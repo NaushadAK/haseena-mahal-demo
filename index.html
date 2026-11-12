@@ -243,6 +243,69 @@ td.r,th.r{text-align:right}
   .qbtn{padding:6px 10px;font-size:.88rem}
   h1{font-size:1.35rem}
 }
+
+/* masters & tailors: phone-first screens */
+.badge{margin-left:auto;background:var(--bad);color:#fff;border-radius:99px;font-size:.7rem;padding:0 6px;font-weight:700;line-height:1.5}
+body.phone-mode .shell{grid-template-columns:minmax(0,1fr)}
+body.phone-mode nav.side{position:fixed;left:50%;transform:translateX(-50%);bottom:0;top:auto;height:auto;width:min(480px,100%);z-index:55;display:flex;justify-content:space-around;gap:2px;overflow:visible;padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px));border:1px solid var(--line);border-bottom:0;border-radius:18px 18px 0 0;background:var(--surface);box-shadow:0 -6px 24px rgba(0,0,0,.08)}
+body.phone-mode nav.side a{flex:1;flex-direction:column;gap:2px;font-size:.72rem;padding:7px 2px;min-width:0;text-align:center;position:relative}
+body.phone-mode nav.side a svg{width:22px;height:22px}
+body.phone-mode nav.side .badge{position:absolute;top:1px;left:calc(50% + 6px);margin:0}
+body.phone-mode main{max-width:480px;margin:0 auto;padding-bottom:150px}
+.ph-wrap{display:flex;flex-direction:column;gap:12px}
+.ph-top h1{font-size:1.5rem}.ph-top p{margin:2px 0 0;color:var(--muted)}
+.seg{display:flex;gap:6px;background:var(--surface-2);padding:4px;border-radius:12px}
+.seg button{flex:1;border:0;background:none;padding:10px 8px;border-radius:9px;font-weight:700;color:var(--muted);cursor:pointer}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.grp{display:flex;flex-direction:column;gap:8px}
+.grp-h{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding:6px 2px 0}
+.job{--c:var(--line);background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px}
+.job.c-info{--c:var(--info)}.job.c-thr{--c:var(--thread)}.job.c-acc{--c:var(--accent)}.job.c-warn{--c:var(--warn)}.job.c-ok{--c:var(--ok)}.job.c-bad{--c:var(--bad)}
+.job.sel{outline:3px solid var(--accent);outline-offset:-1px}
+.jtop{display:flex;gap:10px;align-items:flex-start}
+.jmain{flex:1;min-width:0;cursor:pointer;display:flex;flex-direction:column;gap:4px}
+.jttl{font-weight:700;font-size:1.05rem;line-height:1.25}
+.jmeta{font-size:.86rem;color:var(--muted)}
+.jtags{display:flex;gap:5px;flex-wrap:wrap}
+.jtags .chip{white-space:normal}
+.jthumb{flex:none;width:62px;height:74px;border-radius:10px;overflow:hidden;border:1px solid var(--line);padding:0;background:#efe9dc;cursor:zoom-in}
+.jthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.tick{flex:none;width:30px;height:30px;border-radius:50%;border:2px solid var(--line);background:var(--surface);font-weight:800;color:var(--accent-ink);cursor:pointer;margin-top:2px}
+.tick.on{background:var(--accent);border-color:var(--accent)}
+.jact .bigbtn,.two .bigbtn{width:100%}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bigbtn{min-height:52px}
+.bigbtn.ok{background:var(--ok);color:#fff}.bigbtn.bad{background:var(--bad);color:#fff}.bigbtn.ghost{background:var(--surface-2);color:var(--ink)}
+.ph-action{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(74px + env(safe-area-inset-bottom,0px));width:min(464px,calc(100% - 16px));background:var(--ink);color:var(--bg);border-radius:16px;padding:10px 10px 10px 16px;z-index:56;box-shadow:0 10px 30px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ph-action.col{flex-direction:column;align-items:stretch;padding:12px}
+.ph-action .bigbtn{min-height:46px;padding:10px 16px}
+.tl-pick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tl{border:2px solid var(--line);border-radius:12px;padding:10px;background:var(--surface);color:var(--ink);text-align:left;cursor:pointer;display:flex;flex-direction:column}
+.tl span{font-size:.8rem;color:var(--muted)}
+.tl.ok{border-color:var(--ok)}.tl.warn{border-color:var(--warn)}.tl.bad{border-color:var(--bad)}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:.76rem;color:var(--muted)}
+.lg{display:inline-flex;align-items:center;gap:5px}.lg::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--c)}
+.lg.c-info{--c:var(--info)}.lg.c-acc{--c:var(--accent)}.lg.c-warn{--c:var(--warn)}.lg.c-ok{--c:var(--ok)}.lg.c-bad{--c:var(--bad)}
+.jphotos{display:flex;gap:10px;overflow-x:auto}
+.jphotos button{border:1px solid var(--line);border-radius:12px;padding:0;background:#efe9dc;cursor:zoom-in;flex:none;width:min(240px,70vw);text-align:left;overflow:hidden}
+.jphotos img{width:100%;height:220px;object-fit:cover;display:block}
+.jphotos span{display:block;padding:6px 8px;font-size:.8rem;background:var(--surface);color:var(--ink)}
+.kv.big{font-size:1rem}
+.mbig{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
+.mbig div{background:var(--surface-2);border-radius:10px;padding:8px 12px;display:flex;justify-content:space-between;align-items:baseline}
+.mbig span{color:var(--muted);font-size:.85rem}.mbig b{font-size:1.25rem;font-variant-numeric:tabular-nums}
+.pstrip{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.pthumb{height:var(--h,70px);aspect-ratio:200/230;max-width:100%;border:1px solid var(--line);border-radius:8px;overflow:hidden;padding:0;background:#efe9dc;cursor:zoom-in;display:inline-block}
+.pthumb img{width:100%;height:100%;object-fit:cover;display:block}
+.armed{background:var(--warn)!important;color:#fff!important;border-color:var(--warn)!important}
+.card.k-info{border-top:3px solid var(--info)}.card.k-thr{border-top:3px solid var(--thread)}.card.k-acc{border-top:3px solid var(--accent)}.card.k-warn{border-top:3px solid var(--warn)}.card.k-ok{border-top:3px solid var(--ok)}
+.wa{background:#e9e1d6;border-radius:12px;padding:10px;max-width:540px;display:flex;flex-direction:column;gap:8px}
+.wa-h{color:#1c2230;font-size:.9rem}
+.wa-b{align-self:flex-end;background:#d9fdd3;color:#111;border-radius:10px 10px 2px 10px;padding:7px 10px;max-width:88%;font-size:.9rem;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.wa-t{display:block;text-align:right;font-size:.7rem;color:#5a6470;margin-top:2px}
+body.phone-mode .toast{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+@media (max-width:900px){body.phone-mode nav.side{left:0;transform:none;width:100%;border-radius:0}}
+@media (max-width:600px){.top{gap:8px;padding-block:8px}.brand{flex-direction:row;align-items:center;gap:8px}.brand .logo{height:34px!important}.demo-pill{font-size:.6rem;padding:2px 6px}.top .grow{display:none}.switch{order:3;flex:1 1 100%;min-width:0;flex-wrap:nowrap}.switch label{font-size:0;gap:0;flex:1;min-width:0}.switch select{font-size:.85rem;max-width:none;width:100%}.qbtn{padding:6px 10px;font-size:.82rem;margin-left:auto}}
 </style>
 
 <header class="top" id="top"></header>
@@ -276,10 +339,24 @@ let seed=11; const rnd=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483
 
 /* ---------------- master data (would be settings, not code) ---------------- */
 const BR=[{id:'KAR',name:'Karama'},{id:'DEI',name:'Deira'},{id:'BUR',name:'Bur Dubai'},{id:'SHJ',name:'Sharjah'},{id:'AJM',name:'Ajman'},{id:'AUH',name:'Abu Dhabi'},{id:'ALN',name:'Al Ain'}];
-const LOC=[...BR,{id:'WS',name:'Central workshop'}];
+const LOC=[...BR];
 const ALLB=BR.map(b=>b.id);
 const bn=id=>(LOC.find(b=>b.id===id)||{}).name||id;
-const MASTERS=['Rafeeq','Suresh']; const TAILORS=['Anwar','Biju','Faisal','Imran','Jose','Kabir'];
+const STAFF=[
+ {n:'Rafeeq',r:'master',b:'KAR'},{n:'Suresh',r:'master',b:'KAR'},{n:'Anwar',r:'tailor',b:'KAR'},{n:'Biju',r:'tailor',b:'KAR'},{n:'Faisal',r:'tailor',b:'KAR'},{n:'Imran',r:'tailor',b:'KAR'},
+ {n:'Hameed',r:'master',b:'DEI'},{n:'Jose',r:'tailor',b:'DEI'},{n:'Kabir',r:'tailor',b:'DEI'},
+ {n:'Latheef',r:'master',b:'BUR'},{n:'Sajan',r:'tailor',b:'BUR'},{n:'Ravi',r:'tailor',b:'BUR'},
+ {n:'Nizar',r:'master',b:'SHJ'},{n:'Babu',r:'tailor',b:'SHJ'},{n:'Shafi',r:'tailor',b:'SHJ'},
+ {n:'Ismail',r:'master',b:'AJM'},{n:'Manoj',r:'tailor',b:'AJM'},{n:'Riyas',r:'tailor',b:'AJM'},
+ {n:'Abdulla',r:'master',b:'AUH'},{n:'Vinu',r:'tailor',b:'AUH'},{n:'Sathar',r:'tailor',b:'AUH'},
+ {n:'Musthafa',r:'master',b:'ALN'},{n:'Jibin',r:'tailor',b:'ALN'},{n:'Hakeem',r:'tailor',b:'ALN'}];
+const mastersOf=b=>STAFF.filter(s=>s.r==='master'&&(!b||s.b===b)).map(s=>s.n);
+const tailorsOf=b=>STAFF.filter(s=>s.r==='tailor'&&(!b||s.b===b)).map(s=>s.n);
+const staffIn=(bs,r)=>STAFF.filter(s=>bs.includes(s.b)&&(!r||s.r===r)).map(s=>s.n);
+const MASTERS=mastersOf(), TAILORS=tailorsOf();
+const CONS={kandura:3.5,shirt:1.8,trousers:1.3,abaya:3.2,churidar:2.5,blouse:1.0,ushirt:1.6,utrousers:1.2};
+const PIECE={kandura:25,shirt:15,trousers:12,abaya:35,churidar:20,blouse:12,ushirt:10,utrousers:9,alt:6};
+const DEF_FAB={kandura:'F01',shirt:'F01',trousers:'F04',abaya:'F03',churidar:'F01',blouse:'F01',ushirt:'F02',utrousers:'F02'};
 const GAR={
   kandura:{name:'Kandura',price:120,form:['Length','Shoulder','Chest','Sleeve','Neck','Cuff']},
   shirt:{name:'Shirt',price:75,form:['Length','Shoulder','Chest','Waist','Sleeve','Neck']},
@@ -294,9 +371,12 @@ const ALT={hem:{name:'Shorten / hem',price:15},sides:{name:'Take in sides',price
 const EXTRAS={lining:{name:'Lining',price:25},embroidery:{name:'Embroidery',price:40}};
 const URGENT_PCT=30, VAT=0.05, SIMPLIFIED_LIMIT=10000;
 const FLOWS={
-  mtm:{name:'Made-to-measure & uniform',stages:['Measurements pending','Ready for cutting','Cutting','Stitching','Checking / fitting','Ready for delivery','Delivered'],ready:5,done:6,assign:{2:'master',3:'tailor'}},
-  alt:{name:'Alterations',stages:['Received','Assigned','In progress','Checking','Ready for collection','Collected'],ready:4,done:5,assign:{1:'tailor',2:'tailor'}}
+  mtm:{name:'Made-to-measure & uniform',stages:['To cut','Cut, needs tailor','Stitching','Master check','Ready for delivery','Delivered'],keys:['tocut','cut','stitch','check','ready','done'],ready:4,done:5},
+  alt:{name:'Alterations',stages:['Waiting for master','With tailor','Master check','Ready for collection','Collected'],keys:['wait','stitch','check','ready','done'],ready:3,done:4}
 };
+const SKEY=(it,o)=>FLOWS[flowOf(o||ORDBY(it.orderId))].keys[it.stage];
+const SIDX=(o,k)=>FLOWS[flowOf(o)].keys.indexOf(k);
+const STAGE_CLS={tocut:'info',wait:'info',cut:'thr',stitch:'acc',check:'warn',ready:'ok',done:'ok'};
 const TYPES={alteration:'Alteration',mtm:'Made-to-measure',uniform:'Uniform'};
 const flowOf=o=>o.type==='alteration'?'alt':'mtm';
 const REWORK_REASONS=['Fitting not right','Length wrong','Stitching defect','Customer requested change','Wrong measurement used'];
@@ -310,15 +390,17 @@ const USERS={
   sales:{key:'sales',name:'Shabna K.',role:'Sales',branches:['KAR']},
   accountant:{key:'accountant',name:'Mini Joseph',role:'Accountant',branches:['KAR','DEI','BUR']},
   branchadmin:{key:'branchadmin',name:'Ashraf P.',role:'Branch admin',branches:['KAR']},
-  management:{key:'management',name:'Sameer A.',role:'Management admin',branches:ALLB.concat(['WS'])},
-  tailor:{key:'tailor',name:'Anwar',role:'Tailor (optional login)',branches:['KAR','WS'],staff:'Anwar'},
+  management:{key:'management',name:'Sameer A.',role:'Management admin',branches:ALLB},
+  master:{key:'master',name:'Rafeeq',role:'Master',branches:['KAR'],staff:'Rafeeq',phone:true},
+  tailor:{key:'tailor',name:'Anwar',role:'Tailor',branches:['KAR'],staff:'Anwar',phone:true},
 };
 const P={
-  sales:{nav:['home','customers','new-order','orders','production','scan','deliveries','billing'],discount:10,invoice:true,payment:true,creditNote:false,approve:false,stock:false,stockAdjust:false,reports:false,setup:false,changeDate:true,cancel:false},
-  accountant:{nav:['home','customers','orders','billing','reports'],discount:0,invoice:true,payment:true,creditNote:true,approve:false,stock:false,stockAdjust:false,reports:true,setup:false,changeDate:false,cancel:false},
-  branchadmin:{nav:['home','customers','new-order','orders','production','scan','deliveries','billing','stock','reports'],discount:25,invoice:true,payment:true,creditNote:false,approve:true,stock:true,stockAdjust:true,reports:true,setup:false,changeDate:true,cancel:true},
-  management:{nav:['home','customers','new-order','orders','production','scan','deliveries','billing','stock','reports','setup'],discount:100,invoice:true,payment:true,creditNote:true,approve:true,stock:true,stockAdjust:true,reports:true,setup:true,changeDate:true,cancel:true},
-  tailor:{nav:['home','production','scan'],discount:0,invoice:false,payment:false,creditNote:false,approve:false,stock:false,stockAdjust:false,reports:false,setup:false,changeDate:false,cancel:false},
+  sales:{nav:['home','customers','new-order','orders','production','scan','deliveries','billing'],discount:10,invoice:true,payment:true,creditNote:false,approve:false,stock:false,stockAdjust:false,reports:false,setup:false,changeDate:true,cancel:false,move:'confirm'},
+  accountant:{nav:['home','customers','orders','billing','reports'],discount:0,invoice:true,payment:true,creditNote:true,approve:false,stock:false,stockAdjust:false,reports:true,setup:false,changeDate:false,cancel:false,move:'none'},
+  branchadmin:{nav:['home','customers','new-order','orders','production','scan','deliveries','billing','stock','reports'],discount:25,invoice:true,payment:true,creditNote:false,approve:true,stock:true,stockAdjust:true,reports:true,setup:false,changeDate:true,cancel:true,move:'confirm'},
+  management:{nav:['home','customers','new-order','orders','production','scan','deliveries','billing','stock','reports','setup'],discount:100,invoice:true,payment:true,creditNote:true,approve:true,stock:true,stockAdjust:true,reports:true,setup:true,changeDate:true,cancel:true,move:'confirm'},
+  master:{nav:['m-cut','m-assign','m-check','m-team','scan'],discount:0,invoice:false,payment:false,creditNote:false,approve:false,stock:false,stockAdjust:false,reports:false,setup:false,changeDate:false,cancel:false,move:'direct'},
+  tailor:{nav:['t-work','t-done','scan'],discount:0,invoice:false,payment:false,creditNote:false,approve:false,stock:false,stockAdjust:false,reports:false,setup:false,changeDate:false,cancel:false,move:'direct'},
 };
 
 /* ---------------- sample customers & companies ---------------- */
@@ -349,13 +431,16 @@ const CU=id=>CUST.find(c=>c.id===id), CO=id=>COMP.find(c=>c.id===id);
 /* ---------------- transactional sample data ---------------- */
 const ORD=[],DEL=[],INV=[],PAY=[],CN=[],QUO=[],AUDIT=[];
 const CNT={KAR:40,DEI:27,BUR:33,SHJ:18,AJM:12,AUH:21,ALN:9}; const CTR={inv:100,cn:6,rct:310,dn:30,qt:20,tr:12};
-function newOrder(p){const n=++CNT[p.branch];const o={id:'O'+(ORD.length+1),ref:`${p.branch}-${ym(p.created)}-${String(n).padStart(4,'0')}`,branch:p.branch,collect:p.collect||p.branch,type:p.type,custId:p.custId||null,memberId:p.memberId||null,compId:p.compId||null,po:p.po||'',quote:p.quote||'',created:p.created,promised:p.promised,origPromised:p.promised,notes:p.notes||'',discountPct:p.discountPct||0,approval:p.approval||null,fitting:p.fitting||null,items:[],log:[]};
-  ORD.push(o);o.log.push({at:p.created,user:p.by||'Shabna K.',text:'Order created'+(p.quote?` from quotation ${p.quote}`:'')});return o}
-function addItem(o,p){const it={id:o.id+'-'+(o.items.length+1),no:o.items.length+1,orderId:o.id,gar:p.gar||null,alts:p.alts||null,label:p.label,memberId:p.memberId||null,empId:p.empId||null,size:p.size||null,meas:p.meas||null,source:p.source||(o.type==='alteration'?'customer garment':'shop stock'),fabric:p.fabric||'',condition:p.condition||'',photo:p.photo||null,price:p.price,urgent:!!p.urgent,due:p.due||o.promised,stage:0,master:p.master||null,tailor:p.tailor||null,rework:0,reworkOpen:false,reworkReason:'',location:p.location||o.branch,transit:p.transit||null,deliveryId:null,invoiceId:null,cancelled:false,hist:[]};
+function newOrder(p){const n=++CNT[p.branch];const o={id:'O'+(ORD.length+1),ref:`${p.branch}-${ym(p.created)}-${String(n).padStart(4,'0')}`,branch:p.branch,collect:p.collect||p.branch,type:p.type,custId:p.custId||null,memberId:p.memberId||null,compId:p.compId||null,po:p.po||'',quote:p.quote||'',created:p.created,promised:p.promised,origPromised:p.promised,notes:p.notes||'',discountPct:p.discountPct||0,approval:p.approval||null,fitting:p.fitting||null,items:[],log:[],msgs:[]};
+  ORD.push(o);o.log.push({at:p.created,user:p.by||'Shabna K.',text:'Order created'+(p.quote?` from quotation ${p.quote}`:'')});notify(o,'confirmed',p.created);return o}
+function addItem(o,p){const it={id:o.id+'-'+(o.items.length+1),no:o.items.length+1,orderId:o.id,gar:p.gar||null,alts:p.alts||null,label:p.label,memberId:p.memberId||null,empId:p.empId||null,size:p.size||null,meas:p.meas||null,source:p.source||(o.type==='alteration'?'customer garment':'shop stock'),fabric:p.fabric||'',condition:p.condition||'',photo:p.photo||null,photos:p.photos||[],price:p.price,urgent:!!p.urgent,due:p.due||o.promised,stage:0,master:p.master||null,tailor:p.tailor||null,cut:null,rework:0,reworkOpen:false,reworkReason:'',location:p.location||o.branch,transit:p.transit||null,deliveryId:null,invoiceId:null,cancelled:false,hist:[]};
   o.items.push(it);seedStages(it,o,p.stage||0);return it}
-function seedStages(it,o,st){const f=FLOWS[flowOf(o)];const start=it.size?1:0;const span=Math.max(1,dayDiff(TODAY,o.created));
-  for(let s=start;s<=st;s++){const a=f.assign[s-1];const by=s===0?'—':a==='master'?(it.master||'Rafeeq'):a==='tailor'?(it.tailor||'Anwar'):'Shabna K.';
-    it.hist.push({stage:s,at:addDays(o.created,Math.min(span-1,Math.round(s*span/(f.stages.length)))),by,entered:'Shabna K.'})}it.stage=st}
+function seedStages(it,o,st){const f=FLOWS[flowOf(o)];const span=Math.max(1,dayDiff(TODAY,o.created));
+  it.hist.push({stage:0,at:o.created,by:'—',entered:'Shabna K.'});
+  for(let s=1;s<=st;s++){const k=f.keys[s];const by=k==='check'?(it.tailor||'—'):k==='done'?'—':(it.master||'—');
+    it.hist.push({stage:s,at:addDays(o.created,Math.min(span-1,Math.max(0,Math.round(s*span/f.stages.length)))),by,entered:by==='—'?'Shabna K.':by,note:k==='stitch'&&it.tailor?'Assigned to '+it.tailor:''});
+    if(k==='cut')it.cut=it.source==='shop stock'&&it.gar?{fab:DEF_FAB[it.gar]||'F01',m:CONS[it.gar]||2,by:it.master||'—',at:addDays(o.created,1)}:{fab:null,m:0,by:it.master||'—',at:addDays(o.created,1)}}
+  it.stage=st}
 const itemRef=it=>{const o=ORDBY(it.orderId);return o.ref+'/'+String(it.no).padStart(2,'0')};
 const ORDBY=id=>ORD.find(o=>o.id===id);
 const ITEM=id=>{for(const o of ORD){const i=o.items.find(x=>x.id===id);if(i)return i}return null};
@@ -364,13 +449,13 @@ const itemNet=(i,o)=>r2(i.price*(1-(o.discountPct||0)/100));
 function partyName(o){return o.compId?CO(o.compId).name:CU(o.custId).name}
 function itemWho(it){const o=ORDBY(it.orderId);if(it.empId){const e=empOf(it);return e?e.name:''}if(it.memberId){const c=CU(o.custId);const m=c.members.find(m=>m.id===it.memberId);return m?m.name:c.name}return partyName(o)}
 
-function recordPayment(o,amount,method,ref,date,user,kind){const p={id:'P'+(PAY.length+1),no:'RCT-'+String(++CTR.rct).padStart(5,'0'),orderId:o.id,amount:r2(amount),method,ref:ref||'',date,user:user||'Shabna K.',kind:kind||'payment',alloc:[]};PAY.push(p);o.log.push({at:date,user:p.user,text:`${kind==='advance'?'Advance':'Payment'} ${money(amount)} received (${method}) · ${p.no}`});o.log.push({at:date,user:'System',text:'Notification event recorded: payment received',ntf:1});return p}
+function recordPayment(o,amount,method,ref,date,user,kind){const p={id:'P'+(PAY.length+1),no:'RCT-'+String(++CTR.rct).padStart(5,'0'),orderId:o.id,amount:r2(amount),method,ref:ref||'',date,user:user||'Shabna K.',kind:kind||'payment',alloc:[]};PAY.push(p);o.log.push({at:date,user:p.user,text:`${kind==='advance'?'Advance':'Payment'} ${money(amount)} received (${method}) · ${p.no}`});notify(o,'payment',date,{amt:amount,rct:p.no});return p}
 function allocateFree(o,inv){let due=invDue(inv);PAY.filter(p=>p.orderId===o.id).forEach(p=>{const free=r2(p.amount-sum(p.alloc.map(a=>a.amount)));if(free>0&&due>0){const a=r2(Math.min(free,due));p.alloc.push({invId:inv.id,amount:a});due=r2(due-a)}})}
 function createInvoice(o,items,date,user,forceFull){const comp=o.compId?CO(o.compId):null;const net=r2(sum(items.map(i=>i.price)));const disc=r2(net*(o.discountPct||0)/100);const taxable=r2(net-disc);const vat=r2(taxable*VAT);const total=r2(taxable+vat);
   const type=forceFull||(comp&&comp.trn)||total>SIMPLIFIED_LIMIT?'full':'simplified';const no='INV-2026-'+String(++CTR.inv).padStart(6,'0');
   const g={};items.forEach(i=>{const k=i.label+'|'+i.price;g[k]=g[k]||{desc:i.label,rate:i.price,qty:0};g[k].qty++});
   const lines=Object.values(g).map(l=>{const n=r2(l.qty*l.rate*(1-(o.discountPct||0)/100));return {...l,net:n,vat:r2(n*VAT),total:r2(n*1.05)}});
-  const inv={id:'I'+(INV.length+1),no,date,orderId:o.id,type,itemIds:items.map(i=>i.id),lines,net,disc,taxable,vat,total,status:'issued',po:o.po,user:user||'Mini Joseph'};
+  const inv={id:'I'+(INV.length+1),no,date,orderId:o.id,type,itemIds:items.map(i=>i.id),lines,net,disc,taxable,vat,total,status:'issued',po:o.po,user:user||'Mini Joseph',einv:type==='full'&&comp?{st:'Accepted',ref:'AE-'+String(Math.abs(no.split('').reduce((h,c)=>h*31+c.charCodeAt(0)|0,7))).slice(0,10)}:null};
   INV.push(inv);items.forEach(i=>i.invoiceId=inv.id);allocateFree(o,inv);o.log.push({at:date,user:inv.user,text:`${type==='full'?'Tax invoice':'Simplified tax invoice'} ${no} issued for ${items.length} item(s), ${money(total)}`});
   AUDIT.push({at:date,user:inv.user,what:'Invoice issued',ref:no,old:'—',nw:money(total)});return inv}
 const invPaid=inv=>r2(sum(PAY.flatMap(p=>p.alloc.filter(a=>a.invId===inv.id).map(a=>a.amount))));
@@ -379,7 +464,7 @@ const invDue=inv=>inv.status==='cancelled'?0:r2(inv.total-invPaid(inv)-invCredit
 function createDelivery(o,items,date,rec,user){const no=`DN-${o.collect}-${String(++CTR.dn).padStart(4,'0')}`;const f=FLOWS[flowOf(o)];
   const d={id:'D'+(DEL.length+1),no,orderId:o.id,date,itemIds:items.map(i=>i.id),recipient:rec.name,mobile:rec.mobile||'',signed:!!rec.signed,user:user||'Shabna K.',branch:o.collect};DEL.push(d);
   items.forEach(i=>{i.deliveryId=d.id;i.stage=f.done;i.hist.push({stage:f.done,at:date,by:'—',entered:d.user});i.location='customer'});
-  o.log.push({at:date,user:d.user,text:`Delivery note ${no}: ${items.length} item(s) handed to ${rec.name}`});o.log.push({at:date,user:'System',text:'Notification event recorded: delivered',ntf:1});return d}
+  o.log.push({at:date,user:d.user,text:`Delivery note ${no}: ${items.length} item(s) handed to ${rec.name}`});notify(o,'delivered',date,{n:items.length});return d}
 function ofig(o){const its=o.items.filter(i=>!i.cancelled);const f=FLOWS[flowOf(o)];const net=r2(sum(its.map(i=>itemNet(i,o))));const total=r2(net*(1+VAT));
   const val=arr=>r2(sum(arr.map(i=>itemNet(i,o)))*1.05);
   const comp=its.filter(i=>i.stage>=f.ready);const del=its.filter(i=>i.deliveryId);const inv=its.filter(i=>i.invoiceId);
@@ -389,65 +474,100 @@ function ofig(o){const its=o.items.filter(i=>!i.cancelled);const f=FLOWS[flowOf(
 const isOverdue=(it,o)=>!it.cancelled&&!it.deliveryId&&it.stage<FLOWS[flowOf(o)].ready&&dayDiff(it.due,TODAY)<0;
 const isReady=(it,o)=>!it.cancelled&&!it.deliveryId&&it.stage>=FLOWS[flowOf(o)].ready;
 
+
+/* ---------------- reference photos, messages, small helpers ---------------- */
+const REF_SHAPES={
+ kandura:{c:'#f7f4ec',p:'M74 34 L92 26 Q100 34 108 26 L126 34 L158 74 L146 84 L130 64 L132 196 L68 196 L70 64 L54 84 L42 74 Z',x:'<path d="M100 30 L100 92" stroke-dasharray="3 3"/><circle cx="100" cy="96" r="3"/>'},
+ ushirt:{c:'#2c3e63',p:'M62 42 L86 30 Q100 40 114 30 L138 42 L166 78 L152 88 L138 72 L138 168 L62 168 L62 72 L48 88 L34 78 Z',x:'<rect x="108" y="74" width="20" height="22" rx="2"/><circle cx="118" cy="84" r="5" fill="#ffcc07" stroke="none"/>'},
+ churidar:{c:'#e8a0b4',p:'M76 32 L92 26 Q100 44 108 26 L124 32 L150 76 L138 84 L128 64 L136 184 L64 184 L72 64 L62 84 L50 76 Z',x:'<path d="M84 60 Q100 74 116 60" stroke-dasharray="2 3"/><path d="M80 70 Q100 90 120 70" stroke-dasharray="2 3"/>'},
+ abaya:{c:'#22252b',p:'M82 26 Q100 36 118 26 L140 40 L176 122 L162 130 L140 92 L156 198 L44 198 L60 92 L38 130 L24 122 L60 40 Z',x:'<path d="M150 108 L166 124 M146 98 L170 120" stroke="#ffcc07"/><path d="M50 108 L34 124 M54 98 L30 120" stroke="#ffcc07"/>'},
+};
+function REFIMG(kind,label,color){const s=REF_SHAPES[kind]||REF_SHAPES.kandura;const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230"><rect width="200" height="230" fill="#efe9dc"/><g stroke="#2a3a44" stroke-width="2" fill="none" stroke-linejoin="round"><path d="${s.p}" fill="${color||s.c}"/>${s.x}</g><text x="100" y="220" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#5d6472">${label||'Reference'}</text></svg>`;return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)}
+const allPhotos=it=>[...(it.photo?[{src:it.photo,cap:'Photo at intake'}]:[]),...(it.photos||[])];
+const MSG_T={
+ confirmed:{on:true,label:'Order confirmed',t:'Hi {name}, thank you for your order {ref} at Haseena Mahal {branch}. It will be ready by {date}.'},
+ ready:{on:true,label:'Ready for collection',t:'Hi {name}, good news! Your garment from order {ref} is ready for collection at Haseena Mahal {collect}.'},
+ delivered:{on:true,label:'Delivered',t:'Hi {name}, {n} item(s) from order {ref} were handed over today. Thank you for choosing Haseena Mahal.'},
+ payment:{on:true,label:'Payment received',t:'Hi {name}, we have received AED {amt} for order {ref} (receipt {rct}). Thank you.'},
+ fitting:{on:true,label:'Fitting reminder',t:'Hi {name}, a reminder of your fitting at Haseena Mahal {branch} today at {time}.'}};
+function contactOf(o){if(o.compId){const c=CO(o.compId);return {name:c.contact.split(',')[0],to:c.phone}}const c=CU(o.custId);return {name:c.name.split(' ')[0],to:c.mobile}}
+function notify(o,kind,date,x){const T=MSG_T[kind];if(!T||!T.on||!o.msgs)return;const ct=contactOf(o);const v={name:ct.name,ref:o.ref,branch:bn(o.branch),collect:bn(o.collect),date:fdl(o.promised),...(x||{})};if(v.amt!=null)v.amt=(+v.amt).toFixed(2);
+  const text=T.t.replace(/\{(\w+)\}/g,(m,k)=>v[k]??'');o.msgs.push({at:date,kind,to:ct.to,text,status:dayDiff(TODAY,date)>0?'Read':'Delivered'});o.log.push({at:date,user:'System',text:'WhatsApp sent: '+T.label,ntf:1})}
+function dueTag(it){if(it.deliveryId)return '';const d=dayDiff(it.due,TODAY);if(d<0)return `<span class="chip bad">${-d} day${d<-1?'s':''} late</span>`;if(d===0)return '<span class="chip warn">Due today</span>';if(d===1)return '<span class="chip">Due tomorrow</span>';return `<span class="chip">Due ${fd(it.due)}</span>`}
+function whoLine(i,o){const k=SKEY(i,o);if(k==='tocut'||k==='wait')return '✂ '+(i.master||'Branch queue');if(k==='cut')return '✂ '+(i.master||'—')+' · needs tailor';return '🧵 '+(i.tailor||'—')+(i.master?' · ✂ '+i.master:'')}
+function askBtn(key,label,cls,data){const attrs=Object.entries(data).map(([k,v])=>`data-${k}="${esc(v)}"`).join(' ');
+  if(PR().move!=='confirm')return `<button class="${cls}" data-a="${data.do}" ${attrs}>${label}</button>`;
+  const armed=S.ask===key;return `<button class="${cls}${armed?' armed':''}" data-a="ask" data-k="${esc(key)}" ${attrs}>${armed?'Tap again to confirm: '+label:label}</button>`}
+function nextAct(i){const o=ORDBY(i.orderId);const k=SKEY(i,o);if(i.deliveryId||i.cancelled)return null;
+  if(k==='tocut')return {label:'✂ Record cutting',do:'openCut',direct:1};
+  if(k==='cut'||k==='wait')return {label:'Assign a tailor',do:'openAssign',direct:1};
+  if(k==='stitch')return {label:'✓ Stitching done',do:'doDone'};
+  if(k==='check')return {label:'✓ Checked, mark ready',do:'doReady',cls:'ok'};
+  return null}
+function photoStrip(it,size){const ph=allPhotos(it);if(!ph.length)return '';return `<div class="pstrip">${ph.map((p,k)=>`<button class="pthumb" data-a="photo" data-i="${it.id}" data-p="${k}" style="--h:${size||70}px"><img src="${p.src}" alt="${esc(p.cap)}"></button>`).join('')}</div>`}
+
 (function seedAll(){
-  /* A1: corporate uniform order, 50 employees */
   const gs=CO('G1');
   QUO.push({id:'Q1',no:'QT-0019',compId:'G1',date:day(-15),valid:day(15),status:'converted',lines:[{gar:'ushirt',qty:50,rate:45},{gar:'utrousers',qty:50,rate:42}],note:'Navy poly-viscose, company logo on pocket'});
   const o1=newOrder({branch:'KAR',type:'uniform',compId:'G1',po:'GSF/PO/2026/1187',quote:'QT-0019',created:day(-12),promised:day(6),notes:'Logo embroidery on left pocket. Deliver by department.',by:'Ashraf P.'});
-  gs.employees.forEach((e,i)=>{const n=i+1;let st,tl,ms='Rafeeq';
-    if(n<=20)st=5; else if(n<=35)st=3; else st=2; tl=n<=12?'Anwar':n<=24?'Biju':n<=35?'Anwar':null;
-    ['ushirt','utrousers'].forEach(g=>addItem(o1,{gar:g,label:GAR[g].name,empId:e.id,size:e.size,meas:e.meas?{...e.meas[g]}:null,price:gs.contract[g],stage:st,master:ms,tailor:tl,source:'shop stock',fabric:'Navy poly-viscose'}))});
-  const adv=recordPayment(o1,r2(50*(45+42)*1.05/2),'Bank transfer','ENBD TRF 88213',day(-11),'Mini Joseph','advance');
-  const first=o1.items.filter(i=>{const n=+i.empId.split('-')[1];return n<=10});
+  const uref=[{src:REFIMG('ushirt','Client sample'),cap:'Client sample: navy shirt, logo on left pocket'}];
+  gs.employees.forEach((e,i)=>{const n=i+1;let st,tl=null;
+    if(n<=20){st=4;tl=n<=10?'Anwar':'Biju'}else if(n<=27){st=2;tl='Anwar'}else if(n<=32){st=2;tl='Biju'}else if(n<=35){st=3;tl='Faisal'}else if(n<=42){st=1}else{st=0}
+    ['ushirt','utrousers'].forEach(g=>addItem(o1,{gar:g,label:GAR[g].name,empId:e.id,size:e.size,meas:e.meas?{...e.meas[g]}:null,price:gs.contract[g],stage:st,master:'Rafeeq',tailor:tl,source:'shop stock',fabric:'Navy poly-viscose',photos:uref}))});
+  recordPayment(o1,r2(50*(45+42)*1.05/2),'Bank transfer','ENBD TRF 88213',day(-11),'Mini Joseph','advance');
+  const first=o1.items.filter(i=>+i.empId.split('-')[1]<=10);
   createDelivery(o1,first,day(-2),{name:'Joseph Varghese',mobile:'050 661 2290',signed:true},'Ashraf P.');
   createInvoice(o1,first,day(-2),'Mini Joseph');
-  const rw=o1.items.find(i=>i.empId==='GS-012'&&i.gar==='ushirt');rw.stage=3;rw.rework=1;rw.reworkOpen=true;rw.reworkReason='Collar uneven at checking';rw.hist.push({stage:'Rework',at:day(-1),by:'Suresh',entered:'Shabna K.',note:'Collar uneven at checking'});
-  /* A2: walk-in alteration, due today */
+  const rw=o1.items.find(i=>i.empId==='GS-012'&&i.gar==='ushirt');rw.stage=2;rw.tailor='Anwar';rw.rework=1;rw.reworkOpen=true;rw.reworkReason='Collar uneven at master check';rw.hist.push({stage:'Rework',at:day(-1),by:'Rafeeq',entered:'Rafeeq',note:'Collar uneven at master check'});
+  /* walk-in alteration, due today */
   const o2=newOrder({branch:'KAR',type:'alteration',custId:'C3',memberId:'C3a',created:day(-1),promised:day(0)});
-  addItem(o2,{alts:['hem'],label:'Dress, maroon — Shorten / hem',condition:'Good, small stain near hem (shown to customer)',price:15,stage:2,tailor:'Biju',memberId:'C3a'});
-  addItem(o2,{alts:['sides'],label:'Blouse, cream silk — Take in sides',condition:'Good',price:25,stage:1,tailor:'Biju',memberId:'C3a'});
+  addItem(o2,{alts:['hem'],label:'Dress, maroon — Shorten / hem',condition:'Good, small stain near hem (shown to customer)',price:15,stage:1,master:'Suresh',tailor:'Biju',memberId:'C3a',photo:REFIMG('churidar','Intake photo','#8a2c3c')});
+  addItem(o2,{alts:['sides'],label:'Blouse, cream silk — Take in sides',condition:'Good',price:25,stage:0,master:'Rafeeq',memberId:'C3a',photo:REFIMG('churidar','Intake photo','#efe2c4')});
   recordPayment(o2,20,'Cash','',day(-1),'Shabna K.','advance');
-  /* A3: made-to-measure with customer fabric + fitting today */
+  /* made-to-measure with customer fabric, reference photos, fitting today */
   const c1=CU('C1');
   const o3=newOrder({branch:'KAR',type:'mtm',custId:'C1',created:day(-8),promised:day(3),fitting:{at:day(0),time:'17:30',note:'Kandura trial for Rasheed'}});
-  addItem(o3,{gar:'kandura',label:'Kandura',memberId:'C1b',meas:{...c1.members[1].meas.kandura[0].values},price:120,stage:4,master:'Suresh',tailor:'Faisal',fabric:'White cotton, 3.5 m from shop'});
-  addItem(o3,{gar:'churidar',label:'Churidar set',memberId:'C1c',meas:{...c1.members[2].meas.churidar[0].values},price:90,stage:3,master:'Suresh',tailor:'Imran',source:'customer fabric',fabric:'Pink georgette, 2.5 m (customer brought)'});
+  addItem(o3,{gar:'kandura',label:'Kandura',memberId:'C1b',meas:{...c1.members[1].meas.kandura[0].values},price:120,stage:3,master:'Suresh',tailor:'Faisal',fabric:'White cotton, 3.5 m from shop',photos:[{src:REFIMG('kandura','Customer photo'),cap:'Customer photo: Emirati collar, no cuffs, hidden buttons'}]});
+  addItem(o3,{gar:'churidar',label:'Churidar set',memberId:'C1c',meas:{...c1.members[2].meas.churidar[0].values},price:90,stage:2,master:'Suresh',tailor:'Imran',source:'customer fabric',fabric:'Pink georgette, 2.5 m (customer brought)',photos:[{src:REFIMG('churidar','Sketch'),cap:'Sketch: V-neck, embroidered yoke, 3/4 sleeves'}]});
   recordPayment(o3,100,'Card','POS 4471',day(-8),'Shabna K.','advance');
+  const o3b=newOrder({branch:'KAR',type:'mtm',custId:'C1',memberId:'C1a',created:day(-1),promised:day(8),notes:'Gold embroidery on both sleeves, as in the photo'});
+  addItem(o3b,{gar:'abaya',label:'Abaya',memberId:'C1a',meas:{...c1.members[0].meas.abaya[0].values},price:180,stage:0,master:'Rafeeq',fabric:'Black nida, 3.2 m',photos:[{src:REFIMG('abaya','Customer photo'),cap:'Customer photo: gold embroidery on sleeves'}]});
+  recordPayment(o3b,90,'Cash','',day(-1),'Shabna K.','advance');
   /* overdue at Deira */
   const o4=newOrder({branch:'DEI',type:'mtm',custId:'C2',memberId:'C2a',created:day(-10),promised:day(-2),by:'Rahul M.'});
-  for(let k=0;k<3;k++)addItem(o4,{gar:'kandura',label:'Kandura',memberId:'C2a',meas:{...CU('C2').members[0].meas.kandura[0].values},price:120,stage:3,master:'Rafeeq',tailor:'Faisal',fabric:'White cotton, 3.5 m'});
+  for(let k=0;k<3;k++)addItem(o4,{gar:'kandura',label:'Kandura',memberId:'C2a',meas:{...CU('C2').members[0].meas.kandura[0].values},price:120,stage:2,master:'Hameed',tailor:'Jose',fabric:'White cotton, 3.5 m'});
   recordPayment(o4,150,'Cash','',day(-10),'Rahul M.','advance');
   /* ready for collection, unpaid */
   const o5=newOrder({branch:'KAR',type:'alteration',custId:'C5',memberId:'C5a',created:day(-3),promised:day(0)});
-  addItem(o5,{alts:['zip','waist'],label:'Skirt, black — Replace zip + Adjust waist',condition:'Zip broken',price:40,stage:4,tailor:'Jose',memberId:'C5a'});
-  /* cross-location: taken at Karama, stitched at workshop, collect at Deira */
+  addItem(o5,{alts:['zip','waist'],label:'Skirt, black — Replace zip + Adjust waist',condition:'Zip broken',price:40,stage:3,master:'Suresh',tailor:'Biju',memberId:'C5a'});
+  notify(o5,'ready',day(0));
+  /* taken at Karama, collect at Deira: in transit */
   const o6=newOrder({branch:'KAR',collect:'DEI',type:'mtm',custId:'C4',memberId:'C4a',created:day(-9),promised:day(1),notes:'Customer will collect at Deira branch'});
-  ['shirt','shirt'].forEach(g=>addItem(o6,{gar:g,label:GAR[g].name,memberId:'C4a',meas:{...CU('C4').members[0].meas[g][0].values},price:75,stage:5,master:'Rafeeq',tailor:'Kabir',location:'WS',transit:{from:'WS',to:'DEI',sent:day(0),by:'Rafeeq',tr:'GT-0044'}}));
+  ['shirt','shirt'].forEach(g=>addItem(o6,{gar:g,label:GAR[g].name,memberId:'C4a',meas:{...CU('C4').members[0].meas[g][0].values},price:75,stage:4,master:'Rafeeq',tailor:'Imran',location:'KAR',transit:{from:'KAR',to:'DEI',sent:day(0),by:'Ashraf P.',tr:'GT-0044'}}));
   recordPayment(o6,70,'Cash','',day(-9),'Shabna K.','advance');
-  /* Bur Dubai order (for branch isolation demo) */
+  /* Bur Dubai order (for branch isolation) */
   const o7=newOrder({branch:'BUR',type:'mtm',custId:'C6',memberId:'C6a',created:day(-4),promised:day(4),by:'Latha S.'});
-  addItem(o7,{gar:'kandura',label:'Kandura',memberId:'C6a',meas:{...CU('C6').members[0].meas.kandura[0].values},price:120,stage:2,master:'Suresh',fabric:'White cotton'});
-  addItem(o7,{gar:'kandura',label:'Kandura',memberId:'C6a',meas:{...CU('C6').members[0].meas.kandura[0].values},price:120,stage:1,fabric:'Cream cotton'});
+  addItem(o7,{gar:'kandura',label:'Kandura',memberId:'C6a',meas:{...CU('C6').members[0].meas.kandura[0].values},price:120,stage:1,master:'Latheef',fabric:'White cotton'});
+  addItem(o7,{gar:'kandura',label:'Kandura',memberId:'C6a',meas:{...CU('C6').members[0].meas.kandura[0].values},price:120,stage:0,fabric:'Cream cotton'});
   /* filler orders across branches */
   const walk=['Shameer V.','Lakshmi R.','Omar S.','Rizwana P.','Ajay M.','Sara H.','Nadeem T.','Jincy J.','Fahad A.','Meera K.','Hamza R.','Divya S.'];
   const extraC=[];walk.forEach((nm,i)=>{const c={id:'X'+i,name:nm,mobile:'05'+(i%6)+' '+(300+i*17)+' '+(1000+i*331).toString().slice(-4),email:'',branch:BR[i%7].id,since:'2025',members:[{id:'X'+i+'a',name:nm.split(' ')[0]+' (self)',meas:{}}]};CUST.push(c);extraC.push(c)});
   BR.forEach((b,bi)=>{for(let k=0;k<4;k++){const c=extraC[(bi*2+k)%extraC.length];const alt=rnd()<.5;const created=day(-Math.floor(2+rnd()*12));const promised=addDays(created,alt?3:10);
     const o=newOrder({branch:b.id,type:alt?'alteration':'mtm',custId:c.id,memberId:c.members[0].id,created,promised,by:'Staff'});
-    const f=FLOWS[alt?'alt':'mtm'];const n=1+Math.floor(rnd()*3);
-    for(let j=0;j<n;j++){if(alt){const a=pick(Object.keys(ALT));addItem(o,{alts:[a],label:pick(['Trousers','Dress','Shirt','Abaya','Kurta'])+' — '+ALT[a].name,price:ALT[a].price,stage:Math.floor(rnd()*(f.ready+1)),tailor:pick(TAILORS),memberId:c.members[0].id})}
-      else{const g=pick(['kandura','shirt','trousers','abaya','blouse']);addItem(o,{gar:g,label:GAR[g].name,price:GAR[g].price,stage:Math.floor(rnd()*(f.ready+1)),master:pick(MASTERS),tailor:pick(TAILORS),memberId:c.members[0].id,meas:genMeas(g)})}}
+    const f=FLOWS[alt?'alt':'mtm'];const n=1+Math.floor(rnd()*3);const ms=mastersOf(b.id),ts=tailorsOf(b.id);
+    for(let j=0;j<n;j++){const st=Math.floor(rnd()*(f.ready+1));const kk=f.keys[st];const master=st>0||rnd()<.5?pick(ms):null;const tailor=['stitch','check','ready'].includes(kk)?pick(ts):null;
+      if(alt){const a=pick(Object.keys(ALT));addItem(o,{alts:[a],label:pick(['Trousers','Dress','Shirt','Abaya','Kurta'])+' — '+ALT[a].name,price:ALT[a].price,stage:st,master,tailor,memberId:c.members[0].id})}
+      else{const g=pick(['kandura','shirt','trousers','abaya','blouse']);addItem(o,{gar:g,label:GAR[g].name,price:GAR[g].price,stage:st,master,tailor,memberId:c.members[0].id,meas:genMeas(g)})}}
     if(rnd()<.7)recordPayment(o,r2(ofig(o).total*.5),pick(['Cash','Card']),'',created,'Staff','advance');
-    if(rnd()<.35){const rd=o.items.filter(i=>isReady(i,o));if(rd.length){createDelivery(o,rd,addDays(promised,-1)<TODAY?addDays(promised,-1):TODAY,{name:c.name,signed:false},'Staff');createInvoice(o,rd,TODAY,'Staff');const due=sum(INV.filter(v=>v.orderId===o.id).map(invDue));if(due>0&&rnd()<.7){const p=recordPayment(o,due,'Cash','',TODAY,'Staff');allocateAll(o)}}}
+    if(rnd()<.35){const rd=o.items.filter(i=>isReady(i,o));if(rd.length){createDelivery(o,rd,addDays(promised,-1)<TODAY?addDays(promised,-1):TODAY,{name:c.name,signed:false},'Staff');createInvoice(o,rd,TODAY,'Staff');const due=sum(INV.filter(v=>v.orderId===o.id).map(invDue));if(due>0&&rnd()<.7){recordPayment(o,due,'Cash','',TODAY,'Staff');allocateAll(o)}}}
   }});
-  /* quotation waiting to be converted */
   QUO.push({id:'Q2',no:'QT-0021',compId:'G2',date:day(-3),valid:day(27),status:'sent',lines:[{gar:'ushirt',qty:12,rate:50}],note:'Light blue scrub tops, name embroidery'});
-  /* a pending discount approval */
+  /* pending discount approval; garments waiting in the branch queue */
   const o8=newOrder({branch:'KAR',type:'mtm',custId:'X0',memberId:'X0a',created:day(0),promised:day(9),discountPct:18,approval:{pct:18,by:'Shabna K.',status:'pending',reason:'Regular customer, 5 kanduras'}});
-  for(let k=0;k<5;k++)addItem(o8,{gar:'kandura',label:'Kandura',price:120,stage:0,memberId:'X0a'});
+  for(let k=0;k<5;k++)addItem(o8,{gar:'kandura',label:'Kandura',price:120,stage:0,memberId:'X0a',meas:genMeas('kandura'),fabric:'White cotton'});
   AUDIT.push({at:day(-6),user:'Sameer A.',what:'Price list changed',ref:'Kandura stitching',old:'AED 110.00',nw:'AED 120.00'});
   AUDIT.push({at:day(-2),user:'Ashraf P.',what:'Promised date changed',ref:o4.ref,old:fdl(day(-4)),nw:fdl(day(-2))});
   o4.origPromised=day(-4);o4.log.push({at:day(-5),user:'Ashraf P.',text:`Promised date changed ${fdl(day(-4))} → ${fdl(day(-2))} · reason: fabric arrived late`});
-  /* one cancelled invoice with its credit note */
   const ci=INV.find(v=>v.type==='simplified');if(ci){cancelInvoice(ci,'Wrong customer selected',day(-1),'Mini Joseph',true)}
 })();
 function allocateAll(o){INV.filter(v=>v.orderId===o.id&&v.status!=='cancelled').forEach(v=>allocateFree(o,v))}
@@ -457,10 +577,16 @@ function cancelInvoice(inv,reason,date,user,reissue){const o=ORDBY(inv.orderId);
   if(reissue){createInvoice(o,items,date,user)}return c}
 
 /* stock (phase 2) */
-const STOCK={};STOCK_ITEMS.forEach(s=>{STOCK[s.id]={};LOC.forEach(l=>{STOCK[s.id][l.id]=s.unit==='m'?Math.round(rnd()*(l.id==='WS'?400:120)):Math.round(rnd()*(l.id==='WS'?900:250))})});STOCK.F02.DEI=6;STOCK.F02.WS=14;
+const STOCK={};STOCK_ITEMS.forEach(s=>{STOCK[s.id]={};LOC.forEach(l=>{STOCK[s.id][l.id]=s.unit==='m'?Math.round(45+rnd()*110):Math.round(260+rnd()*500)})});
+STOCK.F02.KAR=38;STOCK.F02.DEI=6;STOCK.F01.KAR=74;STOCK.F03.KAR=31;
 const MIN={F01:40,F02:30,F03:25,F04:20,A01:200,A02:30,A03:20,A04:20};
-const TRF=[{id:'T1',no:'TR-0012',from:'KAR',to:'DEI',item:'F02',sent:50,received:null,date:day(-1),by:'Ashraf P.',status:'in transit'},{id:'T2',no:'TR-0011',from:'WS',to:'AJM',item:'F01',sent:50,received:48,date:day(-5),by:'Rafeeq',status:'received'}];
-const STOCKLOG=[{at:day(-3),user:'Ashraf P.',item:'A02',loc:'KAR',change:-4,reason:'Physical count: 4 zips damaged'}];
+const TRF=[{id:'T1',no:'TR-0012',from:'KAR',to:'DEI',item:'F02',sent:50,received:null,date:day(-1),by:'Ashraf P.',status:'in transit'},{id:'T2',no:'TR-0011',from:'DEI',to:'AJM',item:'F01',sent:50,received:48,date:day(-5),by:'Hameed',status:'received'}];
+const STOCKLOG=[
+  {at:day(-9),user:'Ashraf P.',item:'F02',loc:'KAR',change:120,reason:'Received from Al Khaleej Textiles · GRN-0231',kind:'receive'},
+  {at:day(-6),user:'Rafeeq',item:'F02',loc:'KAR',change:-19.6,reason:'Cut 14 garment(s) for '+ORD[0].ref,kind:'cut'},
+  {at:day(-3),user:'Ashraf P.',item:'A02',loc:'KAR',change:-4,reason:'Physical count: 4 zips damaged',kind:'count'},
+  {at:day(-1),user:'Ashraf P.',item:'F02',loc:'KAR',change:-50,reason:'Transfer TR-0012 to Deira',kind:'transfer'},
+  {at:day(-1),user:'Suresh',item:'F01',loc:'KAR',change:-3.5,reason:'Cut 1 garment(s) for '+ORD[2].ref,kind:'cut'}];
 
 /* ---------------- questions to confirm with the client ---------------- */
 const QS=[
@@ -476,8 +602,8 @@ const QS=[
   {id:'o1',s:'orders',t:'Order number format like KAR-2611-0042 (branch, year-month, number) — acceptable?',h:''},
   {id:'o2',s:'orders',t:'Can a customer collect at a different branch from where they ordered?',h:''},
   {id:'p1',s:'production',t:'Are these the stage names you use today?',h:'Made-to-measure: measurements pending → ready for cutting → cutting → stitching → checking/fitting → ready → delivered.',key:1},
-  {id:'p2',s:'production',t:'Where does cutting and stitching happen: in each branch, a central workshop, or both?',h:'This decides whether garments need to be tracked moving between locations.',key:1},
-  {id:'p3',s:'production',t:'Will masters and tailors use the system themselves, or will sales staff update for them?',h:'Is piece-rate pay used? (We count items per tailor; payroll itself is not included.)'},
+  {id:'p2',s:'production',t:'How many metres of fabric does each garment type normally need?',h:'Pre-filled when the master records cutting. The actual metres used show wastage.',key:1},
+  {id:'p3',s:'production',t:'Are tailors paid per piece? If so, what is the rate for each garment?',h:'Used for the piece-rate estimate in reports. Payroll itself is not included.'},
   {id:'s1',s:'scan',t:'Is a QR label on each garment acceptable for your staff?',h:'Staff scan with their own phone; no special scanner needed.'},
   {id:'s2',s:'scan',t:'Which receipt and label printers do branches have today?',h:''},
   {id:'d1',s:'deliveries',t:'When a customer still owes money at collection: block the handover, or only warn?',h:''},
@@ -486,11 +612,11 @@ const QS=[
   {id:'b2',s:'billing',t:'One company (one TRN) or several (mainland, free zone)?',h:'Each company needs its own invoice numbering.',key:1},
   {id:'b3',s:'billing',t:'Can sales staff issue invoices at the counter, or only the accountant?',h:'Credit notes are limited to the accountant and management.'},
   {id:'b4',s:'billing',t:'Do invoices need Arabic text? Which accounting software does your accountant use?',h:''},
-  {id:'k1',s:'stock',t:'Is it OK for stock tracking to come in phase 2, after orders and billing are running?',h:''},
+  {id:'k1',s:'stock',t:'Which fabrics and accessories do you keep in stock, and who are the suppliers?',h:''},
   {id:'k2',s:'stock',t:'Do you need to track fabric roll by roll, or is metres per branch enough?',h:''},
   {id:'r1',s:'reports',t:'Which three reports matter most to you every week?',h:''},
   {id:'u1',s:'setup',t:'Are these roles and permissions right for your staff?',h:'About 24 users across 7 branches and management.'},
-  {id:'u2',s:'setup',t:'Do staff need Arabic or Malayalam screens?',h:''},
+  {id:'u2',s:'setup',t:'Which WhatsApp messages should customers receive, and in which language?',h:'Order confirmed, ready, delivered, payment received, fitting reminder.'},
   {id:'u3',s:'setup',t:'Must your data be hosted inside the UAE?',h:''},
   {id:'u4',s:'setup',t:'What records do you have today (paper, Excel, other software) that must be brought in?',h:''},
 ];
@@ -500,12 +626,12 @@ const SCREEN_NAMES={home:'Home',customers:'Customers & measurements','new-order'
 const S={role:'sales',branch:'ALL',route:'home',orderId:null,custId:null,compId:null,modal:null,drawer:false,welcome:true,
   ordTab:'items',ordEmp:'',ordersTab:'orders',ordersQ:'',ordersType:'',ordersStatus:'open',custTab:'customers',custQ:'',memberId:null,
   prodFlow:'mtm',prodType:'',prodTailor:'',prodDue:'',prodQ:'',bulk:false,sel:new Set(),
-  billTab:'invoices',stockTab:'levels',repTab:'overdue',setupTab:'roles',scan:{item:null,multi:false,list:[]},wiz:null,review:{},reviewSource:'local',justCreated:null};
+  billTab:'invoices',stockTab:'levels',repTab:'overdue',setupTab:'roles',scan:{item:null,multi:false,list:[]},wiz:null,review:{},reviewSource:'local',justCreated:null,ask:null,bulkAsk:null,phTab:'mine'};
 const U=()=>USERS[S.role], PR=()=>P[S.role];
 const myBranches=()=>S.branch==='ALL'?U().branches:[S.branch];
 const canSeeOrder=o=>U().branches.includes(o.branch)||U().branches.includes(o.collect);
 const visOrders=()=>ORD.filter(o=>{const b=myBranches();return b.includes(o.branch)||b.includes(o.collect)});
-const visItems=()=>visOrders().flatMap(o=>o.items.filter(i=>!i.cancelled).map(i=>({i,o}))).filter(({i})=>S.role!=='tailor'||i.tailor===U().staff||i.master===U().staff);
+const visItems=()=>visOrders().flatMap(o=>o.items.filter(i=>!i.cancelled).map(i=>({i,o}))).filter(({i})=>!U().staff||i.tailor===U().staff||i.master===U().staff);
 
 /* ---------------- icons ---------------- */
 const IC={
@@ -523,7 +649,8 @@ const IC={
  review:'<path d="M4 4h16v12H8l-4 4z"/><path d="M9 9l2 2 4-4"/>',
 };
 const ico=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[k]||''}</svg>`;
-const NAV=[['home','Home'],['customers','Customers'],['new-order','New order'],['orders','Orders'],['production','Production'],['scan','Scan'],['deliveries','Deliveries'],['billing','Billing'],['stock','Stock','P2'],['reports','Reports'],['setup','Setup']];
+const NAV=[['home','Home'],['customers','Customers'],['new-order','New order'],['orders','Orders'],['production','Production'],['scan','Scan'],['deliveries','Deliveries'],['billing','Billing'],['stock','Stock'],['reports','Reports'],['setup','Setup'],['m-cut','To cut'],['m-assign','Assign'],['m-check','Check'],['m-team','Team'],['t-work','My work'],['t-done','Done']];
+Object.assign(IC,{'m-cut':IC.production,'m-assign':'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5"/><path d="M14 16l3 3 5-6"/>','m-check':'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/>','m-team':IC.customers,'t-work':'<path d="M4 20L18 6"/><ellipse cx="19" cy="5" rx="1.6" ry="2.6" transform="rotate(45 19 5)"/><path d="M4 20c3-1 2-5 6-5"/>','t-done':'<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/>'});
 
 /* ---------------- shell ---------------- */
 function renderTop(){const u=U();const done=Object.values(S.review).filter(r=>r&&r.v).length;
@@ -532,14 +659,14 @@ function renderTop(){const u=U();const done=Object.values(S.review).filter(r=>r&
   <div class="grow"></div>
   <div class="switch">
     <label for="roleSel">Signed in as<select id="roleSel" data-ch="role">${Object.values(USERS).map(x=>`<option value="${x.key}" ${x.key===S.role?'selected':''}>${esc(x.name)} · ${esc(x.role)}</option>`).join('')}</select></label>
-    <label for="brSel">Branch<select id="brSel" data-ch="branch">${u.branches.length>1?`<option value="ALL" ${S.branch==='ALL'?'selected':''}>All my branches (${u.branches.length})</option>`:''}${u.branches.map(b=>`<option value="${b}" ${S.branch===b?'selected':''}>${esc(bn(b))}</option>`).join('')}</select></label>
+    ${u.phone?"":`<label for="brSel">Branch<select id="brSel" data-ch="branch">${u.branches.length>1?`<option value="ALL" ${S.branch==='ALL'?'selected':''}>All my branches (${u.branches.length})</option>`:''}${u.branches.map(b=>`<option value="${b}" ${S.branch===b?'selected':''}>${esc(bn(b))}</option>`).join('')}</select></label>`}
   </div>
   <button class="qbtn" data-a="drawer">Questions for you <span class="cnt">${done}/${QS.length}</span></button>`}
-function renderNav(){const pr=PR();const allowed=k=>pr.nav.includes(k);
-  document.getElementById('nav').innerHTML=NAV.filter(([k])=>allowed(k)).map(([k,l,ph])=>`<a data-a="go" data-r="${k}" class="${S.route===k||(k==='orders'&&S.route==='order')?'on':''}">${ico(k)}<span>${l}</span>${ph?`<span class="ph">${ph}</span>`:''}</a>`).join('')+
-  `<div class="sep"></div><a data-a="go" data-r="review" class="${S.route==='review'?'on':''}">${ico('review')}<span>Decisions</span></a>`}
+function renderNav(){const pr=PR();const cnt=navCounts();
+  document.getElementById('nav').innerHTML=pr.nav.map(k=>NAV.find(n=>n[0]===k)).filter(Boolean).map(([k,l])=>`<a data-a="go" data-r="${k}" class="${S.route===k||(k==='orders'&&S.route==='order')?'on':''}">${ico(k)}<span>${l}</span>${cnt[k]?`<span class="badge">${cnt[k]}</span>`:''}</a>`).join('')+
+  (U().phone?'':`<div class="sep"></div><a data-a="go" data-r="review" class="${S.route==='review'?'on':''}">${ico('review')}<span>Decisions</span></a>`)}
 function render(){const ae=document.activeElement;const fid=ae&&ae.id;let ss=null,se=null;try{ss=ae.selectionStart;se=ae.selectionEnd}catch(e){}
-  renderTop();renderNav();const m=document.getElementById('main');m.innerHTML=(VIEWS[S.route]||VIEWS.home)();renderLayer();
+  if(U().phone&&!PR().nav.includes(S.route)&&S.route!=='review'&&S.route!=='order')S.route=PR().nav[0];document.body.classList.toggle('phone-mode',!!U().phone);renderTop();renderNav();const m=document.getElementById('main');m.innerHTML=(VIEWS[S.route]||VIEWS.home)();renderLayer();
   if(fid){const el=document.getElementById(fid);if(el&&el!==document.activeElement&&(el.tagName==='INPUT'||el.tagName==='TEXTAREA')){el.focus();try{if(ss!=null)el.setSelectionRange(ss,se)}catch(e){}}}
   afterRender()}
 function afterRender(){document.querySelectorAll('[data-qr]').forEach(el=>{if(el.dataset.done)return;el.dataset.done=1;const sz=+el.dataset.size||76;if(window.QRCode){try{new QRCode(el,{text:el.dataset.qr,width:sz,height:sz,colorDark:'#111111',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}catch(e){el.textContent='QR'}}else{el.style.cssText=`width:${sz}px;height:${sz}px;background:repeating-conic-gradient(#111 0 25%,#fff 0 50%) 0 0/12px 12px`}});
@@ -547,9 +674,8 @@ function afterRender(){document.querySelectorAll('[data-qr]').forEach(el=>{if(el
 let toastT;function toast(t){let el=document.getElementById('toast');if(!el){el=document.createElement('div');el.id='toast';el.className='toast';el.setAttribute('role','status');document.body.appendChild(el)}el.textContent=t;el.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>el.hidden=true,3200)}
 const head=(eb,title,sub,actions)=>`<div class="ph-head"><div><div class="eyebrow">${eb}</div><h1>${title}</h1>${sub?`<p>${sub}</p>`:''}</div><div class="row">${actions||''}</div></div>`;
 const lock=t=>`<div class="lock"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div>${t}</div></div>`;
-function stageChip(it,o){const f=FLOWS[flowOf(o)];if(it.cancelled)return '<span class="chip">Cancelled</span>';const n=f.stages[it.stage];
-  let cls=it.stage>=f.done?'ok':it.stage>=f.ready?'acc':'';if(isOverdue(it,o))cls='bad';
-  return `<span class="chip ${cls}">${esc(n)}</span>${it.reworkOpen?' <span class="chip warn">Rework</span>':''}${it.transit?' <span class="chip info">In transit</span>':''}`}
+function stageChip(it,o){const f=FLOWS[flowOf(o)];if(it.cancelled)return '<span class="chip">Cancelled</span>';const k=f.keys[it.stage];let cls=STAGE_CLS[k]||'';if(isOverdue(it,o))cls='bad';
+  return `<span class="chip ${cls}">${esc(f.stages[it.stage])}</span>${it.reworkOpen?' <span class="chip bad">Rework</span>':''}${it.transit?' <span class="chip info">In transit</span>':''}`}
 function progressBar(fg){const w=x=>fg.n?Math.round(100*x/fg.n):0;return `<div class="bar" title="${fg.del} delivered, ${fg.comp-fg.del} ready, ${fg.n-fg.comp} in work"><i style="width:${w(fg.del)}%;background:var(--ok)"></i><i style="width:${w(fg.comp-fg.del)}%;background:var(--accent)"></i></div>`}
 
 /* ---------------- views ---------------- */
@@ -557,12 +683,12 @@ const VIEWS={};
 VIEWS.home=()=>{const u=U();const its=visItems();const today=its.filter(({i,o})=>!i.deliveryId&&dayDiff(i.due,TODAY)===0);const over=its.filter(({i,o})=>isOverdue(i,o));const ready=its.filter(({i,o})=>isReady(i,o));
   const fits=visOrders().filter(o=>o.fitting&&dayDiff(o.fitting.at,TODAY)===0);const unpaid=visOrders().map(o=>({o,f:ofig(o)})).filter(x=>x.f.balance>0.009&&x.f.del>0);const transit=its.filter(({i})=>i.transit);
   const appr=visOrders().filter(o=>o.approval&&o.approval.status==='pending');
-  const welcome=S.welcome?`<div class="welcome"><div><h2>Welcome to the demo</h2><p>This shows how the system would work at Haseena Mahal, with sample customers and orders. <b>Switch "Signed in as" at the top</b> to see what Sales, the Accountant, a Branch admin, Management and a Tailor would each see. When something should work differently, press <b>Questions for you</b> and note it.</p></div><button class="btn sm" data-a="hideWelcome">Got it</button></div>`:'';
+  const welcome=S.welcome?`<div class="welcome"><div><h2>Welcome to the demo</h2><p>This shows how the system would work at Haseena Mahal, with sample customers and orders. <b>Switch "Signed in as" at the top</b> to see what Sales, the Accountant, a Branch admin, Management, a Master and a Tailor would each see. Masters and tailors get screens made for their phones. When something should work differently, press <b>Questions for you</b> and note it.</p></div><button class="btn sm" data-a="hideWelcome">Got it</button></div>`:'';
   if(S.role==='management')return welcome+homeMgmt(over,ready,appr);
   if(S.role==='accountant')return welcome+homeAcct();
   if(S.role==='tailor'){const mine=its.filter(({i})=>!i.deliveryId);return welcome+head('My work',`Good day, ${u.name}`,'Only the garments assigned to you are shown.')+`<div class="tiles">${tile('Assigned to me',mine.length,'','go','production')}${tile('Late',mine.filter(({i,o})=>isOverdue(i,o)).length,'bad','go','production')}${tile('In rework',mine.filter(({i})=>i.reworkOpen).length,'warn','go','production')}</div>`+itemList(mine.slice(0,12),'My garments')}
   return welcome+head(bn(myBranches()[0])+(myBranches().length>1?' + more':'')+' branch · '+fd(TODAY),`Today at a glance`,'What needs action today. Tap any number to see the garments behind it.',PR().nav.includes('new-order')?`<button class="btn pri" data-a="go" data-r="new-order">+ New order</button>`:'')+
-  `<div class="tiles">${tile('Due today',today.length,'','prod','today')}${tile('Overdue',over.length,'bad','prod','overdue')}${tile('Ready for collection',ready.length,'ok','go','deliveries')}${tile('Fittings today',fits.length,'','none','')}${tile('Unpaid after delivery',unpaid.length,'warn','go','billing',money(sum(unpaid.map(x=>x.f.balance))))}${tile('In transit',transit.length,'','prod','')}</div>`+
+  `<div class="tiles">${tile('Due today',today.length,'','prod','today')}${tile('Overdue',over.length,'bad','prod','overdue')}${tile('Ready for collection',ready.length,'ok','go','deliveries')}${tile('Fittings today',fits.length,'','none','')}${tile('Unpaid after delivery',unpaid.length,'warn','go','billing',money(sum(unpaid.map(x=>x.f.balance))))}${tile('In transit',transit.length,'','prod','')}${tile('Waiting for a master',its.filter(({i,o})=>['tocut','wait'].includes(SKEY(i,o))&&!i.master).length,'','prod','queue')}${PR().stock?tile('Low stock',lowStock().length,'warn','go','stock','items below minimum'):''}</div>`+
   (appr.length?`<div class="panel" style="border-color:var(--warn)"><h3>Discount waiting for approval</h3>${appr.map(o=>`<div class="row between" style="margin-top:10px"><div><span class="mono">${o.ref}</span> · ${esc(partyName(o))} · <b>${o.approval.pct}%</b> requested by ${esc(o.approval.by)} · <span class="muted">${esc(o.approval.reason)}</span></div>${PR().approve?`<div class="row"><button class="btn sm pri" data-a="approve" data-o="${o.id}">Approve</button><button class="btn sm" data-a="reject" data-o="${o.id}">Reject</button></div>`:'<span class="chip warn">Waiting for Branch admin</span>'}</div>`).join('')}</div>`:'')+
   `<div class="grid g2" style="margin-top:16px">${itemList(over.sort((a,b)=>a.i.due-b.i.due),'Overdue — oldest first',true)}<div class="panel"><h3>Fittings today</h3>${fits.length?fits.map(o=>`<div class="row between" style="margin-top:10px"><div><b>${o.fitting.time}</b> · ${esc(partyName(o))}<div class="small muted">${esc(o.fitting.note)} · <span class="mono">${o.ref}</span></div></div><button class="btn sm" data-a="openOrder" data-o="${o.id}">Open</button></div>`).join(''):'<p class="muted">No fittings today.</p>'}
   <h3 style="margin-top:18px">Ready for collection</h3>${ready.length?ready.slice(0,6).map(({i,o})=>`<div class="row between" style="margin-top:8px"><div><span class="mono small">${itemRef(i)}</span> ${esc(i.label)}<div class="small muted">${esc(itemWho(i))}</div></div><button class="btn sm" data-a="openOrder" data-o="${o.id}">Open</button></div>`).join('')+(ready.length>6?`<p class="small muted">+ ${ready.length-6} more</p>`:''):'<p class="muted">Nothing waiting.</p>'}</div></div>`};
@@ -636,11 +762,11 @@ function wiz3(){const w=S.wiz;const c=w.custId?CU(w.custId):null;let body='';
     <div class="field"><span>Fabric from</span><select id="ls${k}" data-ch="lineSource" data-k="${k}"><option value="shop stock" ${l.source==='shop stock'?'selected':''}>Shop fabric</option><option value="customer fabric" ${l.source==='customer fabric'?'selected':''}>Customer's own fabric</option></select></div></div>
     <div class="field"><span>${l.source==='customer fabric'?'Customer fabric received (description and length)':'Shop fabric'}</span><input id="lf${k}" data-in="line" data-k="${k}" data-f="fabric" value="${esc(l.fabric)}" placeholder="${l.source==='customer fabric'?'e.g. Pink georgette, 2.5 m':'e.g. White cotton, 3.5 m'}"></div>
     <div><div class="row between"><span class="small muted" style="font-weight:600">Measurements (inches) ${l.measFrom?`· from ${esc(l.measFrom)}`:'· new'}</span></div><div class="mrow" style="margin-top:6px">${g.form.map(f=>`<label>${f}<input id="mm${k}${f.replace(/\W/g,'')}" data-in="meas" data-k="${k}" data-f="${f}" value="${l.meas[f]??''}" inputmode="decimal"></label>`).join('')}</div></div>
-    <div class="row small"><label class="row"><input type="checkbox" data-a="wizExtra" data-k="${k}" data-v="lining" ${l.lining?'checked':''}> Lining +25</label><label class="row"><input type="checkbox" data-a="wizExtra" data-k="${k}" data-v="embroidery" ${l.embroidery?'checked':''}> Embroidery +40</label><label class="row"><input type="checkbox" data-a="wizUrgent" data-k="${k}" ${l.urgent?'checked':''}> Urgent +${URGENT_PCT}%</label><label class="row">Style notes / sketch <input type="file" accept="image/*" style="max-width:190px"></label></div></div>`}).join('')+`<button class="btn" data-a="wizAdd">+ Another garment</button>`}
+    <div class="row small"><label class="row"><input type="checkbox" data-a="wizExtra" data-k="${k}" data-v="lining" ${l.lining?'checked':''}> Lining +25</label><label class="row"><input type="checkbox" data-a="wizExtra" data-k="${k}" data-v="embroidery" ${l.embroidery?'checked':''}> Embroidery +40</label><label class="row"><input type="checkbox" data-a="wizUrgent" data-k="${k}" ${l.urgent?'checked':''}> Urgent +${URGENT_PCT}%</label><label class="row">Reference photo / sketch <input type="file" accept="image/*" data-refphoto="${k}" style="max-width:190px"></label></div>${(l.photos||[]).length?`<div class="pstrip">${l.photos.map(ph=>`<span class="pthumb" style="--h:64px"><img src="${ph.src}" alt=""></span>`).join('')}</div>`:''}</div>`}).join('')+`<button class="btn" data-a="wizAdd">+ Another garment</button>`}
   else{const co=CO(w.compId);if(!w.lines.length)w.lines.push({gar:'ushirt',emps:co.employees.map(e=>e.id)});
     body=`<div class="note">Contract prices for ${esc(co.name)} are used automatically. Each employee gets their own garment item, linked to their measurements or size.</div>`+w.lines.map((l,k)=>`<div class="line-card"><div class="row between"><b>${GAR[l.gar].name}</b>${w.lines.length>1?`<button class="btn sm ghost" data-a="wizDel" data-k="${k}">Remove</button>`:''}</div>
     <div class="fgrid"><div class="field"><span>Garment</span><select id="ug${k}" data-ch="lineGarU" data-k="${k}">${Object.entries(GAR).filter(([,v])=>v.uniform).map(([gk,v])=>`<option value="${gk}" ${gk===l.gar?'selected':''}>${v.name} · ${co.contract[gk]||v.price}</option>`).join('')}</select></div><div class="field"><span>Employees</span><div class="row"><b>${l.emps.length}</b> of ${co.employees.length} <button class="btn sm" data-a="uAll" data-k="${k}">All</button><button class="btn sm" data-a="uNone" data-k="${k}">None</button></div></div></div>
-    <details><summary class="small" style="cursor:pointer">Choose employees (${co.employees.filter(e=>e.mode==='size').length} by size, ${co.employees.filter(e=>e.mode!=='size').length} measured)</summary><div class="tbl-wrap" style="max-height:260px;overflow:auto;margin-top:8px"><table>${co.employees.map(e=>`<tr><td><input type="checkbox" data-a="uEmp" data-k="${k}" data-e="${e.id}" ${l.emps.includes(e.id)?'checked':''}></td><td class="mono small">${e.id}</td><td>${esc(e.name)}</td><td>${e.dept}</td><td>${e.mode==='size'?'Size '+e.size:'Measured'}</td></tr>`).join('')}</table></div></details></div>`).join('')+`<button class="btn" data-a="wizAdd">+ Another garment type</button>`}
+    <details><summary class="small" style="cursor:pointer">Choose employees (${co.employees.filter(e=>e.mode==='size').length} by size, ${co.employees.filter(e=>e.mode!=='size').length} measured)</summary><div class="tbl-wrap" style="max-height:260px;overflow:auto;margin-top:8px"><table>${co.employees.map(e=>`<tr><td><input type="checkbox" data-a="uEmp" data-k="${k}" data-e="${e.id}" ${l.emps.includes(e.id)?'checked':''}></td><td class="mono small">${e.id}</td><td>${esc(e.name)}</td><td>${e.dept}</td><td>${e.mode==='size'?'Size '+e.size:'Measured'}</td></tr>`).join('')}</table></div></details><label class="row small">Reference photo / sample <input type="file" accept="image/*" data-refphoto="${k}" style="max-width:220px"></label>${(l.photos||[]).length?`<div class="pstrip">${l.photos.map(ph=>`<span class="pthumb" style="--h:64px"><img src="${ph.src}" alt=""></span>`).join('')}</div>`:''}</div>`).join('')+`<button class="btn" data-a="wizAdd">+ Another garment type</button>`}
   return `<div class="wiz-layout"><div class="stack">${body}</div>${wizSummary()}</div>${wizNav(w.lines.length&&w.lines.every(l=>w.type!=='alteration'||l.alts.length))}`}
 function newMtmLine(c){const w=S.wiz;const mem=c.members.find(m=>m.id===w.memberId)||c.members[0];const g=Object.keys(mem.meas).find(k=>!GAR[k].uniform)||'kandura';return mtmLineFor(mem,g)}
 function mtmLineFor(mem,g){const sets=mem.meas[g];return {gar:g,memberId:mem.id,qty:1,source:'shop stock',fabric:'',meas:sets?{...sets[0].values}:{},measFrom:sets?`saved set of ${fdl(sets[0].date)}`:'',urgent:false,lining:false,embroidery:false}}
@@ -651,7 +777,7 @@ function wizSummary(){const w=S.wiz;const t=wizTotals();const lim=PR().discount;
   <div class="totals" style="margin-top:10px"><span>Items</span><span>${t.qty}</span><span>Subtotal</span><span>${money(t.net)}</span>${t.disc?`<span>Discount</span><span>− ${money(t.disc)}</span>`:''}<span>VAT 5%</span><span>${money(t.vat)}</span><span class="g">Total</span><span class="g">${money(t.total)}</span></div></div>`}
 function wiz4(){const w=S.wiz;const t=wizTotals();const fittings=w.type==='mtm';
   return `<div class="wiz-layout"><div class="panel stack"><div class="fgrid"><div class="field"><span>Promised date</span><input id="wizProm" type="date" data-in="wizProm" value="${w.promised}"></div>
-  <div class="field"><span>Collect at branch</span><select id="wizColl" data-ch="wizColl">${BR.map(b=>`<option value="${b.id}" ${w.collect===b.id?'selected':''}>${b.name}</option>`).join('')}</select></div>
+  <div class="field"><span>Give to master</span><select id="wizMaster" data-ch="wizMaster"><option value="">Branch queue (any master can take it)</option>${mastersOf(S.branch!=='ALL'?S.branch:U().branches[0]).map(m=>`<option ${w.master===m?'selected':''}>${m}</option>`).join('')}</select></div><div class="field"><span>Collect at branch</span><select id="wizColl" data-ch="wizColl">${BR.map(b=>`<option value="${b.id}" ${w.collect===b.id?'selected':''}>${b.name}</option>`).join('')}</select></div>
   ${w.type==='uniform'?`<div class="field"><span>Customer PO number</span><input id="wizPO" data-in="wizPO" value="${esc(w.po)}" placeholder="e.g. ANM/PO/0456"></div><div class="field"><span>PO document</span><input type="file"></div>`:''}
   ${fittings?`<div class="field"><span>Fitting / trial appointment</span><input id="wizFit" type="datetime-local"></div>`:''}</div>
   <div class="fgrid"><div class="field"><span>Advance received (AED)</span><input id="wizAdv" type="number" min="0" data-in="wizAdv" value="${w.advance}" placeholder="${r2(t.total/2)}"></div><div class="field"><span>Paid by</span><select id="wizAdvM" data-ch="wizAdvM">${['Cash','Card','Bank transfer','Cheque'].map(m=>`<option ${w.advMethod===m?'selected':''}>${m}</option>`).join('')}</select></div></div>
@@ -693,55 +819,149 @@ VIEWS.order=()=>{const o=ORDBY(S.orderId);if(!o)return VIEWS.orders();if(!canSee
   `<div class="five"><div><div class="k">Ordered</div><div class="v num">${f.n}</div><div class="a num">${money(f.total)}</div></div><div><div class="k">Completed</div><div class="v num">${f.comp}</div><div class="a num">${money(f.compV)}</div></div><div><div class="k">Delivered</div><div class="v num">${f.del}</div><div class="a num">${money(f.delV)}</div></div><div><div class="k">Invoiced</div><div class="v num">${f.inv}</div><div class="a num">${money(f.invV)}</div></div><div><div class="k">Paid</div><div class="v num" style="font-size:1.05rem;padding-top:4px">${money(f.paid)}</div><div class="a num">Balance <b style="color:${f.balance>0?'var(--warn)':'var(--ok)'}">${money(f.balance)}</b>${f.advFree>0?`<br>Advance unused ${money(f.advFree)}`:''}</div></div></div>
   ${f.n-f.del>0&&f.del>0?`<div class="note" style="margin-top:12px">Partly delivered: <b>${f.n-f.del}</b> garment(s) still outstanding. The order stays open until everything is delivered and paid.</div>`:''}
   ${o.notes?`<div class="note warn" style="margin-top:12px"><b>Instructions:</b> ${esc(o.notes)}</div>`:''}
-  <div class="tabs" style="margin-top:16px">${[['items',`Garments (${o.items.length})`],['deliveries',`Deliveries (${dels.length})`],['billing',`Invoices & payments (${invs.length+pays.length})`],['log','Activity log']].map(([k,l])=>`<button class="${tab===k?'on':''}" data-a="ordTab" data-t="${k}">${l}</button>`).join('')}</div>`+
+  <div class="tabs" style="margin-top:16px">${[['items',`Garments (${o.items.length})`],['deliveries',`Deliveries (${dels.length})`],['billing',`Invoices & payments (${invs.length+pays.length})`],['msgs',`Messages (${(o.msgs||[]).length})`],['log','Activity log']].map(([k,l])=>`<button class="${tab===k?'on':''}" data-a="ordTab" data-t="${k}">${l}</button>`).join('')}</div>`+
   (tab==='items'?`<div class="row" style="margin-bottom:10px">${o.compId?`<div class="field"><span>Filter by employee</span><select id="ordEmp" data-ch="ordEmp"><option value="">All employees</option>${CO(o.compId).employees.map(e=>`<option value="${e.id}" ${S.ordEmp===e.id?'selected':''}>${e.id} · ${esc(e.name)}</option>`).join('')}</select></div>`:''}${pr.changeDate?`<button class="btn sm" data-a="changeDate" data-o="${o.id}">Change promised date</button>`:''}${pr.cancel?`<button class="btn sm danger" data-a="cancelItem" data-o="${o.id}">Cancel an item</button>`:''}<button class="btn sm" data-a="labels" data-o="${o.id}">Print labels</button></div>
    <div class="tbl-wrap"><table><tr><th>#</th><th>Garment</th><th>${o.compId?'Employee':'For'}</th><th>Stage</th><th>Master / tailor</th><th>Due</th><th class="r">Price</th></tr>${items.map(i=>`<tr class="click" data-a="item" data-i="${i.id}"><td class="mono small">${String(i.no).padStart(2,'0')}</td><td>${esc(i.label)}${i.source==='customer fabric'?' <span class="chip thr">customer fabric</span>':''}${i.size?` <span class="chip">size ${i.size}</span>`:''}</td><td>${esc(itemWho(i))}</td><td>${stageChip(i,o)}${i.deliveryId?`<div class="small muted">${DEL.find(d=>d.id===i.deliveryId).no}</div>`:''}</td><td class="small">${esc(i.master||'—')} / ${esc(i.tailor||'—')}</td><td class="num">${fd(i.due)}</td><td class="r num">${money(i.price)}</td></tr>`).join('')}</table></div>`:'')+
   (tab==='deliveries'?(dels.length?`<div class="tbl-wrap"><table><tr><th>Delivery note</th><th>Date</th><th>Items</th><th>Received by</th><th></th></tr>${dels.map(d=>`<tr><td class="mono">${d.no}</td><td>${fdl(d.date)}</td><td>${d.itemIds.length}</td><td>${esc(d.recipient)} ${d.signed?'<span class="chip ok">signed</span>':''}</td><td><button class="btn sm" data-a="viewDN" data-d="${d.id}">View</button></td></tr>`).join('')}</table></div>`:'<p class="muted">Nothing delivered yet.</p>'):'')+
   (tab==='billing'?`${invs.length?`<h3 style="margin-bottom:8px">Invoices</h3>`+billInvoices(invs,null,true):'<p class="muted">No invoices yet. Invoices can only be made for delivered garments.</p>'}<h3 style="margin:16px 0 8px">Payments & advances</h3>${pays.length?`<div class="tbl-wrap"><table><tr><th>Receipt</th><th>Date</th><th>Kind</th><th>Method</th><th class="r">Amount</th><th>Applied to</th></tr>${pays.map(p=>`<tr><td class="mono">${p.no}</td><td>${fdl(p.date)}</td><td>${p.kind==='advance'?'<span class="chip info">Advance</span>':'Payment'}</td><td>${p.method}${p.ref?' · '+esc(p.ref):''}</td><td class="r num">${money(p.amount)}</td><td class="small">${p.alloc.map(a=>INV.find(v=>v.id===a.invId).no+' '+money(a.amount)).join('<br>')||'<span class="muted">not yet applied</span>'}${r2(p.amount-sum(p.alloc.map(a=>a.amount)))>0&&p.alloc.length?`<br><span class="muted">${money(p.amount-sum(p.alloc.map(a=>a.amount)))} unused</span>`:''}</td></tr>`).join('')}</table></div>`:'<p class="muted">No payments yet.</p>'}`:'')+
-  (tab==='log'?`<ul class="hist" style="padding-left:18px">${o.log.slice().reverse().map(l=>`<li><span class="small muted">${fdl(l.at)} · ${esc(l.user)}</span><br>${l.ntf?'<span class="chip info">WhatsApp</span> ':''}${esc(l.text)}</li>`).join('')}</ul><p class="small muted">Customer messages (WhatsApp) are recorded from day one and switched on in phase 2.</p>`:'')};
+  (tab==='msgs'?msgsView(o):'')+
+  (tab==='log'?`<ul class="hist" style="padding-left:18px">${o.log.slice().reverse().map(l=>`<li><span class="small muted">${fdl(l.at)} · ${esc(l.user)}</span><br>${l.ntf?'<span class="chip info">WhatsApp</span> ':''}${esc(l.text)}</li>`).join('')}</ul>`:'')};
 
 /* ---- production ---- */
 VIEWS.production=()=>{const fl=FLOWS[S.prodFlow];let its=visItems().filter(({o,i})=>flowOf(o)===S.prodFlow&&!i.deliveryId);
   if(S.prodType)its=its.filter(({o})=>o.type===S.prodType);if(S.prodTailor)its=its.filter(({i})=>i.tailor===S.prodTailor||i.master===S.prodTailor);
-  if(S.prodDue==='today')its=its.filter(({i})=>dayDiff(i.due,TODAY)===0);if(S.prodDue==='overdue')its=its.filter(({i,o})=>isOverdue(i,o));if(S.prodDue==='week')its=its.filter(({i})=>dayDiff(i.due,TODAY)<=7);if(S.prodDue==='rework')its=its.filter(({i})=>i.reworkOpen);
+  if(S.prodDue==='today')its=its.filter(({i})=>dayDiff(i.due,TODAY)===0);if(S.prodDue==='overdue')its=its.filter(({i,o})=>isOverdue(i,o));if(S.prodDue==='week')its=its.filter(({i})=>dayDiff(i.due,TODAY)<=7);if(S.prodDue==='rework')its=its.filter(({i})=>i.reworkOpen);if(S.prodDue==='queue')its=its.filter(({i,o})=>['tocut','wait'].includes(SKEY(i,o))&&!i.master);
   const q=S.prodQ.toLowerCase();if(q)its=its.filter(({i})=>itemRef(i).toLowerCase().includes(q)||itemWho(i).toLowerCase().includes(q)||i.label.toLowerCase().includes(q));
-  const cols=fl.stages.slice(0,fl.done);const canBulk=S.role!=='tailor';
-  return head(myBranches().map(bn).join(', '),'Production board','Every garment moves on its own, so one order can have items at different stages.',`<div class="tabs" style="margin:0;border:0">${Object.entries(FLOWS).map(([k,v])=>`<button class="${S.prodFlow===k?'on':''}" data-a="prodFlow" data-f="${k}">${v.name}</button>`).join('')}</div>`)+
+  const cols=fl.stages.slice(0,fl.done);const canBulk=PR().move==='confirm';
+  return head(myBranches().map(bn).join(', '),'Production board','Masters and tailors update their own work from their phones. You can see everything here and step in when needed.',`<div class="tabs" style="margin:0;border:0">${Object.entries(FLOWS).map(([k,v])=>`<button class="${S.prodFlow===k?'on':''}" data-a="prodFlow" data-f="${k}">${v.name}</button>`).join('')}</div>`)+
   `<div class="row" style="margin-bottom:12px;align-items:flex-end"><div class="field" style="min-width:180px"><span>Search</span><input id="prodQ" data-in="prodQ" value="${esc(S.prodQ)}" placeholder="order, name, garment"></div>
   ${S.prodFlow==='mtm'?`<div class="field"><span>Order type</span><select id="pt" data-ch="prodType"><option value="">All</option><option value="mtm" ${S.prodType==='mtm'?'selected':''}>Made-to-measure</option><option value="uniform" ${S.prodType==='uniform'?'selected':''}>Uniform</option></select></div>`:''}
-  <div class="field"><span>Master / tailor</span><select id="ptl" data-ch="prodTailor"><option value="">Everyone</option>${MASTERS.concat(TAILORS).map(t=>`<option ${S.prodTailor===t?'selected':''}>${t}</option>`).join('')}</select></div>
-  <div class="field"><span>Due</span><select id="pd" data-ch="prodDue"><option value="">Any time</option>${[['today','Due today'],['overdue','Overdue'],['week','Next 7 days'],['rework','In rework']].map(([k,v])=>`<option value="${k}" ${S.prodDue===k?'selected':''}>${v}</option>`).join('')}</select></div>
+  <div class="field"><span>Master / tailor</span><select id="ptl" data-ch="prodTailor"><option value="">Everyone</option>${staffIn(myBranches()).map(t=>`<option ${S.prodTailor===t?'selected':''}>${t}</option>`).join('')}</select></div>
+  <div class="field"><span>Show</span><select id="pd" data-ch="prodDue"><option value="">All garments</option>${[['queue','In the branch queue'],['today','Due today'],['overdue','Overdue'],['week','Due in 7 days'],['rework','In rework']].map(([k,v])=>`<option value="${k}" ${S.prodDue===k?'selected':''}>${v}</option>`).join('')}</select></div>
   ${canBulk?`<button class="btn ${S.bulk?'pri':''}" data-a="bulk">${S.bulk?'Done selecting':'Select several'}</button>`:''}</div>
-  <div class="board">${cols.map((st,si)=>{const c=its.filter(({i})=>i.stage===si);const shown=c.slice(0,18);return `<div class="col"><h3><span>${st}</span><span class="chip">${c.length}</span></h3>${shown.map(({i,o})=>`<div class="card ${isOverdue(i,o)?'late':''} ${S.sel.has(i.id)?'sel':''}" data-a="${S.bulk?'selItem':'item'}" data-i="${i.id}">${S.bulk?`<input type="checkbox" class="cb" ${S.sel.has(i.id)?'checked':''} tabindex="-1" aria-label="select">`:''}<span class="ref">${itemRef(i)}</span><b>${esc(i.label)}</b><span class="small">${esc(itemWho(i))}${i.size?' · size '+i.size:''}</span><span class="small muted">${fl.assign[si]==='master'||si===2&&S.prodFlow==='mtm'?'✂ '+(i.master||'unassigned'):'🧵 '+(i.tailor||'unassigned')} · due ${fd(i.due)}</span>${i.reworkOpen?'<span class="chip warn">Rework: '+esc(i.reworkReason)+'</span>':''}${i.urgent?'<span class="chip bad">Urgent</span>':''}${i.transit?'<span class="chip info">In transit to '+bn(i.transit.to)+'</span>':''}</div>`).join('')}${c.length>18?`<div class="more">+ ${c.length-18} more — use the filters</div>`:''}</div>`}).join('')}</div>
-  ${S.bulk?`<div class="bulkbar"><b>${S.sel.size} selected</b><button class="btn sm" data-a="selCol">Select all shown in a stage…</button><select id="bkT"><option value="">Assign tailor…</option>${TAILORS.map(t=>`<option>${t}</option>`).join('')}</select><select id="bkM"><option value="">Assign master…</option>${MASTERS.map(t=>`<option>${t}</option>`).join('')}</select><select id="bkS"><option value="">Move to stage…</option>${fl.stages.slice(0,fl.done).map((s,k)=>`<option value="${k}">${s}</option>`).join('')}</select><button class="btn" data-a="bulkApply" ${S.sel.size?'':'disabled'}>Apply to ${S.sel.size}</button></div>`:''}
-  <p class="small muted" style="margin-top:10px">Stage names and order are settings for each type of work. Delivered garments leave the board.</p>`};
-function itemModal(id){const i=ITEM(id);const o=ORDBY(i.orderId);const fl=FLOWS[flowOf(o)];const next=i.stage<fl.ready?i.stage+1:null;const role=S.role;const mine=role!=='tailor'||i.tailor===U().staff||i.master===U().staff;
-  const who=fl.assign[i.stage]==='master'?i.master:fl.assign[i.stage]==='tailor'?i.tailor:null;
+  <div class="board">${cols.map((st,si)=>{const c=its.filter(({i})=>i.stage===si);const shown=c.slice(0,18);return `<div class="col"><h3><span>${st}</span><span class="chip ${STAGE_CLS[fl.keys[si]]}">${c.length}</span></h3>${shown.map(({i,o})=>`<div class="card k-${STAGE_CLS[fl.keys[si]]} ${isOverdue(i,o)?'late':''} ${S.sel.has(i.id)?'sel':''}" data-a="${S.bulk?'selItem':'item'}" data-i="${i.id}">${S.bulk?`<input type="checkbox" class="cb" ${S.sel.has(i.id)?'checked':''} tabindex="-1" aria-label="select">`:''}<span class="ref">${itemRef(i)}${allPhotos(i).length?' · 📷':''}</span><b>${esc(i.label)}</b><span class="small">${esc(itemWho(i))}${i.size?' · size '+i.size:''}</span><span class="small muted">${whoLine(i,o)} · due ${fd(i.due)}</span>${i.reworkOpen?'<span class="chip bad">Rework: '+esc(i.reworkReason)+'</span>':''}${i.urgent?'<span class="chip bad">Urgent</span>':''}${i.transit?'<span class="chip info">In transit to '+bn(i.transit.to)+'</span>':''}</div>`).join('')}${c.length>18?`<div class="more">+ ${c.length-18} more — use the filters</div>`:''}</div>`}).join('')}</div>
+  ${S.bulk?`<div class="bulkbar">${S.bulkAsk?`<b>Move ${S.sel.size} garment(s) to "${fl.stages[S.bulkAsk.s]}"${S.bulkAsk.t?', tailor '+S.bulkAsk.t:''}${S.bulkAsk.m?', master '+S.bulkAsk.m:''}?</b><button class="btn" data-a="bulkConfirm">Yes, move them</button><button class="btn" data-a="bulkCancel">Cancel</button>`:`<b>${S.sel.size} selected</b><button class="btn sm" data-a="selCol">Select all shown in a stage…</button><select id="bkT"><option value="">Assign tailor…</option>${staffIn(myBranches(),'tailor').map(t=>`<option>${t}</option>`).join('')}</select><select id="bkM"><option value="">Assign master…</option>${staffIn(myBranches(),'master').map(t=>`<option>${t}</option>`).join('')}</select><select id="bkS"><option value="">Move to stage…</option>${fl.stages.slice(0,fl.done).map((s,k)=>`<option value="${k}">${s}</option>`).join('')}</select><button class="btn" data-a="bulkApply" ${S.sel.size?'':'disabled'}>Apply to ${S.sel.size}</button>`}</div>`:''}
+  <p class="small muted" style="margin-top:10px">Moving a garment from here asks you to tap twice, so nothing changes by mistake. Delivered garments leave the board.</p>`};
+const stockName=id=>(STOCK_ITEMS.find(s=>s.id===id)||{}).name||id;
+function fabricLine(i){if(i.source==='customer fabric')return 'Customer fabric: '+(i.fabric||'');if(i.source==='customer garment')return 'Customer\'s own garment';if(i.cut&&i.cut.fab)return `${stockName(i.cut.fab)} · ${i.cut.m} m used`;return (i.fabric||stockName(DEF_FAB[i.gar]||'F01'))+(CONS[i.gar]?` · about ${CONS[i.gar]} m`:'')}
+function itemModal(id){const i=ITEM(id);const o=ORDBY(i.orderId);const fl=FLOWS[flowOf(o)];const k=fl.keys[i.stage];const pr=PR();const canMove=pr.move!=='none'&&!U().phone;const br=o.branch;
+  let act='';
+  if(canMove&&!i.deliveryId&&!i.cancelled){
+    if(k==='tocut')act=`<button class="btn pri" data-a="openCut" data-i="${i.id}">✂ Record cutting…</button><span class="small muted">Records the fabric used and takes it from ${bn(br)} stock.</span>`;
+    else if(k==='cut'||k==='wait')act=`<div class="field"><span>Tailor</span><select id="asgT">${tailorsOf(br).map(t=>`<option ${i.tailor===t?'selected':''}>${t}</option>`).join('')}</select></div>${askBtn('as'+i.id,'Assign and start stitching','btn pri',{do:'doAssign',i:i.id})}`;
+    else if(k==='stitch')act=askBtn('dn'+i.id,'Stitching done → Master check','btn pri',{do:'doDone',i:i.id});
+    else if(k==='check')act=askBtn('rd'+i.id,'Checked → Ready','btn pri',{do:'doReady',i:i.id})+`<button class="btn warn" data-a="openRework" data-i="${i.id}">Send back for rework…</button>`;}
   return modal(`<div><div class="eyebrow">${TYPES[o.type]} · ${esc(partyName(o))}</div><h2>${esc(i.label)}</h2><div class="mono small muted">${itemRef(i)}</div></div>`,
-  `<div class="row">${stageChip(i,o)}<span class="chip">Due ${fd(i.due)}</span>${i.rework?`<span class="chip warn">Reworked ${i.rework}×</span>`:''}<span class="chip">At: ${i.location==='customer'?'with customer':bn(i.location)}</span></div>
-  <div class="grid g2"><dl class="kv"><dt>${i.empId?'Employee':'For'}</dt><dd>${esc(itemWho(i))}${i.empId?' · '+i.empId:''}</dd><dt>Material</dt><dd>${esc(i.source)}${i.fabric?' — '+esc(i.fabric):''}</dd>${i.condition?`<dt>Condition at intake</dt><dd>${esc(i.condition)}</dd>`:''}<dt>Cutting master</dt><dd>${S.role==='tailor'?esc(i.master||'—'):`<select id="imM" data-ch="itemMaster" data-i="${i.id}"><option value="">Unassigned</option>${MASTERS.map(m=>`<option ${i.master===m?'selected':''}>${m}</option>`).join('')}</select>`}</dd><dt>Tailor</dt><dd>${S.role==='tailor'?esc(i.tailor||'—'):`<select id="imT" data-ch="itemTailor" data-i="${i.id}"><option value="">Unassigned</option>${TAILORS.map(m=>`<option ${i.tailor===m?'selected':''}>${m}</option>`).join('')}</select>`}</dd>${i.transit?`<dt>Moving</dt><dd>${bn(i.transit.from)} → ${bn(i.transit.to)} · sent ${fd(i.transit.sent)} by ${i.transit.by}</dd>`:''}</dl>
-  <div>${i.meas?`<b class="small">Measurements used for this garment</b><div class="mrow" style="margin-top:6px">${Object.entries(i.meas).map(([k,v])=>`<label>${k}<input value="${v}" disabled></label>`).join('')}</div><p class="small muted">A fixed copy: later changes to the customer's measurements do not change this garment.</p>`:i.size?`<b class="small">Size</b><p>Size chart: <b>${i.size}</b></p>`:''}${i.photo?`<img src="${i.photo}" alt="intake" style="max-height:120px;border-radius:8px">`:''}</div></div>
-  ${mine&&!i.deliveryId?`<div class="panel" style="background:var(--surface)"><h3>Update progress</h3>
-   ${next!=null?`<div class="row" style="margin-top:10px;align-items:flex-end"><div class="field"><span>Work done by</span><select id="doneBy">${['—'].concat(MASTERS,TAILORS).map(s=>`<option ${s===(who||'—')?'selected':''}>${s}</option>`).join('')}</select></div><button class="btn pri" data-a="advance" data-i="${i.id}">Move to "${fl.stages[next]}"</button></div><p class="small muted" style="margin-top:6px">Recorded as done by the person chosen above, entered by ${esc(U().name)}.</p>`:`<p class="small" style="margin-top:6px">Ready. Hand it over from <b>Deliveries</b>.</p>`}
-   ${i.stage>=fl.ready-1||i.stage>=3?`<div class="row" style="margin-top:12px;align-items:flex-end"><div class="field"><span>Send back for rework</span><select id="rwR">${REWORK_REASONS.map(r=>`<option>${r}</option>`).join('')}</select></div><div class="field"><span>Back to stage</span><select id="rwS">${fl.stages.slice(1,fl.ready).map((s,k)=>`<option value="${k+1}" ${k+1===(S.prodFlow==='alt'?2:3)?'selected':''}>${s}</option>`).join('')}</select></div><button class="btn warn" data-a="rework" data-i="${i.id}">Send to rework</button></div>`:''}
-   ${i.transit&&U().branches.includes(i.transit.to)?`<div class="row" style="margin-top:12px"><button class="btn" data-a="receiveTransit" data-i="${i.id}">Receive at ${bn(i.transit.to)}</button></div>`:''}
-   ${!i.transit&&i.stage>=fl.ready&&i.location!==o.collect&&S.role!=='tailor'?`<div class="row" style="margin-top:12px"><button class="btn" data-a="sendTransit" data-i="${i.id}">Send to ${bn(o.collect)} for collection</button></div>`:''}</div>`:''}
-  ${i.deliveryId&&S.role!=='tailor'?`<div class="row"><button class="btn warn" data-a="returnItem" data-i="${i.id}">Customer returned it for correction</button></div>`:''}
-  <div><h3 style="margin-bottom:8px">History</h3><div class="tbl-wrap"><table><tr><th>When</th><th>Stage</th><th>Work done by</th><th>Entered by</th></tr>${i.hist.slice().reverse().map(h=>`<tr><td class="small">${fdl(h.at)}</td><td>${typeof h.stage==='number'?fl.stages[h.stage]:'<span class="chip warn">'+h.stage+'</span>'}${h.note?'<div class="small muted">'+esc(h.note)+'</div>':''}</td><td>${esc(h.by)}</td><td class="small">${esc(h.entered)}</td></tr>`).join('')}</table></div></div>`,
+  `<div class="row">${stageChip(i,o)}${dueTag(i)}${i.rework?`<span class="chip warn">Reworked ${i.rework}×</span>`:''}<span class="chip">At: ${i.location==='customer'?'with customer':bn(i.location)}</span></div>
+  ${i.reworkOpen?`<div class="note bad small"><b>Rework:</b> ${esc(i.reworkReason)}</div>`:''}
+  ${allPhotos(i).length?`<div><b class="small">Reference photos</b>${photoStrip(i,96)}</div>`:''}
+  <div class="grid g2"><dl class="kv"><dt>${i.empId?'Employee':'For'}</dt><dd>${esc(itemWho(i))}${i.empId?' · '+i.empId:''}</dd><dt>Material</dt><dd>${esc(fabricLine(i))}</dd>${i.condition?`<dt>Condition at intake</dt><dd>${esc(i.condition)}</dd>`:''}
+  <dt>Master</dt><dd>${canMove?`<select id="imM" data-ch="itemMaster" data-i="${i.id}"><option value="">Branch queue</option>${mastersOf(br).map(m=>`<option ${i.master===m?'selected':''}>${m}</option>`).join('')}</select>`:esc(i.master||'Branch queue')}</dd>
+  <dt>Tailor</dt><dd>${canMove&&['stitch','check'].includes(k)?`<select id="imT" data-ch="itemTailor" data-i="${i.id}">${tailorsOf(br).map(m=>`<option ${i.tailor===m?'selected':''}>${m}</option>`).join('')}</select>`:esc(i.tailor||'—')}</dd>
+  ${i.cut?`<dt>Cutting</dt><dd>${i.cut.fab?`${i.cut.m} m ${esc(stockName(i.cut.fab))}`:'Customer fabric'} · by ${esc(i.cut.by)}, ${fd(i.cut.at)}</dd>`:''}
+  ${i.transit?`<dt>Moving</dt><dd>${bn(i.transit.from)} → ${bn(i.transit.to)} · sent ${fd(i.transit.sent)} by ${i.transit.by}</dd>`:''}</dl>
+  <div>${i.meas?`<b class="small">Measurements used for this garment</b><div class="mrow" style="margin-top:6px">${Object.entries(i.meas).map(([k2,v])=>`<label>${k2}<input value="${v}" disabled></label>`).join('')}</div><p class="small muted">A fixed copy: later changes to the customer's measurements do not change this garment.</p>`:i.size?`<b class="small">Size</b><p>Size chart: <b>${i.size}</b></p>`:''}</div></div>
+  ${act?`<div class="panel" style="background:var(--surface)"><h3>Next step</h3><div class="row" style="margin-top:10px;align-items:flex-end">${act}</div>${pr.move==='confirm'?'<p class="small muted" style="margin-top:6px">Normally done by the master or tailor on their phone. Moves from here need a second tap to confirm.</p>':''}</div>`:''}
+  ${i.transit&&U().branches.includes(i.transit.to)&&canMove?`<div class="row"><button class="btn" data-a="receiveTransit" data-i="${i.id}">Receive at ${bn(i.transit.to)}</button></div>`:''}
+  ${!i.transit&&k==='ready'&&i.location!==o.collect&&canMove?`<div class="row"><button class="btn" data-a="sendTransit" data-i="${i.id}">Send to ${bn(o.collect)} for collection</button></div>`:''}
+  ${i.deliveryId&&canMove?`<div class="row"><button class="btn warn" data-a="returnItem" data-i="${i.id}">Customer returned it for correction</button></div>`:''}
+  <div><h3 style="margin-bottom:8px">History</h3><div class="tbl-wrap"><table><tr><th>When</th><th>Stage</th><th>Done by</th><th>Entered by</th></tr>${i.hist.slice().reverse().map(h=>`<tr><td class="small">${fdl(h.at)}</td><td>${typeof h.stage==='number'?fl.stages[h.stage]:'<span class="chip warn">'+h.stage+'</span>'}${h.note?'<div class="small muted">'+esc(h.note)+'</div>':''}</td><td>${esc(h.by)}</td><td class="small">${esc(h.entered)}</td></tr>`).join('')}</table></div></div>`,
   `<button class="btn" data-a="openOrder" data-o="${o.id}">Open order</button><button class="btn" data-a="close">Close</button>`)}
 
 /* ---- scan ---- */
-VIEWS.scan=()=>{const sc=S.scan;const pool=visItems().filter(({i})=>!i.deliveryId).slice(0,60);const sample=[];const seen=new Set();for(const x of pool){if(sample.length>=8)break;const k=x.o.id+x.i.stage;if(!seen.has(k)){seen.add(k);sample.push(x)}}
-  const it=sc.item?ITEM(sc.item):null;const o=it?ORDBY(it.orderId):null;const fl=o?FLOWS[flowOf(o)]:null;
+function scanPool(){const pool=visItems().filter(({i})=>!i.deliveryId&&!i.cancelled);const out=[];const seen=new Set();for(const x of pool){const k=x.o.id+x.i.stage;if(!seen.has(k)){seen.add(k);out.push(x)}if(out.length>=8)break}return out}
+function scanResult(){const sc=S.scan;const ph=!!U().phone;
+  if(sc.multi)return sc.list.length?`<div class="small">${sc.list.map(id=>{const x=ITEM(id);return `<div class="row between"><span class="mono">${itemRef(x)}</span><span>${FLOWS[flowOf(ORDBY(x.orderId))].stages[x.stage]}</span></div>`}).join('')}</div>${PR().move==='confirm'?askBtn('scanAll','Move each to its next stage','bigbtn',{do:'scanMoveAll'}):`<button class="bigbtn" data-a="scanMoveAll">Move each to its next stage</button>`}`:'<p class="muted small">Scan labels one after another, then move them all in one step.</p>';
+  const it=sc.item?ITEM(sc.item):null;if(!it)return '<p class="muted small">Waiting for a label…</p>';const o=ORDBY(it.orderId);const na=nextAct(it);
+  return `<div class="mono small muted">${itemRef(it)}</div><b style="font-size:1.1rem">${esc(it.label)}</b><div class="small">${esc(itemWho(it))}</div><div class="row">${stageChip(it,o)}${dueTag(it)}</div>${photoStrip(it,60)}
+   ${na?(na.direct?`<button class="bigbtn" data-a="${na.do}" data-i="${it.id}">${na.label}</button>`:askBtn('sc'+it.id,na.label,'bigbtn'+(na.cls?' '+na.cls:''),{do:na.do,i:it.id})):`<p class="small">${it.deliveryId?'Already delivered.':'Ready for collection.'}</p>`}
+   <button class="btn" data-a="${ph?'job':'item'}" data-i="${it.id}">Open full details</button>`}
+VIEWS.scan=()=>{const sc=S.scan;const sample=scanPool();
+  const pile=`<div class="tagpile">${sample.map(({i,o})=>`<button data-a="doScan" data-i="${i.id}"><b>${itemRef(i)}</b><br>${esc(i.label).slice(0,22)}<br><span class="muted">${FLOWS[flowOf(o)].stages[i.stage]}</span></button>`).join('')||'<span class="muted small">No garments with you right now.</span>'}</div>`;
+  if(U().phone)return `<div class="ph-wrap">${phHead('Scan a label','Point the camera at the QR label on the garment')}<div class="cam" style="border-radius:16px"><div class="frame"></div></div>
+    <div class="row between"><b>${sc.multi?'Scan several':'Scan one'}</b><button class="btn sm" data-a="scanMode">${sc.multi?'Scan one':'Scan several'}</button></div><div class="panel stack">${scanResult()}</div>
+    <h3>Labels on your table</h3><p class="small muted" style="margin:0">Tap one to simulate pointing the camera at it.</p>${pile}</div>`;
   return head('Phone screen','Scan a garment label','Staff point their phone at the QR label. No special scanner needed. Below, tap a label to simulate a scan.')+
   `<div class="grid g2" style="align-items:start"><div class="phone"><div class="cam"><div class="frame"></div></div><div class="pbody">
-  <div class="row between"><b>${sc.multi?'Scan several':'Scan one'}</b><button class="btn sm" data-a="scanMode">${sc.multi?'Switch to single':'Scan several'}</button></div>
-  ${sc.multi?`${sc.list.length?`<div class="small">${sc.list.map(id=>{const x=ITEM(id);return `<div class="row between"><span class="mono">${itemRef(x)}</span><span>${FLOWS[flowOf(ORDBY(x.orderId))].stages[x.stage]}</span></div>`}).join('')}</div><button class="bigbtn" data-a="scanMoveAll">Move all ${sc.list.length} to "Ready"</button>`:'<p class="muted small">Scan labels one after another. Then move them all in one step.</p>'}`
-  :it?`<div class="mono small muted">${itemRef(it)}</div><b style="font-size:1.1rem">${esc(it.label)}</b><div class="small">${esc(itemWho(it))}</div><div>${stageChip(it,o)}</div>
-   ${it.stage<fl.ready?`<button class="bigbtn" data-a="scanAdvance">✓ ${fl.stages[it.stage]} done → ${fl.stages[it.stage+1]}</button>`:'<p class="small">Ready for collection.</p>'}<button class="btn" data-a="item" data-i="${it.id}">Open full details</button>`
-  :'<p class="muted small">Waiting for a label…</p>'}</div></div>
-  <div class="panel"><h3>Labels on the workbench</h3><p class="small muted">Tap one to simulate pointing the camera at it.</p><div class="tagpile" style="margin-top:10px">${sample.map(({i,o})=>`<button data-a="doScan" data-i="${i.id}"><b>${itemRef(i)}</b><br>${esc(i.label).slice(0,22)}<br><span class="muted">${FLOWS[flowOf(o)].stages[i.stage]}</span></button>`).join('')}</div>
+  <div class="row between"><b>${sc.multi?'Scan several':'Scan one'}</b><button class="btn sm" data-a="scanMode">${sc.multi?'Switch to single':'Scan several'}</button></div>${scanResult()}</div></div>
+  <div class="panel"><h3>Labels on the workbench</h3><p class="small muted">Tap one to simulate pointing the camera at it.</p><div style="margin-top:10px">${pile}</div>
   <h3 style="margin-top:18px">What a label looks like</h3><div class="labels" style="margin-top:8px">${sample[0]?qlabel(sample[0].i):''}</div></div></div>`};
+
+/* ---- master & tailor phone screens ---- */
+const branchItems=b=>ORD.filter(o=>o.branch===b).flatMap(o=>o.items.filter(i=>!i.cancelled&&!i.deliveryId).map(i=>({i,o})));
+function groupByOrder(list){const m=new Map();list.slice().sort((a,b)=>a.i.due-b.i.due).forEach(x=>{if(!m.has(x.o.id))m.set(x.o.id,{o:x.o,items:[]});m.get(x.o.id).items.push(x)});return [...m.values()]}
+function tailorLoad(b){const its=branchItems(b);return tailorsOf(b).map(name=>({name,n:its.filter(({i,o})=>i.tailor===name&&SKEY(i,o)==='stitch').length}))}
+function lowStock(){const out=[];STOCK_ITEMS.forEach(s=>myBranches().forEach(b=>{if(STOCK[s.id][b]!=null&&STOCK[s.id][b]<MIN[s.id])out.push({s,b})}));return out}
+function navCounts(){const u=U();if(!u.phone)return {};const its=branchItems(u.branches[0]);const me=u.staff;const n=f=>its.filter(f).length;
+  if(S.role==='master')return {'m-cut':n(({i,o})=>SKEY(i,o)==='tocut'&&i.master===me),'m-assign':n(({i,o})=>['cut','wait'].includes(SKEY(i,o))&&i.master===me),'m-check':n(({i,o})=>SKEY(i,o)==='check'&&i.master===me)};
+  return {'t-work':n(({i,o})=>SKEY(i,o)==='stitch'&&i.tailor===me)}}
+const phHead=(t,sub,right)=>`<div class="ph-top"><div><h1>${t}</h1>${sub?`<p>${sub}</p>`:''}</div>${right||''}</div>`;
+const LEGEND=`<div class="legend"><span class="lg c-info">To cut</span><span class="lg c-acc">Stitching</span><span class="lg c-warn">Check</span><span class="lg c-ok">Ready</span><span class="lg c-bad">Late / rework</span></div>`;
+function jobCard(i,o,op){op=op||{};const k=SKEY(i,o);const late=isOverdue(i,o);const ph=allPhotos(i)[0];const sel=S.sel.has(i.id);const cls=i.reworkOpen||late?'bad':(STAGE_CLS[k]||'');
+  return `<div class="job c-${cls} ${sel?'sel':''}"><div class="jtop">${op.tick?`<button class="tick ${sel?'on':''}" data-a="selTog" data-i="${i.id}" aria-label="Select">${sel?'✓':''}</button>`:''}
+   <div class="jmain" data-a="job" data-i="${i.id}"><div class="jttl">${esc(i.label)}${i.size?` <span class="chip">Size ${i.size}</span>`:''}</div><div class="jmeta">${esc(itemWho(i))} · <span class="mono">${itemRef(i)}</span></div>
+   <div class="jtags">${dueTag(i)}${i.reworkOpen?`<span class="chip bad">Rework: ${esc(i.reworkReason)}</span>`:''}${i.urgent?'<span class="chip bad">Urgent</span>':''}${op.extra||''}</div></div>
+   ${ph?`<button class="jthumb" data-a="photo" data-i="${i.id}" data-p="0" aria-label="Open photo"><img src="${ph.src}" alt=""></button>`:''}</div>${op.actions?`<div class="jact">${op.actions}</div>`:''}</div>`}
+function grpHead(g,btn){return `<div class="grp-h"><div><b>${esc(partyName(g.o))}</b><div class="small muted"><span class="mono">${g.o.ref}</span> · ${g.items.length} garment${g.items.length>1?'s':''}${g.o.notes?' · '+esc(g.o.notes):''}</div></div>${btn||''}</div>`}
+VIEWS['m-cut']=()=>{const me=U().staff,b=U().branches[0];const cut=branchItems(b).filter(({i,o})=>SKEY(i,o)==='tocut');const mine=cut.filter(({i})=>i.master===me),queue=cut.filter(({i})=>!i.master);
+  const tab=S.phTab==='queue'?'queue':'mine';const groups=groupByOrder(tab==='mine'?mine:queue);
+  return `<div class="ph-wrap">${phHead('To cut',`${bn(b)} · ${mine.length} for you · ${queue.length} in the branch queue`)}
+  <div class="seg"><button class="${tab==='mine'?'on':''}" data-a="phTab" data-t="mine">Mine (${mine.length})</button><button class="${tab==='queue'?'on':''}" data-a="phTab" data-t="queue">Branch queue (${queue.length})</button></div>
+  ${groups.map(g=>{const ids=g.items.map(x=>x.i.id).join(',');return `<div class="grp">${grpHead(g,tab==='mine'?(g.items.length>1?`<button class="btn sm" data-a="selGroup" data-ids="${ids}">Select all</button>`:''):`<button class="btn sm" data-a="takeGroup" data-ids="${ids}">Take ${g.items.length>1?'all':'it'}</button>`)}
+    ${g.items.map(({i,o})=>jobCard(i,o,{tick:tab==='mine',extra:`<span class="chip">${esc(fabricLine(i))}</span>`,actions:tab==='mine'?`<button class="bigbtn" data-a="openCut" data-i="${i.id}">✂ Record cutting</button>`:`<button class="bigbtn ghost" data-a="take" data-i="${i.id}">Take this job</button>`})).join('')}</div>`}).join('')||`<div class="empty">${tab==='mine'?'Nothing to cut. Look in the branch queue.':'The branch queue is empty.'}</div>`}
+  ${S.sel.size&&tab==='mine'?`<div class="ph-action"><span><b>${S.sel.size}</b> selected</span><button class="bigbtn" data-a="openCut" data-ids="${[...S.sel].join(',')}">✂ Cut ${S.sel.size} together</button></div>`:''}</div>`};
+VIEWS['m-assign']=()=>{const me=U().staff,b=U().branches[0];const list=branchItems(b).filter(({i,o})=>['cut','wait'].includes(SKEY(i,o))&&i.master===me);const groups=groupByOrder(list);
+  return `<div class="ph-wrap">${phHead('Assign tailors',`${list.length} garment${list.length===1?'':'s'} waiting for a tailor`)}
+  ${groups.map(g=>`<div class="grp">${grpHead(g,g.items.length>1?`<button class="btn sm" data-a="selGroup" data-ids="${g.items.map(x=>x.i.id).join(',')}">Select all</button>`:'')}${g.items.map(({i,o})=>jobCard(i,o,{tick:true,extra:SKEY(i,o)==='wait'?'<span class="chip info">Alteration</span>':`<span class="chip thr">Cut${i.cut&&i.cut.m?' · '+i.cut.m+' m':''}</span>`})).join('')}</div>`).join('')||'<div class="empty">Nothing waiting. Cut garments appear here.</div>'}
+  ${S.sel.size?`<div class="ph-action col"><div><b>${S.sel.size}</b> selected · tap a tailor</div><div class="tl-pick">${tailorLoad(b).map(t=>`<button class="tl ${t.n>=10?'bad':t.n>=5?'warn':'ok'}" data-a="assignTo" data-t="${t.name}"><b>${t.name}</b><span>${t.n} open job${t.n===1?'':'s'}</span></button>`).join('')}</div></div>`:'<p class="small muted" style="text-align:center">Tick garments, then tap a tailor. The numbers show how busy each tailor is.</p>'}</div>`};
+VIEWS['m-check']=()=>{const me=U().staff,b=U().branches[0];const list=branchItems(b).filter(({i,o})=>SKEY(i,o)==='check'&&i.master===me).sort((a,c)=>a.i.due-c.i.due);
+  return `<div class="ph-wrap">${phHead('Master check',`${list.length} garment${list.length===1?'':'s'} finished by tailors`)}
+  ${list.map(({i,o})=>jobCard(i,o,{extra:`<span class="chip acc">🧵 ${esc(i.tailor||'—')}</span>`,actions:`<div class="two"><button class="bigbtn ok" data-a="doReady" data-i="${i.id}">✓ Ready</button><button class="bigbtn bad" data-a="openRework" data-i="${i.id}">↺ Rework</button></div>`})).join('')||'<div class="empty">Nothing to check right now.</div>'}</div>`};
+VIEWS['m-team']=()=>{const b=U().branches[0];const its=branchItems(b);const wk=day(-7);
+  const doneBy=n=>ORD.filter(o=>o.branch===b).flatMap(o=>o.items).filter(i=>i.hist.some(h=>h.by===n&&typeof h.stage==='number'&&SKEY({...i,stage:h.stage})==='check'&&h.at>=wk)).length;
+  return `<div class="ph-wrap">${phHead('Team',`${bn(b)} tailors and fabric`)}
+  <div class="stack">${tailorsOf(b).map(t=>{const mine=its.filter(({i,o})=>i.tailor===t&&SKEY(i,o)==='stitch');const late=mine.filter(({i,o})=>isOverdue(i,o)).length;const rw=mine.filter(({i})=>i.reworkOpen).length;
+    return `<div class="job c-${late||rw?'bad':mine.length>=10?'warn':'ok'}"><div class="jtop"><div class="jmain"><div class="jttl">${t}</div><div class="jtags"><span class="chip acc">${mine.length} stitching</span>${late?`<span class="chip bad">${late} late</span>`:''}${rw?`<span class="chip bad">${rw} rework</span>`:''}<span class="chip">${doneBy(t)} done this week</span></div></div></div></div>`}).join('')}</div>
+  <h3>Fabric at ${bn(b)}</h3><div class="stack">${STOCK_ITEMS.filter(s=>s.cat==='Fabric').map(s=>{const q=STOCK[s.id][b];const low=q<MIN[s.id];const pct=Math.min(100,Math.round(100*q/(MIN[s.id]*3)));
+    return `<div class="panel" style="padding:12px"><div class="row between"><b>${esc(s.name)}</b><span class="${low?'chip bad':'chip ok'}">${q} m</span></div><div class="bar" style="margin-top:8px"><i style="width:${pct}%;background:var(--${low?'bad':'ok'})"></i></div><div class="small muted" style="margin-top:4px">Minimum ${MIN[s.id]} m${low?' · Branch admin has been alerted':''}</div></div>`}).join('')}</div></div>`};
+VIEWS['t-work']=()=>{const me=U().staff,b=U().branches[0];const all=branchItems(b).filter(({i})=>i.tailor===me);const list=all.filter(({i,o})=>SKEY(i,o)==='stitch').sort((a,c)=>(c.i.reworkOpen-a.i.reworkOpen)||(a.i.due-c.i.due));const late=list.filter(({i,o})=>isOverdue(i,o)).length;const wait=all.filter(({i,o})=>SKEY(i,o)==='check');
+  return `<div class="ph-wrap">${phHead('Hello '+me,`${list.length} job${list.length===1?'':'s'} to stitch${late?` · <b style="color:var(--bad)">${late} late</b>`:''}`)}${LEGEND}
+  ${list.map(({i,o})=>jobCard(i,o,{extra:i.meas?'':`<span class="chip">Size ${i.size||'—'}</span>`,actions:`<button class="bigbtn" data-a="doDone" data-i="${i.id}">✓ Stitching done</button>`})).join('')||'<div class="empty">No jobs right now. Your master will assign more.</div>'}
+  ${wait.length?`<details class="panel"><summary><b>${wait.length}</b> waiting for master check</summary><div class="stack" style="margin-top:10px">${wait.map(({i,o})=>`<div class="row between small"><span>${esc(i.label)} · ${esc(itemWho(i))}</span><span class="chip warn">With ${esc(i.master||'master')}</span></div>`).join('')}</div></details>`:''}</div>`};
+VIEWS['t-done']=()=>{const me=U().staff;const ev=ORD.flatMap(o=>o.items.flatMap(i=>i.hist.filter(h=>h.by===me&&typeof h.stage==='number'&&FLOWS[flowOf(o)].keys[h.stage]==='check').map(h=>({i,o,h}))));ev.sort((a,b)=>b.h.at-a.h.at);
+  const wk=ev.filter(x=>dayDiff(TODAY,x.h.at)<7),td=ev.filter(x=>dayDiff(TODAY,x.h.at)===0);const est=sum(wk.map(x=>PIECE[x.i.gar]||PIECE.alt));
+  return `<div class="ph-wrap">${phHead('Done','Garments you finished')}
+  <div class="tiles" style="grid-template-columns:repeat(3,1fr)"><div class="tile"><div class="k">Today</div><div class="v">${td.length}</div></div><div class="tile"><div class="k">7 days</div><div class="v">${wk.length}</div></div><div class="tile"><div class="k">Piece rate, 7 days</div><div class="v" style="font-size:1.3rem">AED ${est}</div><div class="s">estimate</div></div></div>
+  <div class="stack">${ev.slice(0,25).map(({i,o,h})=>`<div class="row between panel" style="padding:10px 12px"><div><b>${esc(i.label)}</b><div class="small muted">${esc(itemWho(i))} · ${fd(h.at)}</div></div>${stageChip(i,o)}</div>`).join('')||'<div class="empty">Nothing finished yet.</div>'}</div></div>`};
+function jobModal(id){const i=ITEM(id);const o=ORDBY(i.orderId);const k=SKEY(i,o);const ph=allPhotos(i);let act='';
+  if(S.role==='tailor'&&k==='stitch'&&i.tailor===U().staff)act=`<button class="bigbtn" data-a="doDone" data-i="${i.id}">✓ Stitching done</button>`;
+  if(S.role==='master'){if(k==='tocut')act=i.master?`<button class="bigbtn" data-a="openCut" data-i="${i.id}">✂ Record cutting</button>`:`<button class="bigbtn" data-a="take" data-i="${i.id}">Take this job</button>`;else if(k==='cut'||k==='wait')act=`<button class="bigbtn" data-a="openAssign" data-i="${i.id}">Assign a tailor</button>`;else if(k==='stitch')act=`<button class="bigbtn" data-a="doDone" data-i="${i.id}">✓ Stitching done</button>`;else if(k==='check')act=`<div class="two"><button class="bigbtn ok" data-a="doReady" data-i="${i.id}">✓ Ready</button><button class="bigbtn bad" data-a="openRework" data-i="${i.id}">↺ Rework</button></div>`}
+  const notes=[o.notes,i.condition].filter(Boolean).join(' · ');
+  return modal(`<div><div class="eyebrow">${TYPES[o.type]} · ${esc(partyName(o))}</div><h2>${esc(i.label)}</h2><div class="mono small muted">${itemRef(i)}</div></div>`,
+  `<div class="row">${stageChip(i,o)}${dueTag(i)}${i.urgent?'<span class="chip bad">Urgent</span>':''}</div>
+  ${i.reworkOpen?`<div class="note bad"><b>Rework:</b> ${esc(i.reworkReason)}</div>`:''}
+  ${ph.length?`<div class="jphotos">${ph.map((p2,n)=>`<button data-a="photo" data-i="${i.id}" data-p="${n}"><img src="${p2.src}" alt=""><span>${esc(p2.cap)}</span></button>`).join('')}</div>`:''}
+  ${notes?`<div class="note warn"><b>Instructions:</b> ${esc(notes)}</div>`:''}
+  <dl class="kv big"><dt>For</dt><dd>${esc(itemWho(i))}${i.size?' · Size '+i.size:''}</dd><dt>Fabric</dt><dd>${esc(fabricLine(i))}</dd><dt>Master</dt><dd>${esc(i.master||'Branch queue')}</dd><dt>Tailor</dt><dd>${esc(i.tailor||'—')}</dd></dl>
+  ${i.meas?`<div><b>Measurements (inches)</b><div class="mbig">${Object.entries(i.meas).map(([k2,v])=>`<div><span>${k2}</span><b>${v}</b></div>`).join('')}</div></div>`:''}`,
+  act?`<div style="width:100%">${act}</div>`:`<button class="btn" data-a="close">Close</button>`)}
+function cutModal(){const m=S.modal;const its=m.ids.map(ITEM);const o=ORDBY(its[0].orderId);const br=o.branch;const shop=its.filter(i=>i.source==='shop stock');const cust=its.filter(i=>i.source!=='shop stock');
+  const std=r2(sum(shop.map(i=>CONS[i.gar]||2)));if(m.m==null)m.m=std;if(!m.fab)m.fab=DEF_FAB[shop[0]&&shop[0].gar]||'F01';
+  const fabs=STOCK_ITEMS.filter(s=>s.cat==='Fabric');const have=STOCK[m.fab][br];const after=r2(have-(+m.m||0));const low=after<MIN[m.fab];
+  return modal(`<div><div class="eyebrow">Record cutting · ${bn(br)}</div><h2>${its.length} garment${its.length>1?'s':''}</h2></div>`,
+  `<div class="small">${its.slice(0,6).map(i=>`<div>${esc(i.label)} · ${esc(itemWho(i))} <span class="mono muted">${itemRef(i)}</span></div>`).join('')}${its.length>6?`<div class="muted">+ ${its.length-6} more</div>`:''}</div>
+  ${shop.length?`<div class="field"><span>Fabric taken from stock</span><select id="cutF" data-ch="cutF">${fabs.map(f=>`<option value="${f.id}" ${m.fab===f.id?'selected':''}>${esc(f.name)} · ${STOCK[f.id][br]} m</option>`).join('')}</select></div>
+  <div class="field"><span>Metres actually used (total)</span><input id="cutM" type="number" step="0.1" min="0" inputmode="decimal" data-in="cutM" value="${m.m}"></div>
+  <p class="small muted" style="margin:0">Standard for ${shop.length} garment${shop.length>1?'s':''}: ${std} m.${(+m.m||0)>std?` <b style="color:var(--warn)">${r2(m.m-std)} m over standard.</b>`:''}</p>
+  <div class="note ${low?'warn':'ok'}">${bn(br)} stock: <b>${have} m</b> → <b>${after} m</b> after cutting${low?`. Below the minimum of ${MIN[m.fab]} m, so the Branch admin is alerted.`:''}</div>`:''}
+  ${cust.length?`<div class="note">${cust.length} garment${cust.length>1?'s use':' uses'} the customer's own fabric. Nothing is taken from stock.</div>`:''}
+  ${U().staff?'':`<div class="field"><span>Cut by</span><select id="cutBy">${mastersOf(br).map(x=>`<option>${x}</option>`).join('')}</select></div>`}`,
+  `<button class="btn" data-a="close">Cancel</button><button class="btn pri" data-a="confirmCut">✂ Confirm cutting</button>`)}
+function assignModal(){const m=S.modal;const its=m.ids.map(ITEM);const o=ORDBY(its[0].orderId);
+  return modal('<h2>Assign a tailor</h2>',`<p class="small muted" style="margin:0">${esc(its[0].label)}${its.length>1?` + ${its.length-1} more`:''} · the numbers show each tailor's open jobs.</p><div class="tl-pick">${tailorLoad(o.branch).map(t=>`<button class="tl ${t.n>=10?'bad':t.n>=5?'warn':'ok'}" data-a="assignTo" data-t="${t.name}"><b>${t.name}</b><span>${t.n} open job${t.n===1?'':'s'}</span></button>`).join('')}</div>`,`<button class="btn" data-a="close">Cancel</button>`)}
+function photoModal(){const m=S.modal;const p2=allPhotos(ITEM(m.i))[m.p];return modal('<h2>Reference photo</h2>',`<img src="${p2.src}" alt="${esc(p2.cap)}" style="width:100%;max-height:70vh;object-fit:contain;border-radius:10px;background:#efe9dc"><p style="margin:0">${esc(p2.cap)}</p>`,m.prev?`<button class="btn pri" data-a="photoBack">Back</button>`:`<button class="btn" data-a="close">Close</button>`)}
+function msgsView(o){const ms=o.msgs||[];if(!ms.length)return '<p class="muted">No messages sent yet.</p>';const ct=contactOf(o);
+  return `<div class="wa"><div class="wa-h"><b>${esc(ct.name)}</b> <span class="small">${esc(ct.to)} · WhatsApp</span></div>${ms.map(m=>`<div class="wa-b"><div>${esc(m.text)}</div><span class="wa-t">${fd(m.at)} · ✓✓ ${m.status}</span></div>`).join('')}</div><p class="small muted" style="margin-top:8px">Sent automatically from the message templates in Setup.</p>`}
 
 /* ---- deliveries ---- */
 VIEWS.deliveries=()=>{const ready=visOrders().filter(o=>o.items.some(i=>isReady(i,o)));const dels=DEL.filter(d=>myBranches().includes(d.branch)||myBranches().includes(ORDBY(d.orderId).branch)).slice().reverse();
@@ -752,7 +972,7 @@ function deliveryModal(oid){const o=ORDBY(oid);const f=ofig(o);const fl=FLOWS[fl
   const groups={};o.items.filter(i=>!i.deliveryId&&!i.cancelled).forEach(i=>{const k=i.empId||'_';(groups[k]=groups[k]||[]).push(i)});
   const selVal=r2(sum([...m.sel].map(id=>itemNet(ITEM(id),o)))*1.05);
   return modal(`<div><div class="eyebrow">New delivery note</div><h2>${o.ref} · ${esc(partyName(o))}</h2></div>`,
-  `<p class="small muted">Tick the garments being handed over now. Garments still in work cannot be selected.</p><div class="tbl-wrap" style="max-height:340px;overflow:auto"><table>${Object.entries(groups).map(([k,arr])=>`${k!=='_'?`<tr><th colspan="3">${k} · ${esc(itemWho(arr[0]))}</th></tr>`:''}${arr.map(i=>{const ok=isReady(i,o)&&!i.transit;return `<tr><td><input type="checkbox" data-a="dlSel" data-i="${i.id}" ${ok?'':'disabled'} ${m.sel.has(i.id)?'checked':''} aria-label="select"></td><td>${esc(i.label)} <span class="mono small muted">${itemRef(i)}</span></td><td>${ok?'<span class="chip acc">Ready</span>':i.transit?'<span class="chip info">In transit, not at branch yet</span>':`<span class="chip">${fl.stages[i.stage]}</span>`}</td></tr>`}).join('')}`).join('')}</table></div>
+  `<p class="small muted">Tick the garments being handed over now. Garments still in work cannot be selected.</p><div class="tbl-wrap" style="max-height:340px;overflow:auto"><table>${Object.entries(groups).map(([k,arr])=>`${k!=='_'?`<tr><th colspan="3">${k} · ${esc(itemWho(arr[0]))}</th></tr>`:''}${arr.map(i=>{const ok=isReady(i,o)&&!i.transit;return `<tr><td><input type="checkbox" data-a="dlSel" data-i="${i.id}" ${ok?'':'disabled'} ${m.sel.has(i.id)?'checked':''} aria-label="select"></td><td><div class="row" style="flex-wrap:nowrap">${allPhotos(i)[0]?`<img src="${allPhotos(i)[0].src}" alt="" style="width:34px;height:40px;object-fit:cover;border-radius:5px;border:1px solid var(--line)">`:''}<span>${esc(i.label)} <span class="mono small muted">${itemRef(i)}</span></span></div></td><td>${ok?'<span class="chip acc">Ready</span>':i.transit?'<span class="chip info">In transit, not at branch yet</span>':`<span class="chip">${fl.stages[i.stage]}</span>`}</td></tr>`}).join('')}`).join('')}</table></div>
   <div class="fgrid"><div class="field"><span>Received by (name)</span><input id="dlName" value="${esc(m.name||(o.compId?CO(o.compId).contact.split(',')[0]:CU(o.custId).name))}"></div><div class="field"><span>Mobile</span><input id="dlMob" value="${esc(o.custId?CU(o.custId).mobile:'')}"></div></div>
   <div class="field"><span>Signature (on the phone screen)</span><canvas id="sig" class="sig" width="600" height="120"></canvas></div>
   ${o.items.some(i=>i.source==='customer fabric')?`<div class="field"><span>Leftover customer fabric returned</span><input id="dlRem" placeholder="e.g. 0.4 m pink georgette returned"></div>`:''}
@@ -766,7 +986,7 @@ function dnModal(did){const d=DEL.find(x=>x.id===did);const o=ORDBY(d.orderId);c
   <p class="small">Delivered now: ${its.length} · Still outstanding on this order: ${ofig(o).n-ofig(o).del}</p><p class="small">Received by: ${esc(d.recipient)} ${d.mobile} ${d.signed?'· <i>signed on screen</i>':''}</p></div>`,`<button class="btn" data-a="share">Share on WhatsApp</button><button class="btn" data-a="close">Close</button>`)}
 
 /* ---- billing ---- */
-function billInvoices(invs,title,compact){return `${title?`<h3 style="margin:12px 0 8px">${title}</h3>`:''}<div class="tbl-wrap"><table><tr><th>Invoice</th><th>Date</th>${compact?'':'<th>Customer</th>'}<th>Type</th><th class="r">Total</th><th class="r">Due</th><th></th></tr>${invs.slice().reverse().map(v=>{const o=ORDBY(v.orderId);return `<tr><td class="mono">${v.no}${v.status==='cancelled'?' <span class="chip bad">cancelled</span>':''}</td><td>${fd(v.date)}</td>${compact?'':`<td>${esc(partyName(o))}<div class="small muted mono">${o.ref}</div></td>`}<td>${v.type==='full'?'<span class="chip info">Tax invoice</span>':'<span class="chip">Simplified</span>'}</td><td class="r num">${money(v.total)}</td><td class="r num">${invDue(v)>0?`<b style="color:var(--warn)">${money(invDue(v))}</b>`:'<span class="chip ok">paid</span>'}</td><td><button class="btn sm" data-a="viewInv" data-v="${v.id}">View</button></td></tr>`}).join('')||'<tr><td colspan="7" class="empty">None.</td></tr>'}</table></div>`}
+function billInvoices(invs,title,compact){return `${title?`<h3 style="margin:12px 0 8px">${title}</h3>`:''}<div class="tbl-wrap"><table><tr><th>Invoice</th><th>Date</th>${compact?'':'<th>Customer</th>'}<th>Type</th><th class="r">Total</th><th class="r">Due</th><th></th></tr>${invs.slice().reverse().map(v=>{const o=ORDBY(v.orderId);return `<tr><td class="mono">${v.no}${v.status==='cancelled'?' <span class="chip bad">cancelled</span>':''}</td><td>${fd(v.date)}</td>${compact?'':`<td>${esc(partyName(o))}<div class="small muted mono">${o.ref}</div></td>`}<td>${v.type==='full'?'<span class="chip info">Tax invoice</span>':'<span class="chip">Simplified</span>'}${v.einv?' <span class="chip ok">e-invoice ✓</span>':''}</td><td class="r num">${money(v.total)}</td><td class="r num">${invDue(v)>0?`<b style="color:var(--warn)">${money(invDue(v))}</b>`:'<span class="chip ok">paid</span>'}</td><td><button class="btn sm" data-a="viewInv" data-v="${v.id}">View</button></td></tr>`}).join('')||'<tr><td colspan="7" class="empty">None.</td></tr>'}</table></div>`}
 VIEWS.billing=()=>{const pr=PR();const tab=S.billTab;const mine=v=>myBranches().includes(ORDBY(v.orderId).branch);const invs=INV.filter(mine);const pays=PAY.filter(p=>myBranches().includes(ORDBY(p.orderId).branch));const cns=CN.filter(c=>mine(INV.find(v=>v.id===c.invId)));
   const toInv=visOrders().filter(o=>o.items.some(i=>i.deliveryId&&!i.invoiceId));
   return head(myBranches().map(bn).join(', '),'Billing','UAE VAT at 5%. Invoice numbers run without gaps and are never deleted.',pr.payment?`<button class="btn pri" data-a="pickOrderPay">Record payment</button>`:'')+
@@ -792,7 +1012,7 @@ function invView(vid){const v=INV.find(x=>x.id===vid);const o=ORDBY(v.orderId);c
   <p class="small" style="margin-top:10px">Bill to: <b>${esc(partyName(o))}</b>${comp?`<br>${esc(comp.address)}<br>TRN ${comp.trn}`:''}<br>Order ${o.ref}${v.po?' · Customer PO '+esc(v.po):''}</p>
   <table><tr><th>Description</th><th class="r">Qty</th><th class="r">Rate</th><th class="r">Taxable</th><th class="r">VAT 5%</th><th class="r">Total</th></tr>${v.lines.map(l=>`<tr><td>${esc(l.desc)}</td><td class="r">${l.qty}</td><td class="r">${l.rate.toFixed(2)}</td><td class="r">${l.net.toFixed(2)}</td><td class="r">${l.vat.toFixed(2)}</td><td class="r">${l.total.toFixed(2)}</td></tr>`).join('')}</table>
   <div class="totals" style="margin:10px 0 0 auto;max-width:280px"><span>Taxable amount</span><span>${v.taxable.toFixed(2)}</span><span>VAT 5%</span><span>${v.vat.toFixed(2)}</span><span class="g">Total AED</span><span class="g">${v.total.toFixed(2)}</span><span>Advance / paid</span><span>${invPaid(v).toFixed(2)}</span><span><b>Balance due</b></span><span><b>${invDue(v).toFixed(2)}</b></span></div></div>
-  <p class="small muted">Layout and Arabic text will follow the format your accountant approves. Company invoices will also be sent electronically under the UAE e-invoicing rules (phase 2).</p>`,
+  <p class="small muted">Layout and Arabic text will follow the format your accountant approves.</p>${v.einv?`<div class="note ok small"><b>E-invoice ${v.einv.st}</b> · sent to the UAE e-invoicing network · reference <span class="mono">${v.einv.ref}</span></div>`:''}`,
   `${v.status!=='cancelled'?(pr.creditNote?`<button class="btn danger" data-a="cancelInv" data-v="${v.id}">Cancel with credit note</button>`:`<span class="small muted" style="margin-right:auto">Credit notes: Accountant or Management only</span>`):''}<button class="btn" data-a="share">Share on WhatsApp</button>${invDue(v)>0&&pr.payment?`<button class="btn pri" data-a="newPayment" data-o="${o.id}">Record payment</button>`:''}<button class="btn" data-a="close">Close</button>`)}
 function paymentModal(oid){const o=ORDBY(oid);const open=INV.filter(v=>v.orderId===o.id&&invDue(v)>0.009);const f=ofig(o);const due=open.length?sum(open.map(invDue)):Math.max(0,f.balance);
   return modal(`<div><div class="eyebrow">Record payment</div><h2>${o.ref} · ${esc(partyName(o))}</h2></div>`,
@@ -801,37 +1021,41 @@ function paymentModal(oid){const o=ORDBY(oid);const open=INV.filter(v=>v.orderId
   <div class="note small">One payment can also settle several invoices of the same customer.</div>`,
   `<button class="btn" data-a="close">Cancel</button><button class="btn pri" data-a="confirmPayment" data-o="${o.id}">Save payment</button>`)}
 
-/* ---- stock (phase 2) ---- */
-VIEWS.stock=()=>{const tab=S.stockTab;const pr=PR();const locs=S.role==='management'?LOC:LOC.filter(l=>myBranches().includes(l.id));
-  return head('Phase 2','Stock by branch','Fabric and accessories per branch, transfers between branches, and corrections with a reason.',`<span class="tag-ph">Phase 2</span>`)+
-  `<div class="note warn" style="margin-bottom:14px">Planned for phase 2, after orders and billing are running well. In phase 1 only the item list and prices are used.</div>
-  <div class="tabs">${[['levels','Stock levels'],['transfers','Transfers'],['history','Corrections']].map(([k,l])=>`<button class="${tab===k?'on':''}" data-a="stockTab" data-t="${k}">${l}</button>`).join('')}</div>`+
-  (tab==='levels'?`<div class="tbl-wrap"><table><tr><th>Item</th><th>Unit</th>${locs.map(l=>`<th class="r">${l.name}</th>`).join('')}${locs.length>1?'<th class="r">Total</th>':''}</tr>${STOCK_ITEMS.map(s=>`<tr><td>${s.name}<div class="small muted">${s.cat} · ${money(s.price)}/${s.unit}</div></td><td>${s.unit}</td>${locs.map(l=>{const q=STOCK[s.id][l.id];return `<td class="r num" style="${q<MIN[s.id]&&l.id!=='WS'?'color:var(--bad);font-weight:700':''}">${q}${q<MIN[s.id]&&l.id!=='WS'?' ↓':''}</td>`}).join('')}${locs.length>1?`<td class="r num"><b>${sum(locs.map(l=>STOCK[s.id][l.id]))}</b></td>`:''}</tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Red ↓ = below the minimum set for that branch. Customer garments and customer fabric never appear here.</p>${pr.stockAdjust?`<button class="btn" data-a="stockAdj" style="margin-top:8px">Record a stock count / correction</button>`:''}`:'')+
-  (tab==='transfers'?`<div class="tbl-wrap"><table><tr><th>Transfer</th><th>From → To</th><th>Item</th><th class="r">Sent</th><th class="r">Received</th><th>Status</th><th></th></tr>${TRF.map(t=>{const s=STOCK_ITEMS.find(x=>x.id===t.item);const diff=t.received!=null?r2(t.sent-t.received):0;return `<tr><td class="mono">${t.no}<div class="small muted">${fd(t.date)} · ${t.by}</div></td><td>${bn(t.from)} → ${bn(t.to)}</td><td>${s.name}</td><td class="r num">${t.sent} ${s.unit}</td><td class="r num">${t.received!=null?t.received+' '+s.unit:'—'}</td><td>${t.status==='in transit'?'<span class="chip info">Awaiting receipt</span>':diff?`<span class="chip warn">Short by ${diff} ${s.unit}</span>`:'<span class="chip ok">Received</span>'}</td><td>${t.status==='in transit'&&(S.role==='management'||U().branches.includes(t.to))?`<button class="btn sm" data-a="recvTrf" data-t="${t.id}">Receive</button>`:''}</td></tr>`}).join('')}</table></div><p class="small muted" style="margin-top:8px">Tip: switch to Management to receive the Karama → Deira transfer and enter a different quantity.</p>`:'')+
-  (tab==='history'?`<div class="tbl-wrap"><table><tr><th>When</th><th>Who</th><th>Item</th><th>Branch</th><th class="r">Change</th><th>Reason</th></tr>${STOCKLOG.slice().reverse().map(l=>`<tr><td>${fdl(l.at)}</td><td>${esc(l.user)}</td><td>${STOCK_ITEMS.find(s=>s.id===l.item).name}</td><td>${bn(l.loc)}</td><td class="r num">${l.change>0?'+':''}${l.change}</td><td>${esc(l.reason)}</td></tr>`).join('')}</table></div>`:'')};
+/* ---- stock ---- */
+VIEWS.stock=()=>{const tab=S.stockTab;const pr=PR();const locs=S.role==='management'?LOC:LOC.filter(l=>myBranches().includes(l.id));const low=lowStock();const KIND={cut:['Cutting','thr'],receive:['Received','ok'],transfer:['Transfer','info'],count:['Count','warn']};
+  return head(myBranches().map(bn).join(', '),'Stock by branch','Fabric and accessories per branch. When a master records cutting, the fabric is taken out automatically.',pr.stockAdjust?`<button class="btn" data-a="stockRecv">Receive stock</button><button class="btn" data-a="stockAdj">Count / correction</button>`:'')+
+  (low.length?`<div class="note warn" style="margin-bottom:14px"><b>Low stock:</b> ${low.map(x=>`${esc(x.s.name)} at ${bn(x.b)} (${STOCK[x.s.id][x.b]} ${x.s.unit})`).join(' · ')}</div>`:'')+
+  `<div class="tabs">${[['levels','Stock levels'],['movements','Movements'],['transfers','Transfers']].map(([k,l])=>`<button class="${tab===k?'on':''}" data-a="stockTab" data-t="${k}">${l}</button>`).join('')}</div>`+
+  (tab==='levels'?`<div class="tbl-wrap"><table><tr><th>Item</th><th>Unit</th>${locs.map(l=>`<th class="r">${l.name}</th>`).join('')}${locs.length>1?'<th class="r">Total</th>':''}</tr>${STOCK_ITEMS.map(s=>`<tr><td>${s.name}<div class="small muted">${s.cat} · ${money(s.price)}/${s.unit}</div></td><td>${s.unit}</td>${locs.map(l=>{const q=STOCK[s.id][l.id];return `<td class="r num" style="${q<MIN[s.id]?'color:var(--bad);font-weight:700':''}">${q}${q<MIN[s.id]?' ↓':''}</td>`}).join('')}${locs.length>1?`<td class="r num"><b>${r2(sum(locs.map(l=>STOCK[s.id][l.id])))}</b></td>`:''}</tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Red ↓ = below the minimum set for that branch. Customer garments and customer fabric never appear here.</p>`:'')+
+  (tab==='movements'?`<div class="tbl-wrap"><table><tr><th>When</th><th>What</th><th>Item</th><th>Branch</th><th class="r">Change</th><th>Details</th><th>By</th></tr>${STOCKLOG.filter(l=>locs.some(x=>x.id===l.loc)).slice().reverse().map(l=>{const s=STOCK_ITEMS.find(x=>x.id===l.item);const kd=KIND[l.kind]||['Change',''];return `<tr><td>${fdl(l.at)}</td><td><span class="chip ${kd[1]}">${kd[0]}</span></td><td>${s.name}</td><td>${bn(l.loc)}</td><td class="r num" style="color:var(--${l.change<0?'bad':'ok'});font-weight:600">${l.change>0?'+':''}${r2(l.change)} ${s.unit}</td><td class="small">${esc(l.reason)}</td><td>${esc(l.user)}</td></tr>`}).join('')}</table></div>`:'')+
+  (tab==='transfers'?`<div class="tbl-wrap"><table><tr><th>Transfer</th><th>From → To</th><th>Item</th><th class="r">Sent</th><th class="r">Received</th><th>Status</th><th></th></tr>${TRF.map(t=>{const s=STOCK_ITEMS.find(x=>x.id===t.item);const diff=t.received!=null?r2(t.sent-t.received):0;return `<tr><td class="mono">${t.no}<div class="small muted">${fd(t.date)} · ${t.by}</div></td><td>${bn(t.from)} → ${bn(t.to)}</td><td>${s.name}</td><td class="r num">${t.sent} ${s.unit}</td><td class="r num">${t.received!=null?t.received+' '+s.unit:'—'}</td><td>${t.status==='in transit'?'<span class="chip info">Awaiting receipt</span>':diff?`<span class="chip warn">Short by ${diff} ${s.unit}</span>`:'<span class="chip ok">Received</span>'}</td><td>${t.status==='in transit'&&(S.role==='management'||U().branches.includes(t.to))?`<button class="btn sm" data-a="recvTrf" data-t="${t.id}">Receive</button>`:''}</td></tr>`}).join('')}</table></div><p class="small muted" style="margin-top:8px">Tip: switch to Management to receive the Karama → Deira transfer and enter a different quantity.</p>`:'')};
 
 /* ---- reports ---- */
 VIEWS.reports=()=>{const tab=S.repTab;const os=visOrders();const its=os.flatMap(o=>o.items.filter(i=>!i.cancelled).map(i=>({i,o})));
   return head(myBranches().map(bn).join(', '),'Reports','Every report filters by branch and dates, and exports to Excel or PDF.',`<button class="btn" data-a="export">Export to Excel</button>`)+
   `<div class="tabs">${[['overdue','Overdue garments'],['prod','Tailor productivity'],['sales','Sales & VAT'],['out','Uniform orders outstanding'],['audit','Audit trail']].map(([k,l])=>`<button class="${tab===k?'on':''}" data-a="repTab" data-t="${k}">${l}</button>`).join('')}</div>`+
   (tab==='overdue'?(()=>{const ov=its.filter(x=>isOverdue(x.i,x.o)).sort((a,b)=>a.i.due-b.i.due);return `<div class="tbl-wrap"><table><tr><th>Garment</th><th>Branch</th><th>Customer</th><th>Stage</th><th>With</th><th class="r">Days late</th></tr>${ov.map(({i,o})=>`<tr class="click" data-a="item" data-i="${i.id}"><td><span class="mono small">${itemRef(i)}</span><br>${esc(i.label)}</td><td>${bn(o.branch)}</td><td>${esc(itemWho(i))}</td><td>${FLOWS[flowOf(o)].stages[i.stage]}</td><td>${esc(i.tailor||i.master||'—')}</td><td class="r"><b style="color:var(--bad)">${-dayDiff(i.due,TODAY)}</b></td></tr>`).join('')||'<tr><td colspan="6" class="empty">No overdue garments.</td></tr>'}</table></div>`})():'')+
-  (tab==='prod'?(()=>{const ppl=MASTERS.concat(TAILORS).map(p=>{const done=its.filter(({i})=>i.hist.some(h=>h.by===p&&typeof h.stage==='number'&&h.stage>0));const rw=its.filter(({i})=>i.rework&&(i.tailor===p));const byG={};done.forEach(({i})=>{byG[i.label.split(' — ')[0]]=(byG[i.label.split(' — ')[0]]||0)+1});return {p,n:done.length,rw:rw.length,byG,role:MASTERS.includes(p)?'Master':'Tailor'}});const mx=Math.max(...ppl.map(x=>x.n),1);
-    return `<div class="tbl-wrap"><table><tr><th>Name</th><th>Role</th><th>Garments worked on (this month)</th><th class="r">Reworked</th><th class="r">Rework rate</th><th>By garment</th></tr>${ppl.map(x=>`<tr><td><b>${x.p}</b></td><td>${x.role}</td><td><div class="row" style="flex-wrap:nowrap"><div class="bar" style="width:140px"><i style="width:${Math.round(100*x.n/mx)}%;background:var(--accent)"></i></div><span class="num">${x.n}</span></div></td><td class="r">${x.rw}</td><td class="r">${x.n?Math.round(100*x.rw/x.n):0}%</td><td class="small muted">${Object.entries(x.byG).slice(0,4).map(([g,n])=>g+' '+n).join(' · ')}</td></tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Counts only. Piece-rate earnings estimate is phase 2; payroll is not included.</p>`})():'')+
+  (tab==='prod'?(()=>{const wk=day(-30);const ppl=STAFF.filter(s=>myBranches().includes(s.b)).map(s=>{const ev=k=>its.filter(({i,o})=>i.hist.some(h=>h.by===s.n&&typeof h.stage==='number'&&FLOWS[flowOf(o)].keys[h.stage]===k&&h.at>=wk));
+      const stitched=ev('check'),cut=its.filter(({i})=>i.cut&&i.cut.by===s.n),checked=ev('ready');const rw=its.filter(({i})=>i.rework&&i.tailor===s.n).length;const earn=s.r==='tailor'?sum(stitched.map(({i})=>PIECE[i.gar]||PIECE.alt)):0;return {s,stitched:stitched.length,cut:cut.length,checked:checked.length,rw,earn}});const mx=Math.max(...ppl.map(x=>x.stitched+x.cut),1);
+    return `<div class="tbl-wrap"><table><tr><th>Name</th><th>Branch</th><th>Role</th><th>Work, last 30 days</th><th class="r">Cut</th><th class="r">Stitched</th><th class="r">Checked</th><th class="r">Reworked</th><th class="r">Piece-rate estimate</th></tr>${ppl.map(x=>`<tr><td><b>${x.s.n}</b></td><td>${bn(x.s.b)}</td><td>${x.s.r==='master'?'Master':'Tailor'}</td><td><div class="bar" style="width:120px"><i style="width:${Math.round(100*(x.stitched+x.cut)/mx)}%;background:var(--accent)"></i></div></td><td class="r">${x.cut||'—'}</td><td class="r">${x.stitched||'—'}</td><td class="r">${x.checked||'—'}</td><td class="r">${x.rw||'—'}</td><td class="r num">${x.s.r==='tailor'?money(x.earn):'—'}</td></tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Piece-rate estimate uses the rates in Setup. Payroll itself is not included.</p>`})():'')+
   (tab==='sales'?(()=>{const rows=BR.filter(b=>myBranches().includes(b.id)).map(b=>{const v=INV.filter(x=>x.status!=='cancelled'&&ORDBY(x.orderId).branch===b.id);const c=CN.filter(c=>ORDBY(INV.find(x=>x.id===c.invId).orderId).branch===b.id);return {b,n:v.length,tax:sum(v.map(x=>x.taxable)),vat:sum(v.map(x=>x.vat)),tot:sum(v.map(x=>x.total)),cn:sum(c.map(x=>x.amount))}});
     return `<div class="tbl-wrap"><table><tr><th>Branch</th><th class="r">Invoices</th><th class="r">Taxable</th><th class="r">VAT 5%</th><th class="r">Total</th><th class="r">Credit notes</th></tr>${rows.map(r=>`<tr><td>${r.b.name}</td><td class="r">${r.n}</td><td class="r num">${money(r.tax)}</td><td class="r num">${money(r.vat)}</td><td class="r num">${money(r.tot)}</td><td class="r num">${r.cn?money(r.cn):'—'}</td></tr>`).join('')}<tr><td><b>Total</b></td><td class="r"><b>${sum(rows.map(r=>r.n))}</b></td><td class="r num"><b>${money(sum(rows.map(r=>r.tax)))}</b></td><td class="r num"><b>${money(sum(rows.map(r=>r.vat)))}</b></td><td class="r num"><b>${money(sum(rows.map(r=>r.tot)))}</b></td><td class="r num"><b>${money(sum(rows.map(r=>r.cn)))}</b></td></tr></table></div><p class="small muted" style="margin-top:8px">The monthly export for the accountant matches these totals.</p>`})():'')+
   (tab==='out'?`<div class="tbl-wrap"><table><tr><th>Order</th><th>Company</th><th class="r">Ordered</th><th class="r">Delivered</th><th class="r">Outstanding</th><th class="r">Invoiced</th><th class="r">Paid</th></tr>${os.filter(o=>o.type==='uniform').map(o=>{const f=ofig(o);return `<tr class="click" data-a="openOrder" data-o="${o.id}"><td class="mono">${o.ref}</td><td>${esc(partyName(o))}</td><td class="r">${f.n}</td><td class="r">${f.del}</td><td class="r"><b>${f.n-f.del}</b></td><td class="r num">${money(f.invV)}</td><td class="r num">${money(f.paid)}</td></tr>`}).join('')||'<tr><td colspan="7" class="empty">No uniform orders in these branches.</td></tr>'}</table></div>`:'')+
   (tab==='audit'?`<div class="tbl-wrap"><table><tr><th>When</th><th>Who</th><th>What</th><th>Reference</th><th>Before</th><th>After</th></tr>${AUDIT.slice().reverse().map(a=>`<tr><td>${fdl(a.at)}</td><td>${esc(a.user)}</td><td>${esc(a.what)}</td><td class="mono small">${esc(a.ref)}</td><td>${esc(a.old)}</td><td>${esc(a.nw)}</td></tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Every change to money, prices, stock and permissions is recorded here and cannot be edited.</p>`:'')};
 
 /* ---- setup ---- */
-VIEWS.setup=()=>{const tab=S.setupTab;const PERM_ROWS=[['Create customers & orders','sales','branchadmin','management'],['Update garment progress','sales','branchadmin','management','tailor'],['Deliver to customer','sales','branchadmin','management'],['Issue invoices','sales','accountant','branchadmin','management'],['Record payments','sales','accountant','branchadmin','management'],['Issue credit notes / cancel invoices','accountant','management'],['Discount up to 10%','sales','branchadmin','management'],['Discount up to 25% & approve discounts','branchadmin','management'],['Change promised date','sales','branchadmin','management'],['Cancel order items','branchadmin','management'],['Stock & corrections (phase 2)','branchadmin','management'],['Reports','accountant','branchadmin','management'],['Users, prices, settings','management']];
-  const roles=['sales','accountant','branchadmin','management','tailor'];
+VIEWS.setup=()=>{const tab=S.setupTab;const roles=['sales','accountant','branchadmin','management','master','tailor'];
+  const PERM_ROWS=[['Create customers & orders','sales','branchadmin','management'],['Give orders to a master','sales','branchadmin','management'],['Take jobs from the branch queue','master'],['Cut and record fabric used','master'],['Assign tailors','master'],['Mark stitching done','tailor','master'],['Check work: ready or rework','master'],['Move workshop stages (tap twice to confirm)','sales','branchadmin','management'],['Deliver to customer','sales','branchadmin','management'],['Issue invoices','sales','accountant','branchadmin','management'],['Record payments','sales','accountant','branchadmin','management'],['Issue credit notes / cancel invoices','accountant','management'],['Discount up to 10%','sales','branchadmin','management'],['Discount up to 25% & approve discounts','branchadmin','management'],['Change promised date','sales','branchadmin','management'],['Cancel order items','branchadmin','management'],['Stock, transfers & corrections','branchadmin','management'],['Reports','accountant','branchadmin','management'],['Users, prices, settings','management']];
+  const WHO={mtm:['Sales or Branch admin give it to a master, or it waits in the branch queue','Master cuts and records the fabric used','Master assigns a tailor','Tailor taps "Stitching done"','Master checks: ready, or back to the tailor for rework','Handed over at the counter'],alt:['Sales or Branch admin give it to a master','Master assigns a tailor','Tailor taps "Done"','Master checks: ready, or back for rework','Handed over at the counter']};
   return head('Management only','Setup','Everything here is a setting, not hard-wired. Please check each list with us.')+
-  `<div class="tabs">${[['roles','Roles & permissions'],['stages','Workflow stages'],['forms','Measurement forms'],['prices','Price list'],['locations','Branches & locations']].map(([k,l])=>`<button class="${tab===k?'on':''}" data-a="setupTab" data-t="${k}">${l}</button>`).join('')}</div>`+
-  (tab==='roles'?`<div class="tbl-wrap"><table class="matrix"><tr><th>Can…</th>${roles.map(r=>`<th>${USERS[r].role.replace(' (optional login)','*')}</th>`).join('')}</tr>${PERM_ROWS.map(([l,...rs])=>`<tr><td>${l}</td>${roles.map(r=>`<td>${rs.includes(r)?'<span class="yes">✓</span>':'<span class="no">—</span>'}</td>`).join('')}</tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">* Tailors and masters only see their own garments, if they get a login. Each person has their own sign-in; admins use a second step (code on phone). Users only see the branches assigned to them.</p>`:'')+
-  (tab==='stages'?`<div class="grid g2">${Object.values(FLOWS).map(f=>`<div class="panel"><h3>${f.name}</h3><ol style="margin:10px 0 0;padding-left:20px">${f.stages.map((s,k)=>`<li>${s}${f.assign[k]?` <span class="chip">${f.assign[k]==='master'?'master assigned':'tailor assigned'}</span>`:''}</li>`).join('')}</ol><p class="small muted">Any garment can be sent to <b>Rework</b> from checking, fitting or after delivery.</p></div>`).join('')}</div>`:'')+
+  `<div class="tabs">${[['roles','Roles & permissions'],['stages','Workflow stages'],['staff','Masters & tailors'],['forms','Measurement forms'],['prices','Prices, fabric & piece rates'],['messages','Customer messages'],['locations','Branches']].map(([k,l])=>`<button class="${tab===k?'on':''}" data-a="setupTab" data-t="${k}">${l}</button>`).join('')}</div>`+
+  (tab==='roles'?`<div class="tbl-wrap"><table class="matrix"><tr><th>Can…</th>${roles.map(r=>`<th>${USERS[r].role}</th>`).join('')}</tr>${PERM_ROWS.map(([l,...rs])=>`<tr><td>${l}</td>${roles.map(r=>`<td>${rs.includes(r)?'<span class="yes">✓</span>':'<span class="no">—</span>'}</td>`).join('')}</tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Masters and tailors use their own phones and see only their own branch and their own jobs. Each person has their own sign-in; admins use a second step (code on phone).</p>`:'')+
+  (tab==='stages'?`<div class="grid g2">${Object.entries(FLOWS).map(([fk,f])=>`<div class="panel"><h3>${f.name}</h3><ol style="margin:10px 0 0;padding-left:20px">${f.stages.map((s,k)=>`<li style="margin-bottom:6px"><span class="chip ${STAGE_CLS[f.keys[k]]}">${s}</span><div class="small muted">${WHO[fk][k]}</div></li>`).join('')}</ol><p class="small muted">Any garment can go back for rework from the master check or after delivery.</p></div>`).join('')}</div>`:'')+
+  (tab==='staff'?`<div class="tbl-wrap"><table><tr><th>Branch</th><th>Masters</th><th>Tailors</th></tr>${BR.map(b=>`<tr><td>${b.name}</td><td>${mastersOf(b.id).join(', ')}</td><td>${tailorsOf(b.id).join(', ')}</td></tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Sample names. Each branch works independently with its own masters and tailors.</p>`:'')+
   (tab==='forms'?`<div class="grid g3">${Object.values(GAR).map(g=>`<div class="panel"><h3>${g.name}</h3><p class="small">${g.form.join(' · ')}</p></div>`).join('')}</div><p class="small muted" style="margin-top:8px">Please share your current paper forms so the fields and their order match exactly.</p>`:'')+
-  (tab==='prices'?`<div class="grid g2"><div class="tbl-wrap"><table><tr><th>Stitching</th><th class="r">Price (AED, ex VAT)</th></tr>${Object.values(GAR).map(g=>`<tr><td>${g.name}</td><td class="r num">${g.price.toFixed(2)}</td></tr>`).join('')}</table></div><div class="tbl-wrap"><table><tr><th>Alteration / extra</th><th class="r">Price</th></tr>${Object.values(ALT).concat(Object.values(EXTRAS)).map(g=>`<tr><td>${g.name}</td><td class="r num">${g.price.toFixed(2)}</td></tr>`).join('')}<tr><td>Urgent surcharge</td><td class="r">${URGENT_PCT}%</td></tr></table></div></div><p class="small muted" style="margin-top:8px">Sample prices. Branch-specific prices and company contract prices are supported.</p>`:'')+
-  (tab==='locations'?`<div class="tbl-wrap"><table><tr><th>Code</th><th>Name</th><th>Kind</th></tr>${LOC.map(l=>`<tr><td class="mono">${l.id}</td><td>${l.name}</td><td>${l.id==='WS'?'Workshop':'Branch'}</td></tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Branch names are placeholders for the demo.</p>`:'')};
+  (tab==='prices'?`<div class="grid g2"><div class="tbl-wrap"><table><tr><th>Stitching</th><th class="r">Price (AED, ex VAT)</th><th class="r">Standard fabric</th><th class="r">Piece rate</th></tr>${Object.entries(GAR).map(([k,g])=>`<tr><td>${g.name}</td><td class="r num">${g.price.toFixed(2)}</td><td class="r num">${CONS[k]} m</td><td class="r num">${PIECE[k].toFixed(2)}</td></tr>`).join('')}</table></div><div class="tbl-wrap"><table><tr><th>Alteration / extra</th><th class="r">Price</th></tr>${Object.values(ALT).concat(Object.values(EXTRAS)).map(g=>`<tr><td>${g.name}</td><td class="r num">${g.price.toFixed(2)}</td></tr>`).join('')}<tr><td>Urgent surcharge</td><td class="r">${URGENT_PCT}%</td></tr><tr><td>Piece rate per alteration</td><td class="r">${PIECE.alt.toFixed(2)}</td></tr></table></div></div><p class="small muted" style="margin-top:8px">Sample figures. Branch-specific prices and company contract prices are supported.</p>`:'')+
+  (tab==='messages'?`<div class="tbl-wrap"><table><tr><th>Message</th><th>Text sent on WhatsApp</th><th>On</th></tr>${Object.values(MSG_T).map(m=>`<tr><td><b>${m.label}</b></td><td class="small">${esc(m.t)}</td><td>${m.on?'<span class="chip ok">On</span>':'<span class="chip">Off</span>'}</td></tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Words in braces are filled in automatically. Every message sent is kept on the order.</p>`:'')+
+  (tab==='locations'?`<div class="tbl-wrap"><table><tr><th>Code</th><th>Name</th><th>Masters</th><th>Tailors</th></tr>${BR.map(l=>`<tr><td class="mono">${l.id}</td><td>${l.name}</td><td>${mastersOf(l.id).length}</td><td>${tailorsOf(l.id).length}</td></tr>`).join('')}</table></div><p class="small muted" style="margin-top:8px">Branch names are placeholders for the demo.</p>`:'')};
 
 /* ---- decisions summary ---- */
 VIEWS.review=()=>{const byS={};QS.forEach(q=>(byS[q.s]=byS[q.s]||[]).push(q));const r=S.review;const cnt=v=>QS.filter(q=>r[q.id]&&r[q.id].v===v).length;
@@ -844,9 +1068,9 @@ function qCard(q){const a=S.review[q.id]||{};return `<div class="q ${q.key?'key'
 /* ---------------- modal & drawer layer ---------------- */
 function modal(h,b,f){return `<div class="overlay" data-a="overlay"><div class="modal" role="dialog" aria-modal="true"><header>${h}<button class="x" data-a="close" aria-label="Close">×</button></header><div class="body">${b}</div>${f?`<footer>${f}</footer>`:''}</div></div>`}
 function renderLayer(){let h='';const m=S.modal;
-  if(m){if(m.k==='item')h=itemModal(m.id);else if(m.k==='delivery')h=deliveryModal(m.o);else if(m.k==='dn')h=dnModal(m.d);else if(m.k==='invoice')h=invoiceModal(m.o);else if(m.k==='inv')h=invView(m.v);else if(m.k==='pay')h=paymentModal(m.o);else if(m.k==='custom')h=m.html();}
-  if(S.drawer){const qs=QS.filter(q=>q.s===(S.route==='order'?'orders':S.route));const show=qs.length?qs:QS.filter(q=>q.key);
-    h+=`<aside class="drawer" aria-label="Questions for you"><header><div><div class="eyebrow">${SCREEN_NAMES[S.route==='order'?'orders':S.route]||''}</div><h2>Questions for you</h2></div><button class="x" data-a="drawer" aria-label="Close">×</button></header><div class="body">${qs.length?'':'<p class="small muted">No questions for this screen. Here are the ones to answer first:</p>'}${show.map(qCard).join('')}
+  if(m){if(m.k==='item')h=itemModal(m.id);else if(m.k==='delivery')h=deliveryModal(m.o);else if(m.k==='dn')h=dnModal(m.d);else if(m.k==='invoice')h=invoiceModal(m.o);else if(m.k==='inv')h=invView(m.v);else if(m.k==='pay')h=paymentModal(m.o);else if(m.k==='job')h=jobModal(m.id);else if(m.k==='cut')h=cutModal();else if(m.k==='assign')h=assignModal();else if(m.k==='photo')h=photoModal();else if(m.k==='custom')h=m.html();}
+  if(S.drawer){const rt=S.route==='order'?'orders':/^(m|t)-/.test(S.route)?'production':S.route;const qs=QS.filter(q=>q.s===rt);const show=qs.length?qs:QS.filter(q=>q.key);
+    h+=`<aside class="drawer" aria-label="Questions for you"><header><div><div class="eyebrow">${SCREEN_NAMES[rt]||''}</div><h2>Questions for you</h2></div><button class="x" data-a="drawer" aria-label="Close">×</button></header><div class="body">${qs.length?'':'<p class="small muted">No questions for this screen. Here are the ones to answer first:</p>'}${show.map(qCard).join('')}
     <div class="q"><p>Anything else on this screen?</p><textarea id="qn_free_${S.route}" data-qnote="free_${S.route}" placeholder="Missing field, wrong word, something you do differently…">${esc((S.review['free_'+S.route]||{}).n||'')}</textarea></div>
     <button class="btn" data-a="go" data-r="review">See all decisions</button></div></aside>`}
   document.getElementById('layer').innerHTML=h}
@@ -865,14 +1089,14 @@ function initSig(c){c.dataset.on=1;const x=c.getContext('2d');x.lineWidth=2.5;x.
   c.addEventListener('pointerdown',e=>{dn=true;const [a,b]=pos(e);x.beginPath();x.moveTo(a,b);c.setPointerCapture(e.pointerId);S.modal&&(S.modal.signed=true)});c.addEventListener('pointermove',e=>{if(!dn)return;const [a,b]=pos(e);x.lineTo(a,b);x.stroke()});c.addEventListener('pointerup',()=>dn=false)}
 
 /* ---------------- actions ---------------- */
-function go(r){if(r!=='review'&&r!=='order'&&!PR().nav.includes(r)&&r!=='home'){toast('Your role does not have this screen.');return}S.route=r;S.modal=null;S.custId=null;S.compId=null;if(r==='new-order'){S.justCreated=null}S.bulk=false;S.sel.clear();if(r==='orders')S.ordersTab='orders';try{history.replaceState(null,'','#'+(r==='order'?'orders':r))}catch(e){}render();window.scrollTo(0,0)}
+function go(r){if(r!=='review'&&r!=='order'&&!PR().nav.includes(r)&&r!=='home'){toast('Your role does not have this screen.');return}S.route=r;S.modal=null;S.custId=null;S.compId=null;if(r==='new-order'){S.justCreated=null}S.bulk=false;S.bulkAsk=null;S.ask=null;S.sel.clear();if(r==='orders')S.ordersTab='orders';try{history.replaceState(null,'','#'+(r==='order'?'orders':r))}catch(e){}render();window.scrollTo(0,0)}
 function openOrder(id){S.orderId=id;S.ordTab='items';S.ordEmp='';S.modal=null;S.route='order';render();window.scrollTo(0,0)}
 function custom(html){S.modal={k:'custom',html};render()}
 const A={
   go:d=>{if(d.r==='review'&&S.drawer)S.drawer=false;go(d.r)}, drawer:()=>{S.drawer=!S.drawer;render()}, hideWelcome:()=>{S.welcome=false;render()},
-  prod:d=>{S.prodDue=d.f==='today'?'today':d.f==='overdue'?'overdue':'';const ov=visItems().filter(({i,o})=>isOverdue(i,o));if(d.f==='overdue'&&ov.length)S.prodFlow=flowOf(ov[0].o);go('production')}, none:()=>{},
+  prod:d=>{S.prodDue=['today','overdue','queue'].includes(d.f)?d.f:'';const ov=visItems().filter(({i,o})=>isOverdue(i,o));if(d.f==='overdue'&&ov.length)S.prodFlow=flowOf(ov[0].o);go('production')}, none:()=>{},
   pickBranch:d=>{S.role='management';S.branch=d.b;render()},
-  close:()=>{S.modal=null;render()}, overlay:(d,el,e)=>{if(e.target===el){S.modal=null;render()}},
+  close:()=>{S.modal=S.modal&&S.modal.k==='photo'&&S.modal.prev?S.modal.prev:null;S.ask=null;render()}, overlay:(d,el,e)=>{if(e.target===el){S.modal=null;S.ask=null;render()}},
   openOrder:d=>openOrder(d.o), item:d=>{S.modal={k:'item',id:d.i};render()},
   custTab:d=>{S.custTab=d.t;render()}, openCust:d=>{S.custId=d.c;S.memberId=null;render()}, openComp:d=>{S.compId=d.c;render()}, back:()=>{S.custId=null;S.compId=null;render()}, member:d=>{S.memberId=d.m;render()},
   orderFor:d=>{wizInit(d.comp?{type:'uniform',compId:d.comp}:{custId:d.c});if(!d.comp){S.wiz.step=1}S.justCreated=null;S.route='new-order';render()},
@@ -906,12 +1130,12 @@ const A={
   wizCreate:()=>{const w=S.wiz;const t=wizTotals();const lim=PR().discount;const br=U().branches[0]==='WS'?'KAR':(S.branch!=='ALL'?S.branch:U().branches[0]);
     const o=newOrder({branch:br,collect:w.collect,type:w.type,custId:w.custId,memberId:w.memberId,compId:w.compId,po:w.po,created:TODAY,promised:new Date(w.promised+'T12:00'),notes:w.notes,discountPct:+w.discount||0,by:U().name,approval:+w.discount>lim?{pct:+w.discount,by:U().name,status:'pending',reason:'Requested at counter'}:null});
     const fitEl=document.getElementById('wizFit');if(fitEl&&fitEl.value){const fv=new Date(fitEl.value);o.fitting={at:fv,time:fv.toTimeString().slice(0,5),note:'Fitting'}}
-    w.lines.forEach(l=>{const p=wizPrice(l);if(w.type==='alteration')addItem(o,{alts:l.alts,label:(l.desc||'Garment')+' — '+l.alts.map(a=>ALT[a].name).join(' + '),condition:l.condition,photo:l.photo,price:p,urgent:l.urgent,memberId:w.memberId,stage:0});
-      else if(w.type==='mtm'){for(let k=0;k<(+l.qty||1);k++)addItem(o,{gar:l.gar,label:GAR[l.gar].name+(l.lining?' + lining':'')+(l.embroidery?' + embroidery':''),memberId:l.memberId,meas:{...l.meas},price:p,urgent:l.urgent,source:l.source,fabric:l.fabric,stage:Object.keys(l.meas).length?1:0});
+    w.lines.forEach(l=>{const p=wizPrice(l);if(w.type==='alteration')addItem(o,{alts:l.alts,label:(l.desc||'Garment')+' — '+l.alts.map(a=>ALT[a].name).join(' + '),condition:l.condition,photo:l.photo,price:p,urgent:l.urgent,memberId:w.memberId,stage:0,master:w.master||null});
+      else if(w.type==='mtm'){for(let k=0;k<(+l.qty||1);k++)addItem(o,{gar:l.gar,label:GAR[l.gar].name+(l.lining?' + lining':'')+(l.embroidery?' + embroidery':''),memberId:l.memberId,meas:{...l.meas},price:p,urgent:l.urgent,source:l.source,fabric:l.fabric,stage:0,master:w.master||null,photos:l.photos||[]});
         const mem=CU(w.custId).members.find(m=>m.id===l.memberId);const prev=mem.meas[l.gar]&&mem.meas[l.gar][0];if(!prev||JSON.stringify(prev.values)!==JSON.stringify(l.meas)){mem.meas[l.gar]=mem.meas[l.gar]||[];if(Object.keys(l.meas).length)mem.meas[l.gar].unshift({date:TODAY,by:U().name,values:{...l.meas}})}}
-      else{const co=CO(w.compId);l.emps.forEach(eid=>{const e=co.employees.find(x=>x.id===eid);addItem(o,{gar:l.gar,label:GAR[l.gar].name,empId:eid,size:e.size,meas:e.meas?{...e.meas[l.gar]}:null,price:p,stage:e.size?1:1})})}});
+      else{const co=CO(w.compId);l.emps.forEach(eid=>{const e=co.employees.find(x=>x.id===eid);addItem(o,{gar:l.gar,label:GAR[l.gar].name,empId:eid,size:e.size,meas:e.meas?{...e.meas[l.gar]}:null,price:p,stage:0,master:w.master||null,photos:l.photos||[],source:'shop stock'})})}});
     if(+w.advance>0)recordPayment(o,+w.advance,w.advMethod,'',TODAY,U().name,'advance');
-    o.log.push({at:TODAY,user:'System',text:'Notification event recorded: order confirmed',ntf:1});
+    
     S.justCreated=o.id;S.wiz=null;toast(`Order ${o.ref} created.`);render();window.scrollTo(0,0)},
   anotherOrder:()=>{S.justCreated=null;S.wiz=null;render()},
   labels:d=>{const o=ORDBY(d.o);custom(()=>modal(`<h2>Labels · ${o.ref}</h2>`,`<div class="labels">${o.items.slice(0,24).map(qlabel).join('')}</div>${o.items.length>24?`<p class="small muted">+ ${o.items.length-24} more</p>`:''}`,`<button class="btn" data-a="close">Close</button>`))},
@@ -928,19 +1152,20 @@ const A={
   selItem:d=>{S.sel.has(d.i)?S.sel.delete(d.i):S.sel.add(d.i);render()},
   selCol:()=>{const fl=FLOWS[S.prodFlow];custom(()=>modal('<h2>Select a whole stage</h2>',`<div class="stack">${fl.stages.slice(0,fl.done).map((s,k)=>`<button class="btn" data-a="selStage" data-s="${k}">${s}</button>`).join('')}</div>`,`<button class="btn" data-a="close">Close</button>`))},
   selStage:d=>{visItems().filter(({o,i})=>flowOf(o)===S.prodFlow&&!i.deliveryId&&i.stage===+d.s&&(!S.prodType||o.type===S.prodType)&&(!S.prodTailor||i.tailor===S.prodTailor||i.master===S.prodTailor)).forEach(({i})=>S.sel.add(i.id));S.modal=null;render()},
-  bulkApply:()=>{const t=document.getElementById('bkT').value,m=document.getElementById('bkM').value,s=document.getElementById('bkS').value;let n=0;S.sel.forEach(id=>{const i=ITEM(id);if(t)i.tailor=t;if(m)i.master=m;if(s!==''){i.stage=+s;i.hist.push({stage:+s,at:TODAY,by:t||m||'—',entered:U().name})}n++});toast(`Updated ${n} garments in one step.`);S.sel.clear();S.bulk=false;render()},
-  advance:d=>{const i=ITEM(d.i);const o=ORDBY(i.orderId);const fl=FLOWS[flowOf(o)];const by=document.getElementById('doneBy').value;i.stage++;i.reworkOpen=false;i.hist.push({stage:i.stage,at:TODAY,by,entered:U().name});
-    if(i.stage===fl.ready){o.log.push({at:TODAY,user:'System',text:`Notification event recorded: ready for collection (${itemRef(i)})`,ntf:1})}toast(`Moved to "${fl.stages[i.stage]}". Done by ${by}, entered by ${U().name}.`);render()},
-  rework:d=>{const i=ITEM(d.i);const r=document.getElementById('rwR').value;const s=+document.getElementById('rwS').value;i.rework++;i.reworkOpen=true;i.reworkReason=r;i.stage=s;i.hist.push({stage:'Rework',at:TODAY,by:'—',entered:U().name,note:r});toast('Sent to rework. Rework count: '+i.rework);render()},
+  bulkApply:()=>{const t=document.getElementById('bkT').value,m=document.getElementById('bkM').value,s=document.getElementById('bkS').value;if(s!==''){S.bulkAsk={t,m,s:+s};render();return}let n=0;S.sel.forEach(id=>{const i=ITEM(id);if(t)i.tailor=t;if(m)i.master=m;n++});toast(`Updated ${n} garments.`);S.sel.clear();S.bulk=false;render()},
+  bulkConfirm:()=>{const {t,m,s}=S.bulkAsk;let n=0;S.sel.forEach(id=>{const i=ITEM(id);if(t)i.tailor=t;if(m)i.master=m;i.stage=s;i.hist.push({stage:s,at:TODAY,by:t||m||'—',entered:U().name});n++});S.bulkAsk=null;toast(`Moved ${n} garments in one step.`);S.sel.clear();S.bulk=false;render()},
+  bulkCancel:()=>{S.bulkAsk=null;render()},
+  advance:()=>{},
+  rework:()=>{},
   itemMaster:(d,el)=>{ITEM(d.i).master=el.value||null;toast('Master assigned.');render()}, itemTailor:(d,el)=>{ITEM(d.i).tailor=el.value||null;toast('Tailor assigned.');render()},
   sendTransit:d=>{const i=ITEM(d.i);const o=ORDBY(i.orderId);i.transit={from:i.location,to:o.collect,sent:TODAY,by:U().name,tr:'GT-'+(45+Math.floor(Math.random()*50))};toast(`Sent to ${bn(o.collect)}. Shows "in transit" until received.`);render()},
   receiveTransit:d=>{const i=ITEM(d.i);i.location=i.transit.to;i.hist.push({stage:'Received at '+bn(i.transit.to),at:TODAY,by:'—',entered:U().name});i.transit=null;toast('Received at branch.');render()},
-  returnItem:d=>{const i=ITEM(d.i);const o=ORDBY(i.orderId);const dn=DEL.find(x=>x.id===i.deliveryId);i.deliveryId=null;i.stage=3;i.rework++;i.reworkOpen=true;i.reworkReason='Returned after delivery ('+dn.no+')';i.location=o.collect;i.hist.push({stage:'Rework',at:TODAY,by:'—',entered:U().name,note:'Returned by customer, original delivery '+dn.no});o.log.push({at:TODAY,user:U().name,text:`${itemRef(i)} returned for correction, linked to ${dn.no}`});toast('Back in production as rework, linked to '+dn.no);render()},
+  returnItem:d=>{const i=ITEM(d.i);const o=ORDBY(i.orderId);const dn=DEL.find(x=>x.id===i.deliveryId);i.deliveryId=null;i.stage=SIDX(o,'stitch');i.rework++;i.reworkOpen=true;i.reworkReason='Returned after delivery ('+dn.no+')';i.location=o.collect;i.hist.push({stage:'Rework',at:TODAY,by:'—',entered:U().name,note:'Returned by customer, original delivery '+dn.no});o.log.push({at:TODAY,user:U().name,text:`${itemRef(i)} returned for correction, linked to ${dn.no}`});toast('Back in production as rework, linked to '+dn.no);render()},
   /* scan */
   doScan:d=>{const sc=S.scan;if(sc.multi){if(!sc.list.includes(d.i))sc.list.push(d.i)}else sc.item=d.i;render()},
   scanMode:()=>{S.scan={item:null,multi:!S.scan.multi,list:[]};render()},
-  scanAdvance:()=>{const i=ITEM(S.scan.item);const o=ORDBY(i.orderId);const fl=FLOWS[flowOf(o)];const a=fl.assign[i.stage];i.stage++;i.hist.push({stage:i.stage,at:TODAY,by:a==='master'?i.master||'—':a==='tailor'?i.tailor||'—':'—',entered:U().name});toast('Updated: '+fl.stages[i.stage]);render()},
-  scanMoveAll:()=>{S.scan.list.forEach(id=>{const i=ITEM(id);const fl=FLOWS[flowOf(ORDBY(i.orderId))];i.stage=fl.ready;i.hist.push({stage:fl.ready,at:TODAY,by:'—',entered:U().name})});toast(`${S.scan.list.length} garments moved to Ready.`);S.scan.list=[];render()},
+  scanAdvance:()=>{},
+  scanMoveAll:()=>{let n=0,s=0;S.scan.list.forEach(id=>{const i=ITEM(id);const o=ORDBY(i.orderId);const k=SKEY(i,o);if(k==='stitch'){i.stage=SIDX(o,'check');i.hist.push({stage:i.stage,at:TODAY,by:U().staff||i.tailor||'—',entered:U().name});n++}else if(k==='check'&&S.role!=='tailor'){i.stage=SIDX(o,'ready');i.reworkOpen=false;i.hist.push({stage:i.stage,at:TODAY,by:U().staff||i.master||'—',entered:U().name});notify(o,'ready',TODAY);n++}else s++});toast(`${n} garment(s) moved on${s?`; ${s} skipped (they need cutting or a tailor first)`:''}.`);S.scan.list=[];render()},
   /* deliveries */
   newDelivery:d=>{S.modal={k:'delivery',o:d.o};render()},
   dlSel:(d,el)=>{const m=S.modal;m.name=document.getElementById('dlName').value;el.checked?m.sel.add(d.i):m.sel.delete(d.i);render()},
@@ -961,9 +1186,9 @@ const A={
   /* stock */
   stockTab:d=>{S.stockTab=d.t;render()},
   recvTrf:d=>{const t=TRF.find(x=>x.id===d.t);const s=STOCK_ITEMS.find(x=>x.id===t.item);custom(()=>modal(`<h2>Receive ${t.no}</h2>`,`<p>${t.sent} ${s.unit} of ${s.name} sent from ${bn(t.from)}.</p><div class="field"><span>Quantity actually received (${s.unit})</span><input id="rqQ" type="number" value="${t.sent-2}"></div>`,`<button class="btn" data-a="close">Cancel</button><button class="btn pri" data-a="doRecv" data-t="${t.id}">Confirm receipt</button>`))},
-  doRecv:d=>{const t=TRF.find(x=>x.id===d.t);t.received=+document.getElementById('rqQ').value;t.status='received';STOCK[t.item][t.to]+=t.received;S.modal=null;toast(t.received<t.sent?`Difference of ${t.sent-t.received} flagged.`:'Received.');render()},
+  doRecv:d=>{const t=TRF.find(x=>x.id===d.t);t.received=+document.getElementById('rqQ').value;t.status='received';STOCK[t.item][t.to]+=t.received;STOCKLOG.push({at:TODAY,user:U().name,item:t.item,loc:t.to,change:t.received,reason:`Transfer ${t.no} from ${bn(t.from)}`+(t.received<t.sent?` · short by ${t.sent-t.received}`:''),kind:'transfer'});S.modal=null;toast(t.received<t.sent?`Difference of ${t.sent-t.received} flagged.`:'Received.');render()},
   stockAdj:()=>custom(()=>modal('<h2>Stock count / correction</h2>',`<div class="fgrid"><div class="field"><span>Item</span><select id="saI">${STOCK_ITEMS.map(s=>`<option value="${s.id}">${s.name}</option>`).join('')}</select></div><div class="field"><span>Branch</span><select id="saB">${LOC.filter(l=>U().branches.includes(l.id)).map(l=>`<option value="${l.id}">${l.name}</option>`).join('')}</select></div><div class="field"><span>Change (+/−)</span><input id="saC" type="number" value="-2"></div><div class="field"><span>Reason (required)</span><input id="saR" placeholder="e.g. physical count"></div></div>`,`<button class="btn" data-a="close">Cancel</button><button class="btn pri" data-a="doAdj">Save</button>`)),
-  doAdj:()=>{const r=document.getElementById('saR').value.trim();if(!r){toast('A reason is required.');return}const it=document.getElementById('saI').value,b=document.getElementById('saB').value,c=+document.getElementById('saC').value;STOCK[it][b]+=c;STOCKLOG.push({at:TODAY,user:U().name,item:it,loc:b,change:c,reason:r});AUDIT.push({at:TODAY,user:U().name,what:'Stock correction',ref:STOCK_ITEMS.find(s=>s.id===it).name+' @ '+bn(b),old:String(STOCK[it][b]-c),nw:String(STOCK[it][b])});S.modal=null;S.stockTab='history';toast('Correction saved with reason.');render()},
+  doAdj:()=>{const r=document.getElementById('saR').value.trim();if(!r){toast('A reason is required.');return}const it=document.getElementById('saI').value,b=document.getElementById('saB').value,c=+document.getElementById('saC').value;STOCK[it][b]+=c;STOCKLOG.push({at:TODAY,user:U().name,item:it,loc:b,change:c,reason:r,kind:'count'});AUDIT.push({at:TODAY,user:U().name,what:'Stock correction',ref:STOCK_ITEMS.find(s=>s.id===it).name+' @ '+bn(b),old:String(STOCK[it][b]-c),nw:String(STOCK[it][b])});S.modal=null;S.stockTab='movements';toast('Correction saved with reason.');render()},
   repTab:d=>{S.repTab=d.t;render()}, setupTab:d=>{S.setupTab=d.t;render()},
   export:()=>toast('In the real system this downloads an Excel file.'), share:()=>toast('In the real system this opens WhatsApp with the PDF attached.'),
   verdict:d=>{const a=S.review[d.q]=S.review[d.q]||{};a.v=a.v===d.v?'':d.v;saveAnswer(d.q);render()},
@@ -971,21 +1196,50 @@ const A={
     const txt=lines.join('\n');const fallback=()=>custom(()=>modal('<h2>Copy the decisions</h2>',`<textarea id="cpT" style="width:100%;min-height:300px;font-family:var(--f-mono);font-size:.8rem">${esc(txt)}</textarea>`,`<button class="btn" data-a="close">Close</button>`));
     try{navigator.clipboard.writeText(txt).then(()=>toast('Copied. Paste it into WhatsApp or email.'),fallback)}catch(e){fallback()}},
 };
+Object.assign(A,{
+  ask:(d,el)=>{if(S.ask===d.k){S.ask=null;A[d.do](d,el)}else{S.ask=d.k;render()}},
+  phTab:d=>{S.phTab=d.t;S.sel.clear();render()},
+  selTog:d=>{S.sel.has(d.i)?S.sel.delete(d.i):S.sel.add(d.i);render()},
+  selGroup:d=>{const ids=d.ids.split(',');const on=ids.every(x=>S.sel.has(x));ids.forEach(x=>on?S.sel.delete(x):S.sel.add(x));render()},
+  job:d=>{S.modal={k:'job',id:d.i};render()},
+  take:d=>{const i=ITEM(d.i);i.master=U().staff;ORDBY(i.orderId).log.push({at:TODAY,user:U().name,text:`${itemRef(i)} taken from the branch queue by ${U().staff}`});S.modal=null;toast('Added to your list to cut.');render()},
+  takeGroup:d=>{const ids=d.ids.split(',');ids.forEach(id=>{const i=ITEM(id);i.master=U().staff;ORDBY(i.orderId).log.push({at:TODAY,user:U().name,text:`${itemRef(i)} taken from the branch queue by ${U().staff}`})});toast(`${ids.length} garment(s) added to your list.`);render()},
+  openCut:d=>{S.modal={k:'cut',ids:d.ids?d.ids.split(','):[d.i],m:null,fab:null};render()},
+  confirmCut:()=>{const m=S.modal;const its=m.ids.map(ITEM);const br=ORDBY(its[0].orderId).branch;const fabEl=document.getElementById('cutF');const fab=fabEl?fabEl.value:null;const tot=r2(+((document.getElementById('cutM')||{}).value)||0);const byEl=document.getElementById('cutBy');const by=U().staff||(byEl?byEl.value:'—');
+    const shop=its.filter(i=>i.source==='shop stock');const per=shop.length?r2(tot/shop.length):0;
+    its.forEach(i=>{const o=ORDBY(i.orderId);i.master=i.master||by;i.cut=i.source==='shop stock'?{fab,m:per,by,at:TODAY}:{fab:null,m:0,by,at:TODAY};i.stage=SIDX(o,'cut');i.hist.push({stage:i.stage,at:TODAY,by,entered:U().name,note:i.source==='shop stock'?`${per} m ${stockName(fab)}`:'Customer fabric'})});
+    let msg=`Cut ${its.length} garment(s).`;
+    if(shop.length&&fab){STOCK[fab][br]=r2(STOCK[fab][br]-tot);STOCKLOG.push({at:TODAY,user:by,item:fab,loc:br,change:-tot,reason:`Cut ${shop.length} garment(s) for ${[...new Set(shop.map(i=>ORDBY(i.orderId).ref))].join(', ')}`,kind:'cut'});msg+=` ${tot} m taken from ${bn(br)} stock.`;if(STOCK[fab][br]<MIN[fab])msg+=` Low stock alert sent: ${stockName(fab)} is at ${STOCK[fab][br]} m.`}
+    S.modal=null;S.sel.clear();toast(msg+(U().phone?' Now assign tailors.':''));render()},
+  openAssign:d=>{S.modal={k:'assign',ids:d.ids?d.ids.split(','):[d.i]};render()},
+  assignTo:d=>{const ids=S.modal&&S.modal.k==='assign'?S.modal.ids:[...S.sel];assignIds(ids,d.t)},
+  doAssign:d=>{assignIds([d.i],document.getElementById('asgT').value)},
+  doDone:d=>{const i=ITEM(d.i);const o=ORDBY(i.orderId);i.stage=SIDX(o,'check');i.hist.push({stage:i.stage,at:TODAY,by:U().staff||i.tailor||'—',entered:U().name});if(S.modal&&S.modal.k!=='custom')S.modal=null;if(S.scan.item===i.id&&!U().phone)S.modal=null;toast(`Done. Sent to ${i.master||'the master'} for checking.`);render()},
+  doReady:d=>{const i=ITEM(d.i);const o=ORDBY(i.orderId);i.stage=SIDX(o,'ready');i.reworkOpen=false;i.hist.push({stage:i.stage,at:TODAY,by:U().staff||i.master||'—',entered:U().name});notify(o,'ready',TODAY);if(S.modal&&S.modal.k!=='custom')S.modal=null;toast('Ready. The customer gets a WhatsApp message.');render()},
+  openRework:d=>{const i=ITEM(d.i);custom(()=>modal('<h2>Send back for rework</h2>',`<p class="small muted" style="margin:0">${esc(i.label)} · goes back to ${esc(i.tailor||'the tailor')}. Pick the reason.</p><div class="stack">${REWORK_REASONS.map(r=>`<button class="btn" style="justify-content:flex-start;padding:12px 14px" data-a="doRework" data-i="${i.id}" data-r="${esc(r)}">${esc(r)}</button>`).join('')}</div>`,`<button class="btn" data-a="close">Cancel</button>`))},
+  doRework:d=>{const i=ITEM(d.i);const o=ORDBY(i.orderId);i.rework++;i.reworkOpen=true;i.reworkReason=d.r;i.stage=SIDX(o,'stitch');i.hist.push({stage:'Rework',at:TODAY,by:U().staff||'—',entered:U().name,note:d.r});S.modal=null;toast(`Back to ${i.tailor||'the tailor'} for rework. It goes to the top of their list.`);render()},
+  photo:d=>{S.modal={k:'photo',i:d.i,p:+d.p,prev:S.modal&&S.modal.k!=='photo'?S.modal:null};render()},
+  photoBack:()=>{S.modal=S.modal.prev;render()},
+  stockRecv:()=>custom(()=>modal('<h2>Receive stock</h2>',`<div class="fgrid"><div class="field"><span>Item</span><select id="rsI">${STOCK_ITEMS.map(s=>`<option value="${s.id}">${s.name}</option>`).join('')}</select></div><div class="field"><span>Branch</span><select id="rsB">${LOC.filter(l=>U().branches.includes(l.id)).map(l=>`<option value="${l.id}">${l.name}</option>`).join('')}</select></div><div class="field"><span>Quantity received</span><input id="rsQ" type="number" value="100"></div><div class="field"><span>Supplier and delivery note</span><input id="rsR" value="Al Khaleej Textiles · GRN-0240"></div></div>`,`<button class="btn" data-a="close">Cancel</button><button class="btn pri" data-a="doStockRecv">Add to stock</button>`)),
+  doStockRecv:()=>{const it=document.getElementById('rsI').value,b=document.getElementById('rsB').value,q=+document.getElementById('rsQ').value||0;if(q<=0){toast('Enter a quantity.');return}STOCK[it][b]=r2(STOCK[it][b]+q);STOCKLOG.push({at:TODAY,user:U().name,item:it,loc:b,change:q,reason:'Received from '+(document.getElementById('rsR').value||'supplier'),kind:'receive'});S.modal=null;S.stockTab='movements';toast('Stock received.');render()},
+});
+function assignIds(ids,t){ids.forEach(id=>{const i=ITEM(id);const o=ORDBY(i.orderId);i.tailor=t;if(['cut','wait'].includes(SKEY(i,o))){i.stage=SIDX(o,'stitch');i.hist.push({stage:i.stage,at:TODAY,by:U().staff||i.master||'—',entered:U().name,note:'Assigned to '+t})}});S.sel.clear();S.modal=null;toast(`${ids.length} garment(s) assigned to ${t}.`);render()}
 document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el)return;const fn=A[el.dataset.a];if(!fn)return;if(el.tagName==='A')e.preventDefault();fn(el.dataset,el,e)});
-document.addEventListener('change',e=>{const el=e.target;const k=el.dataset.ch;if(el.dataset.photo!=null){const f=el.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{S.wiz.lines[+el.dataset.photo].photo=r.result;render()};r.readAsDataURL(f);return}
+document.addEventListener('change',e=>{const el=e.target;const k=el.dataset.ch;if(el.dataset.refphoto!=null){const f=el.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const l=S.wiz.lines[+el.dataset.refphoto];(l.photos=l.photos||[]).push({src:r.result,cap:'Reference from customer'});render()};r.readAsDataURL(f);return}if(el.dataset.photo!=null){const f=el.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{S.wiz.lines[+el.dataset.photo].photo=r.result;render()};r.readAsDataURL(f);return}
   if(!k){if(el.dataset.a&&(el.type==='checkbox'||el.type==='radio'))return;return}
   const v=el.value;const w=S.wiz;
-  if(k==='role'){S.role=v;S.branch='ALL';if(USERS[v].branches.length===1)S.branch=USERS[v].branches[0];S.modal=null;S.wiz=null;S.justCreated=null;S.custId=null;S.compId=null;if(S.route==='order'&&!canSeeOrder(ORDBY(S.orderId)))S.route='orders';if(S.route!=='review'&&S.route!=='order'&&!P[v].nav.includes(S.route))S.route='home';if(S.route==='order'&&!P[v].nav.includes('orders'))S.route='home';toast('Now signed in as '+USERS[v].name+' · '+USERS[v].role);render();return}
+  if(k==='role'){if(USERS[v].phone)S.route=P[v].nav[0];S.role=v;S.branch='ALL';S.sel.clear();S.phTab='mine';S.ask=null;S.bulk=false;S.bulkAsk=null;S.scan={item:null,multi:false,list:[]};if(USERS[v].branches.length===1)S.branch=USERS[v].branches[0];S.modal=null;S.wiz=null;S.justCreated=null;S.custId=null;S.compId=null;if(S.route==='order'&&!canSeeOrder(ORDBY(S.orderId)))S.route='orders';if(S.route!=='review'&&S.route!=='order'&&!P[v].nav.includes(S.route))S.route='home';if(S.route==='order'&&!P[v].nav.includes('orders'))S.route='home';toast('Now signed in as '+USERS[v].name+' · '+USERS[v].role);render();return}
   if(k==='branch'){S.branch=v;render();return}
   if(k==='lineGar'){const l=w.lines[+el.dataset.k];const mem=CU(w.custId).members.find(m=>m.id===l.memberId);Object.assign(l,mtmLineFor(mem,v),{qty:l.qty,source:l.source,fabric:l.fabric});render();return}
   if(k==='lineMember'){const l=w.lines[+el.dataset.k];const mem=CU(w.custId).members.find(m=>m.id===v);Object.assign(l,mtmLineFor(mem,l.gar),{qty:l.qty,source:l.source,fabric:l.fabric});render();return}
   if(k==='lineSource'){w.lines[+el.dataset.k].source=v;render();return}
   if(k==='lineGarU'){w.lines[+el.dataset.k].gar=v;render();return}
-  if(k==='wizColl'){w.collect=v;render();return} if(k==='wizAdvM'){w.advMethod=v;return}
+  if(k==='wizColl'){w.collect=v;render();return} if(k==='wizAdvM'){w.advMethod=v;return} if(k==='wizMaster'){w.master=v;return} if(k==='cutF'){S.modal.fab=v;render();return}
   if(k==='itemMaster'||k==='itemTailor'){A[k](el.dataset,el);return}
   if(k in S){S[k]=v;render()}});
 document.addEventListener('input',e=>{const el=e.target;if(el.dataset.qnote){const id=el.dataset.qnote;const a=S.review[id]=S.review[id]||{};a.n=el.value;saveAnswer(id);return}
   const k=el.dataset.in;if(!k)return;const w=S.wiz;const v=el.value;
+  if(k==='cutM'){S.modal.m=v;render();return}
   if(k==='custQ'||k==='ordersQ'||k==='prodQ'){S[k]=v;render();return}
   if(k==='wizCustQ'){w.custQ=v;render();return}
   if(k==='line'){w.lines[+el.dataset.k][el.dataset.f]=el.dataset.f==='qty'?Math.max(1,+v||1):v;if(el.dataset.f==='qty')render();return}
@@ -993,7 +1247,7 @@ document.addEventListener('input',e=>{const el=e.target;if(el.dataset.qnote){con
   if(k==='wizDisc'){w.discount=Math.max(0,Math.min(100,+v||0));render();return}
   if(k==='wizProm'){w.promised=v;return} if(k==='wizPO'){w.po=v;return} if(k==='wizAdv'){w.advance=v;return} if(k==='wizNotes'){w.notes=v;return}
   if(k==='ncCheck'){const hit=CUST.find(c=>c.mobile.replace(/\s/g,'')===v.replace(/\s/g,''));document.getElementById('ncDup').innerHTML=hit?`<div class="note warn">Already registered: <b>${esc(hit.name)}</b> (${bn(hit.branch)}, ${hit.members.length} family member(s)). <button class="btn sm" data-a="useExisting" data-c="${hit.id}">Use this customer</button></div>`:'';return}});
-A.useExisting=d=>{S.modal=null;if(S.route==='new-order'&&S.wiz){S.wiz.custId=d.c}else S.custId=d.c;render()};
+A.go_=0;A.useExisting=d=>{S.modal=null;if(S.route==='new-order'&&S.wiz){S.wiz.custId=d.c}else S.custId=d.c;render()};
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(S.modal){S.modal=null;render()}else if(S.drawer){S.drawer=false;render()}}});
 function routeFromHash(){const h=(location.hash||'').slice(1);if(h&&(VIEWS[h])&&(h==='review'||P[S.role].nav.includes(h)))S.route=h}
 window.addEventListener('hashchange',()=>{routeFromHash();render()});
